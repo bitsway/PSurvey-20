@@ -209,17 +209,17 @@ function check_user() {
 											var product_tbl_doc_campaign=''
 											
 
-												for (j=0; j < productLength; j++){
-													var productArray = productList[j].split('<fd>');
-													var product_id=productArray[0];	
-													var product_name=productArray[1];
-													product_tbl_doc_campaign=product_tbl_doc_campaign+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " onClick="check_boxTrue(\''+product_id+'\')"  > '+'<table width="100%" border="0" id="order_tbl" cellpadding="0" cellspacing="0" style="border-radius:5px;">'+'<tr style="border-bottom:1px solid #D2EEE9;"><td width="60px" style="text-align:center; padding-left:5px;"><input class="docCampaign" type="checkbox" onClick="getDocCampaignData_keyup(\''+product_id+'\')" name="doc_camp'+product_id+'" value="checkbox" id="doc_camp'+product_id+'"><label for="doc_camp'+product_id+'"></br></label><input type="hidden" id="doc_camp_id'+product_id+'" value="'+product_id+'" ></td><td  style="text-align:left;">'+'</br><font id="'+ product_id +'" onClick="check_boxTrue(\''+product_id+'\')" class="name" >'+ product_name.toUpperCase()+'</font></td></tr>'+'</table>'+'</li>';
-													//$("#error_login").html('Processing Product List....');	
-												}
-									
-											
-											$("#campaign_combo_id_lv").empty()
-											$("#campaign_combo_id_lv").append(product_tbl_doc_campaign);
+												//for (j=0; j < productLength; j++){
+//													var productArray = productList[j].split('<fd>');
+//													var product_id=productArray[0];	
+//													var product_name=productArray[1];
+//													product_tbl_doc_campaign=product_tbl_doc_campaign+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " onClick="check_boxTrue(\''+product_id+'\')"  > '+'<table width="100%" border="0" id="order_tbl" cellpadding="0" cellspacing="0" style="border-radius:5px;">'+'<tr style="border-bottom:1px solid #D2EEE9;"><td width="60px" style="text-align:center; padding-left:5px;"><input class="docCampaign" type="checkbox" onClick="getDocCampaignData_keyup(\''+product_id+'\')" name="doc_camp'+product_id+'" value="checkbox" id="doc_camp'+product_id+'"><label for="doc_camp'+product_id+'"></br></label><input type="hidden" id="doc_camp_id'+product_id+'" value="'+product_id+'" ></td><td  style="text-align:left;">'+'</br><font id="'+ product_id +'" onClick="check_boxTrue(\''+product_id+'\')" class="name" >'+ product_name.toUpperCase()+'</font></td></tr>'+'</table>'+'</li>';
+//													//$("#error_login").html('Processing Product List....');	
+//												}
+//									
+//											alert (product_tbl_doc_campaign)
+//											$("#campaign_combo_id_lv").empty()
+//											$("#campaign_combo_id_lv").append(product_tbl_doc_campaign);
 											//$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaignHead+localStorage.product_tbl_doc_campaign_1+localStorage.product_tbl_doc_campaign_2+localStorage.product_tbl_doc_campaign_3+localStorage.product_tbl_doc_campaign_4+localStorage.product_tbl_doc_campaign_5+localStorage.product_tbl_doc_campaignEnd);
 											
 											//================Market
@@ -727,7 +727,7 @@ function getDocCampaignData(){
 	}
 }
 function check_boxTrue(product_id){	
-	alert (product_id);
+	//alert (product_id);
 	var camp_combo="#doc_camp"+product_id
 	var camp_combo_val=$(camp_combo).is(":checked")
 	if (camp_combo_val==false){
@@ -741,7 +741,7 @@ function check_boxTrue(product_id){
 	}
 
 function getDocCampaignData_keyup(product_id){
-	alert (product_id)
+	
 	var pid=$("#doc_camp_id"+product_id).val();
 	var pname=$("#doc_camp_name"+product_id).val();
 	var camp_combo="#doc_camp"+product_id
@@ -820,7 +820,6 @@ function getDocCampaignData_keyup(product_id){
 		localStorage.campaign_doc_str=campaign_doc_str;
 		//alert (localStorage.campaign_doc_str)
 	}
-	alert (localStorage.campaign_doc_str)
 	}
 
 
