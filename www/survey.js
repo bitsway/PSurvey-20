@@ -229,7 +229,7 @@ function check_user() {
 													var visitPlanMarketComb=''								
 													var profileMarketComb='';								
 													var unscheduleMarketComb='';
-													
+													alert ('asd')
 													for (var k=0; k < planMarketListShowLength; k++){
 														var planMarketValueArray = planMarketList[k].split('<fd>');
 														planMarketID=planMarketValueArray[0];
@@ -535,7 +535,7 @@ function gotoMarket(pic_no) {
 	
 	//alert (localStorage.synced)
 	if (localStorage.synced='YES'){
-		if (error_flag==0  ){
+		if (error_flag==1  ){
 			$.afui.loadContent("#imageSinglePage",true,true,'right');
 		}
 		else{
@@ -552,6 +552,7 @@ function gotoMarket(pic_no) {
 }
 
 function marketNext_doc(marketNameID) {
+	alert ('sd')
  if (localStorage.click_flag==0){
 	 localStorage.click_flag=1;
 			localStorage.visit_market_show=marketNameID
@@ -819,6 +820,7 @@ function getDocCampaignData_keyup(product_id){
 		localStorage.campaign_doc_str=campaign_doc_str;
 		//alert (localStorage.campaign_doc_str)
 	}
+	alert (localStorage.campaign_doc_str)
 	}
 
 
