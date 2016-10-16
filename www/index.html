@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+<head>
+
+    <title>M-Reporting</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="build/icons.css" />
+
+    <link rel="stylesheet" type="text/css" href="build/af.ui.css" />
+
+     <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/fastclick.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.shim.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.ui.js"></script>
+
+
+    <script src="src/af.desktopBrowsers.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.actionsheet.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.animation.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.touchEvents.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.popup.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.drawer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.toast.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.animateheader.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.splashscreen.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.swipereveal.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.lockscreen.js"></script>
+	
+     <script src="survey.js"></script>
+	
+    <script>
+    $.afui.useOSThemes=false;
+    $.afui.loadDefaultHash=true;
+    $.afui.autoLaunch=false;
+
+    //check search
+    var search=document.location.search.toLowerCase().replace("?","");
+    if(search.length>0)
+    {
+
+       $.afui.useOSThemes=true;
+        if(search=="win8")
+            $.os.ie=true;
+        else if(search=="firefox")
+            $.os.fennec="true"
+        $.afui.ready(function(){
+            $(document.body).get(0).className=(search);
+        });
+    }
+
+    $(document).ready(function(){
+        $.afui.launch();
+		//alert (localStorage.synced)
+		//alert (localStorage.click_flag)
+		localStorage.click_flag=0;
+		$("#wait_image_login").hide();
+		$("#wait_image_ret").hide();
+		$("#wait_image_prescription").hide();
+
+		//alert (localStorage.unschedule_market_cmb_id)
+		$('#market_combo_id_lv').empty();
+		$('#market_combo_id_lv').append(localStorage.unschedule_market_cmb_id);
+		$("#campaign_combo_id_lv").empty()
+		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign);
+		$("#itemSearch").val('A')
+		searchItem()
+		
+		var image1 = document.getElementById('myImagePrescription_1');
+		image1.src = localStorage.prescriptionPhoto_1;
+		$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+	
+		
+		var image2 = document.getElementById('myImagePrescription_2');
+		image2.src = localStorage.prescriptionPhoto_2;
+		$("#prescriptionPhoto_2").val(localStorage.prescriptionPhoto_2)
+		
+		var image3 = document.getElementById('myImagePrescription_3');
+		image3.src = localStorage.prescriptionPhoto_3;
+		$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+		
+		if (localStorage.synced=='YES'){
+			$.afui.loadContent("#imagePage",true,true,'right');	
+		}
+		$(".visit_client").html(localStorage.visit_client); 
+		$(".market").html(localStorage.visit_market_show);		
+		
+		getLocation();
+		setProductList();
+    });
+
+    //if($.os.ios)
+        $.afui.animateHeader(true);
+		
+
+    </script>
+    
+	<style>
+	 li:hover { color:#FFF; background-color:#006B9F; font-size:14px }
+	</style>
+    
+</head>
+
+
+
+
+
+
+
+
+<body >
+   		 <div id="splashscreen" class='ui-loader heavy'>
+                M-Reporting
+                <br>
+                <br>
+                <span ><img style="" width="50px;" src="loading.gif" alt=""></span>
+                <h1>Starting....</h1>
+
+            </div>
+    
+    
+          <!--  //============Login page Start-->
+    
+    <div class="view" id="loginView">
+        <div class="pages">
+         <header><h1>Login</h1></header> 
+            <div class="panel" id="login">
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                    <br><br><br><br>
+                     <input type="text" id="test" name="test" style="width:100%" placeholder="Medicine Name 1"   />
+                    <div id="error_login" style="color:#C00"></div> 
+                    <div class="input-group">
+                    	<form>		
+						<input name="cid" id="cid"  type="text" placeholder="CID" value="">			
+                        <input name="user_id" id="user_id"   type="text" placeholder="User ID" value="">
+                        <input type="number" name="user_pass" id="user_pass"  placeholder="Password" value="">
+                    </form>						
+                    </div>
+                     <input type="submit" id="loginButton" onClick="check_user()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Sync     " onClick="new_ps()"  />
+                     
+                     
+                     </br></br></br></br>
+                     
+                     <input type="submit" id="loginButton" onClick="marketPage()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Set Doctor     " onClick="new_ps()"  />
+                   <!-- <a class='button' id="loginButton" onClick="check_user()"  data-transition='up-reveal:dismiss'>Sync</a>-->
+                    <div align="center"><img id="wait_image_login" style="" width="50px;" src="loading.gif" alt=""></div>
+                    
+               <!-- </div>-->
+            </div>
+        </div>
+        <footer>
+		 <a onClick="homePage()" class="icon home" >Home</a>
+         <a onClick="homePage()"  ></a>
+         <!-- <a href="#imagePage"></a>-->
+        </footer>
+
+    </div>
+
+      
+<!--//==============================Image Page=================-->
+      
+       <div class="view" id="imagePageView">
+        <div class="pages">
+         <header><h1>RX capture</h1></header> 
+            <div class="panel" id="imagePage">
+            </br></br></br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                     <div id="error_image" style="color:#C00"></div> 
+                    <div class="input-group">
+                    
+                    <ul class="list">
+                     <li>
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" width="70" height="70" alt="TakePic" onClick="getPrescriptionImage_1()"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_1">
+                                <input name="prescriptionPhoto_1" id="prescriptionPhoto_1" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(1)">
+                                <img src="icon-arrow-right.png" width="70" height="70" alt="Next" >
+                                </td>
+                              </tr>
+                            </table>
+                                                                
+
+                        </li>
+                    <li>
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_2()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png"  width="70" height="70" alt="Image"  id="myImagePrescription_2">
+                                <input name="prescriptionPhoto_2" id="prescriptionPhoto_2" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(2)"><img src="icon-arrow-right.png" width="70" height="70" alt="Next" ></td>
+                              </tr>
+                            </table>
+                                                      
+
+                        </li>
+                        
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_3()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_3">
+                                <input name="prescriptionPhoto_3" id="prescriptionPhoto_3" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(3);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+					 <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_4()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_4">
+                                <input name="prescriptionPhoto_4" id="prescriptionPhoto_4" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(4);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                         <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_5()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_5">
+                                <input name="prescriptionPhoto_5" id="prescriptionPhoto_5" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(5);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                         <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_6()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_6">
+                                <input name="prescriptionPhoto_6" id="prescriptionPhoto_6" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(6);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                         <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_7()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_7">
+                                <input name="prescriptionPhoto_7" id="prescriptionPhoto_7" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(7);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                         <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_8()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_8">
+                                <input name="prescriptionPhoto_8" id="prescriptionPhoto_8" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(8);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                         <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_9()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_9">
+                                <input name="prescriptionPhoto_9" id="prescriptionPhoto_9" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(9);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                         <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_10()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_10">
+                                <input name="prescriptionPhoto_10" id="prescriptionPhoto_10" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(10);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        
+                        
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_11()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_11">
+                                <input name="prescriptionPhoto_11" id="prescriptionPhoto_10" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(11);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_12()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_12">
+                                <input name="prescriptionPhoto_12" id="prescriptionPhoto_10" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(12);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_13()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_13">
+                                <input name="prescriptionPhoto_13" id="prescriptionPhoto_13" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(13);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_14()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_14">
+                                <input name="prescriptionPhoto_14" id="prescriptionPhoto_14" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(14);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_15()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_15">
+                                <input name="prescriptionPhoto_15" id="prescriptionPhoto_15" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(15);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_16()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_16">
+                                <input name="prescriptionPhoto_16" id="prescriptionPhoto_16" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(16);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_17()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_17">
+                                <input name="prescriptionPhoto_17" id="prescriptionPhoto_17" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(17);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_18()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_18">
+                                <input name="prescriptionPhoto_18" id="prescriptionPhoto_18" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(18);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                         <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_19()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_19">
+                                <input name="prescriptionPhoto_19" id="prescriptionPhoto_19" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(19);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        <li>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="33%" align="center"><img src="camera.png" onClick="getPrescriptionImage_20()" width="70" height="70" alt="TakePic"></td>
+                                <td width="33%" align="center">
+                                <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_20">
+                                <input name="prescriptionPhoto_20" id="prescriptionPhoto_20" type="hidden" value="">
+                                </td>
+                                <td width="33%" align="center" onClick="gotoMarket(20);getLocation();"><img src="icon-arrow-right.png" width="70" height="70" alt="Next"></td>
+                              </tr>
+                            </table>
+                        </li>
+                        
+
+
+
+
+
+
+                    </ul>
+                    </div>
+                    
+               <!-- </div>-->
+            </div>
+        </div>
+        <footer>
+		 
+           <a href="#login" class="icon key" > Sync  </a> 
+           <a href="#page_reports" class="icon paper" >Report</a>
+            <a onClick="exit()"   ><img  src="exit.png" alt="" height="60px"; width="60px"></a>
+          <!--  <a href="#login"  >   </a> -->
+          <!-- <a onClick="homePage()"></a>-->
+        </footer>
+
+    </div>      
+
+
+<!--//==============================Image Single Page=================-->
+      
+       <div class="view" id="imageSinglePageView">
+        <div class="pages">
+         <header><h1>RX capture</h1></header> 
+            <div class="panel" id="imageSinglePage">
+            </br></br></br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                     <div id="error_image" style="color:#C00"></div> 
+					 <div><b>Market :</b><span class="market"></span></div>
+                     <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>  
+
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td> <img src="images.png"  alt="Image" id="myImagePrescription_show"></td>
+                               
+                            </table>
+                                                                
+						<input type="submit" id="imageNext" onClick="page_doctor_campaign()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Next     "   />
+                      
+                   <!-- </div>-->
+                    
+               <!-- </div>-->
+            </div>
+        </div>
+        <footer>
+		  <table width="100%" border="0">
+  <tr>
+    <td align="left"><a onClick="homePage()" class="icon left" >Back</a></td>
+    <td width="40%">&nbsp;</td>
+    <td width="40%">&nbsp;</td>
+  </tr>
+</table>
+
+           
+           <!--<a href="#page_reports" class="icon paper" >Report</a>
+            <a onClick="exit()"   ><img  src="exit.png" alt="" height="60px"; width="60px"></a>-->
+          <!--  <a href="#login"  >   </a> -->
+          <!-- <a onClick="homePage()"></a>-->
+        </footer>
+
+    </div>   
+
+
+
+             
+
+  <!--//==============================Market Page=================-->
+       <div class="view" id="marketPageView">
+        <div class="pages">
+         <header> 
+         <table width="100%" border="0">
+          <tr>
+            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="homePage()">	</td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">Market</font></td>
+            <td width="10%" >&nbsp;</td> 
+          </tr>
+        </table>
+</header> 
+            <div class="panel" id="marketPage">
+            </br></br></br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                     <div id="error_login" style="color:#C00"></div> 
+                    
+                 <!--<div class="input-group"> -->
+                 <input type="text" id="marketSearch" style="width:100%" placeholder="Search" onKeyUp="searchMarket()"  />
+                <!--</div>-->
+				
+                         <ul class="list" id="market_combo_id_lv" >
+                        
+                        </ul>
+                    </div>
+                    
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+		<a onClick="homePage()" class="icon home" >Home</a>
+        <a onClick="homePage()"  ></a>
+          <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
+          </footer>
+
+    </div>               
+                      
+            
+            
+  
+ 
+  <!--//==============================Doctor Page=================-->
+       <div class="view" id="doctorPageView">
+        <div class="pages">
+         <header>         
+         
+         <table width="100%" border="0">
+          <tr>
+            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="marketPage()">	</td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">Doctor List</font></td>
+            <td width="10%" > <img id="item_load" src="loading1.gif"   ></td>
+          </tr>
+        </table>
+         
+         
+         
+         </header> 
+            <div class="panel" id="page_doctor">
+            </br></br></br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                   
+                    <div><b>Market :</b><span class="market"></span></div>
+                    </br>
+                     <div id="err_m_retailer_next" style="color:#C00"></div> 
+                   <!-- <div class="input-group">-->
+                         <input type="text" id="doctorSearch" style="width:100%" placeholder="Search" onKeyUp="searchDoctor()"  />
+                       <!-- </div>-->
+        
+                         <ul class="list" id="doctor_combo_id_lv" >
+                        
+                        </ul>
+                                <img id="wait_image_ret" style="width:50" src="loading.gif" alt="">		
+                    </div>
+                    
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+		 <a onClick="homePage()" class="icon home" >Home</a>
+           <a onClick="homePage()" ></a>
+           
+            </footer>
+
+    </div> 
+  
+  
+<!--//==============================Product Page=================-->
+
+      <div class="view" id="doctorCampaignPageView">
+        <div class="pages">
+         <header style="height:70px">
+         </br>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                 
+                            <td width="2%" onClick="search_setfocus()">
+                     
+                            </td>
+                    <td width="70%" onClick="search_setfocus()">
+                       <!--<div class="input-group">-->   
+                         <input id="itemSearch" type="text" id="itemSearch" style="width:100%; color:#000; font-weight:normal" placeholder="Search" onKeyUp="searchItem()"  />
+                        <!--</div>-->
+                          
+                            
+                            </td>
+                            <td onClick="search_setfocus()" width="10%"></td>
+                            <td align="right">
+                            <img src="icon-arrow-right_1.png" width="40" height="40" alt="Next" onClick="getDocCampaignData()" >
+                            <!-- <img  class="icon right"   alt="Next" onClick="getDocCampaignData()" >-->
+           <!--  <input type="submit" id="input" style="height:40px;  " onClick="getDocCampaignData()"  />-->
+                     
+                            </td>
+                            <td width="2%">
+                     
+                            </td>
+                          </tr>
+                        </table>
+         
+         
+         </header> 
+            <div class="panel" id="page_doctor_campaign">
+            </br></br></br></br></br></br></br>
+            
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                    <div><b>Market :</b><span class="market"></span></div>
+                     <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>   
+                    </br>
+                   
+                            
+                            <div id="myerror_doctor_campaign" style="color:#C00"></div> 
+                            <div class="input-group">
+                        
+                        <table width="100%" border="0"   >
+                <tr>
+                <td width="90%"  style="vertical-align:top;overflow:scroll; height:700px; display:block">
+                 <ul class="list" id="campaign_combo_id_lv" >
+                        
+                        </ul>
+                 </td>
+                
+                 <td style="vertical-align:top" >
+                    <table >
+                    <tr  onClick="searchProductChar('A')">
+                    <td height="20px" >A</td>
+                    </tr>
+                    <tr  >
+                  
+                    <tr style="vertical-align:top" onClick="searchProductChar('B')">
+                    <td height="20px">B</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('C')">
+                    <td height="20px">C</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('D')">
+                    <td height="20px">D</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('E')">
+                    <td height="20px">E</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('F')">
+                    <td height="20px">F</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('G')">
+                    <td height="20px">G</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('H')">
+                    <td height="20px">H</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('I')">
+                    <td height="20px">I</td>
+                    </tr>
+                  
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('J')">
+                    <td height="20px">J</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('K')">
+                    <td height="20px">K</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('L')">
+                    <td height="20px">L</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('M')">
+                    <td height="20px">M</td>
+                    
+                    </tr>
+                    <tr style="vertical-align:top" onClick="searchProductChar('N')">
+                    <td height="20px">N</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('O')">
+                    <td height="20px">O</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('P')">
+                    <td height="20px">P</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('Q')">
+                    <td height="20px">Q</td>
+                    </tr>
+                   
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('R')">
+                    <td height="20px">R</td>
+                    </tr>
+                  
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('S')">
+                    <td height="20px">S</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('T')">
+                    <td height="20px">T</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('U')">
+                    <td height="20px">U</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('V')">
+                    <td height="20px">V</td>
+                    </tr>
+
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('W')">
+                    <td height="20px">W</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('X')">
+                    <td height="20px">X</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('Y')">
+                    <td height="20px">Y</td>
+                    </tr>
+                    
+                    <tr style="vertical-align:top" onClick="searchProductChar('Z')">
+                    <td height="20px">Z</td>
+                    </tr>
+                    </table>
+                </td>
+                </tr>
+                </table>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                         
+                                    
+                            
+                 </div>
+                   </div> 
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+        
+                <table width="100%" border="0">
+  <tr>
+    <td align="left">  <a onClick="page_imageSingle()" class="icon left" >Back</a></td>
+    <td align="right">
+		
+      			 <select id="item_combo" style=" width:40px"data-native-menu="false" onChange="comboSearch()" >
+                        <option value="A" >A</option>
+                        <option value="B" >B</option>
+                        <option value="C" >C</option>
+                        <option value="D" >D</option>
+                        <option value="E" >E</option>
+                        <option value="F" >F</option>
+                        <option value="G" >G</option>
+                        <option value="H" >H</option>
+                        <option value="I" >I</option>
+                        <option value="J" >J</option>
+                        <option value="K" >K</option> 
+                        <option value="L" >L</option>
+                        <option value="M" >M</option>
+                        <option value="N" >N</option>
+                        <option value="O" >O</option> 
+                        <option value="P" >P</option>
+                        <option value="Q" >Q</option>
+                        <option value="R" >R</option>
+                        <option value="S" >S</option>
+                        <option value="T" >T</option>
+                        <option value="U" >U</option>
+                        <option value="V" >V</option>
+                        <option value="W" >W</option>
+                        <option value="X" >X</option>
+                        <option value="Y" >Y</option>
+                        <option value="Z" >Z</option>
+                </select>
+         </td>
+  </tr>
+</table>	
+         
+		  <!--<a onClick="homePage()" class="icon home" >Home</a>-->
+          
+           </footer>
+
+    </div> 
+  
+  <!-- //======================Others Medicine-->
+         
+      <div class="view" id="page_prescriptionView">
+        <div class="pages">
+         <header><h1></h1>
+         
+          <table width="100%" border="0">
+          <tr>
+            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="page_doctor_campaign()">	</td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">Other Medicine</font></td>
+            <td width="10%" >&nbsp;</td>
+          </tr>
+        </table>
+         
+         
+         
+         </header> 
+            <div class="panel" id="page_prescription">
+                <br><br><br><br><br>
+              <!--  <div class="card">-->
+          		
+                <div id="error_login" style="color:#C00"></div> 
+                
+                
+               <div><b>Market :</b><span class="market"></span></div>
+               <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>
+                   <!-- <div class="input-group">-->
+
+                             
+                    <br>
+        
+                        
+                        <input type="hidden" name="lat" id="lat" value="" readonly>
+                        <input type="hidden" name="long" id="long" value="" readonly><!--readonly-->
+                        
+                        <input type="text" name="error_prescription_submittxt" id="error_prescription_submittxt" value="" >
+                         <div id="error_prescription_submit" style="color:#B70000"></div>   
+                        <br><br>
+                        <div  id="btn_loc_submit" style="display:none">
+                        <!--<input type="submit" id="input" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Confirm Location     " onClick="getLocation()"  />-->
+                                             
+                        </div>
+                       
+                        
+                        <div  id="btn_prescription_submit">
+                         <input type="submit" id="input" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Submit     " onClick="prescription_submit()"  />
+                        
+                        </div>
+                         
+                        <div align="center">
+                        <img id="wait_image_prescription" style="" width="50px;" src="loading.gif" alt="">
+                        </div>
+               <!-- </div>-->
+               <!-- </div>-->
+            </div>
+ 
+        </div>
+        <footer>
+        
+             <a onClick="homePage()" class="icon home" >Home</a>
+             <a onClick="homePage()"  ></a>
+            
+             
+              </footer>
+
+       
+    </div>
+  
+  
+  
+  
+ <!-- //============Success================-->
+  
+  
+   <div class="view" id="page_successView">
+        <div class="pages">
+         <header><h1>Success</h1></header> 
+            <div class="panel" id="page_success">
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                    <br><br><br><br>
+                    <div id="error_login" style="color:#C00"></div> 
+                    <div id="success_message" style="background-image:url(result_back.png); background-repeat:no-repea; width:300px; margin:0px auto; height:200px; color:#FFF; font-size:20px; vertical-align:middle; text-align:center; padding-top:5px;" ></br>Submitted Successfully</div>
+            
+            <br>
+            <br>
+            <br>
+            <input type="submit" id="input" style="width:100%; height:50px;  background-color:#09C; color:#FFF; font-size:20px" value="     New     " onClick="new_ps()"  />
+			<br>
+               <!-- </div>-->
+            </div>
+        </div>
+        <footer>
+		 <!--<a onClick="homePage();new_ps()" class="icon home" >Home</a>
+         <a onClick="homePage();new_ps()" ></a>-->
+          <!--<a href="#login" onClick="new_ps()"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> </footer>
+
+    </div>
+  
+  
+  
+ <!--//==============Report===================-->
+ 
+  
+<div class="view" id="page_reportsView">
+<div class="pages">
+
+<header><h1>Report</h1></header> 
+
+
+    <div class="panel" id="page_reports">
+    </br></br></br></br>
+        <!--<div class="card">-->
+            <!--<h1>Sync</h1>-->
+             
+        
+    <div id="myerror" style="color:#C00"></div>               
+                              
+					<div id="report"> </div>
+					
+                    <table width="100%" border="0">
+                    <tr><td>Rep: </td><td><input id="se_mpo_doc" name="se_mpo_doc" type="text" placeholder="Rep">
+                    <input id="se_item_doc" name="se_item_doc" type="hidden" placeholder="Item"></td></tr>
+                    <tr>
+                    <td>Market: </td><td><input id="se_market_doc" name="se_market_doc" type="text" placeholder="Market/level"  ></td></tr>
+					  <tr>
+						<td>From &nbsp;</td>
+						<td><input id="date_from_doc" name="date_from_doc" type="date" data-role="date"  ></td>
+						</tr>	
+					
+					
+					  <tr>
+						<td>To &nbsp;</td>
+						<td><input id="date_to_doc" name="date_to_doc" type="date" data-role="date" ></td>
+					  </tr>
+					</table>
+				
+                </br>
+                <input type="submit" id="loginButton" onClick="summary_report_prescription();"  style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="   Prescription Count     "   />
+                </br>
+                <input type="submit" id="loginButton" onClick="detail_report_prescription();"  style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="   Prescription Detail     "   />
+				
+				
+                
+                <br>
+				<br>
+    
+           
+       <!-- </div>-->
+       </div>
+    </div>
+
+<footer>
+<a onClick="homePage()" class="icon home" >Home</a>
+<a onClick="homePage()"  ></a>
+ 
+
+</div>   
+  
+<div class="view" id="page_report_prescriptionView">
+        <div class="pages">
+         <header><h3> <div id="report_header_prescription" align="center"> Prescription Summary</div></h3></header> 
+            <div class="panel" id="page_report_prescription">
+            </br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+<!--                   <input id="myerror_s_report_doctortxt" name="myerror_s_report_doctortxt" type="text"  >-->
+					<input id="myerror_s_reporttxt" name="myerror_s_report_doctortxt" type="hidden"  >
+                     <div id="myerror_s_report_prescription" style="color:#C00"></div>               
+				<ul data-inset="true" data-role="listview">
+					
+					<li>
+						
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td><div id="report_mpo_prescription">  </div></td>
+                          </tr>
+                           <tr>
+                            <td><div id="report_market_prescription" >  </div></td>
+                           </tr>
+                          <tr>
+                            <td><div id="date_f_prescription"> </div></td>
+							</tr>
+							  <tr>	
+								<td> <div id="date_t_prescription">  </div></td>
+								
+								
+							  </tr>
+							</table>
+						
+												
+					</li>
+                  <div style='background-color:#00BFBF; height:5px; font-size:5px'></div>
+					<li>
+					  		<div id="wait_image_p"><img style="width:50px" src="loading.gif" alt="">	</div>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+							  <tr>
+								
+								<td><div id="visit_count_prescription">  </div></td>
+								 </tr>
+								 <tr>
+								<td><div id="visit_withAtt_prescription">  </div></td>
+								 </tr>
+								 <tr>
+								<td><div id="visit_withoutAtt_prescription">  </div></td>
+							  </tr>
+							</table>
+		
+					</li>
+						
+											
+				</ul>
+				
+				
+				<div id="rep_detail_prescription" style="color:#000066; font-size:10px; width:100%"></div>
+				
+				
+                    </div>
+                    
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+		<a onClick="page_reports_dcr()" class="icon left" >Home</a>
+        <a onClick="page_reports_dcr()"  ></a>
+         
+
+    </div>    
+  
+  
+            
+ <script type="text/javascript" src="phonegap.js"></script>
+
+          
+              
+
+
+
+
+
+    
+    
+</body>
+
+</html>
