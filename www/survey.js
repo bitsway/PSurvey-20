@@ -535,7 +535,7 @@ function gotoMarket(pic_no) {
 	
 	//alert (localStorage.synced)
 	if (localStorage.synced='YES'){
-		if (error_flag==1  ){
+		if (error_flag==0  ){
 			$.afui.loadContent("#imageSinglePage",true,true,'right');
 		}
 		else{
@@ -715,7 +715,7 @@ function marketRetailerNext_doc(mClientNameID) {
 
 
 function getDocCampaignData(){	
-	//alert (localStorage.campaign_doc_str.length)
+	alert (localStorage.campaign_doc_str.length)
     if  (localStorage.campaign_doc_str.length < 5){
 	
 	$("#myerror_doctor_campaign").html('Please select minimum one Item');
