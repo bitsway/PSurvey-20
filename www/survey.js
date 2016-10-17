@@ -758,7 +758,7 @@ function marketRetailerNext_doc(mClientNameID) {
 
 
 function getDocCampaignData(){	
-	alert (localStorage.campaign_doc_str.length)
+	alert ('test')
     if  (localStorage.campaign_doc_str.length < 5){
 	
 	$("#myerror_doctor_campaign").html('Please select minimum one Item');
