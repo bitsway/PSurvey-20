@@ -783,7 +783,7 @@ function check_boxTrue(product_id){
 	}
 
 function getDocCampaignData_keyup(product_id){
-	
+	alert (product_id)
 	var pid=$("#doc_camp_id"+product_id).val();
 	var pname=$("#doc_camp_name"+product_id).val();
 	var camp_combo="#doc_camp"+product_id
