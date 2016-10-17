@@ -193,7 +193,8 @@ function check_user() {
 											$("#test").val(localStorage.base_url+'check_user?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode);
 										}
 										else if (resultArray[0]=='SUCCESS'){
-											localStorage.synced='YES'		
+											localStorage.synced='YES'	
+											localStorage.campaign_doc_str=''	
 											localStorage.append_A=0	
 											localStorage.append_B=0
 											localStorage.append_C=0
@@ -862,6 +863,8 @@ function getDocCampaignData_keyup(product_id){
 		localStorage.campaign_doc_str=campaign_doc_str;
 		//alert (localStorage.campaign_doc_str)
 	}
+	
+	alert  (localStorage.campaign_doc_str)
 	}
 
 
