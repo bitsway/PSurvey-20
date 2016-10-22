@@ -82,8 +82,7 @@ function check_user() {
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 //	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
-
-	var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+	var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 	
 	
 	var user_id=$("#user_id").val();
@@ -206,7 +205,7 @@ function check_user() {
 											region_string=resultArray[10];
 											localStorage.user_type=resultArray[16];
 											localStorage.market_doctor=resultArray[17];
-											//alert (localStorage.menu);
+											//alert (localStorage.productListStr);
 											
 											
 											localStorage.product_tbl_doc_campaign_A=''
@@ -238,86 +237,87 @@ function check_user() {
 											
 											localStorage.campaign_doc_str=''
 											//alert (localStorage.campaign_doc_str)
-											var productList_A=localStorage.productListStr.split('</A>')[0].replace('<A>','');
-											var productListStr_after_A=localStorage.productListStr.split('</A>')[1]
+											var productList_A=localStorage.productListStr.split('<AEND>')[0].replace('<ASTART>','');
+											
+											var productListStr_after_A=localStorage.productListStr.split('<AEND>')[1]
 										
-											var productList_B=productListStr_after_A.split('</B>')[0].replace('<B>','');
-											var productListStr_after_B=productListStr_after_A.split('</B>')[1]
+											var productList_B=productListStr_after_A.split('<BEND>')[0].replace('<BSTART>','');
+											var productListStr_after_B=productListStr_after_A.split('<BEND>')[1]
 											
-											var productList_C=productListStr_after_B.split('</C>')[0].replace('<C>','');
-											var productListStr_after_C=productListStr_after_B.split('</C>')[1]
+											var productList_C=productListStr_after_B.split('<CEND>')[0].replace('<CSTART>','');
+											var productListStr_after_C=productListStr_after_B.split('<CEND>')[1]
 											
-											var productList_D=productListStr_after_C.split('</D>')[0].replace('<D>','');
-											var productListStr_after_D=productListStr_after_C.split('</D>')[1]
+											var productList_D=productListStr_after_C.split('<DEND>')[0].replace('<DSTART>','');
+											var productListStr_after_D=productListStr_after_C.split('<DEND>')[1]
 											
-											var productList_E=productListStr_after_D.split('</E>')[0].replace('<E>','');
-											var productListStr_after_E=productListStr_after_D.split('</E>')[1]
+											var productList_E=productListStr_after_D.split('<EEND>')[0].replace('<ESTART>','');
+											var productListStr_after_E=productListStr_after_D.split('<EEND>')[1]
 											
-											var productList_F=productListStr_after_E.split('</F>')[0].replace('<F>','');
-											var productListStr_after_F=productListStr_after_E.split('</F>')[1]
+											var productList_F=productListStr_after_E.split('<FEND>')[0].replace('<FSTART>','');
+											var productListStr_after_F=productListStr_after_E.split('<FEND>')[1]
 											
-											var productList_G=productListStr_after_F.split('</G>')[0].replace('<G>','');
-											var productListStr_after_G=productListStr_after_F.split('</G>')[1]
+											var productList_G=productListStr_after_F.split('<GEND>')[0].replace('<GSTART>','');
+											var productListStr_after_G=productListStr_after_F.split('<GEND>')[1]
 											
-											var productList_H=productListStr_after_G.split('</H>')[0].replace('<H>','');
-											var productListStr_after_H=productListStr_after_G.split('</H>')[1]
+											var productList_H=productListStr_after_G.split('<HEND>')[0].replace('<HSTART>','');
+											var productListStr_after_H=productListStr_after_G.split('<HEND>')[1]
 											
-											var productList_I=productListStr_after_H.split('</I>')[0].replace('<I>','');
-											var productListStr_after_I=productListStr_after_H.split('</I>')[1]
+											var productList_I=productListStr_after_H.split('<IEND>')[0].replace('<ISTART>','');
+											var productListStr_after_I=productListStr_after_H.split('<IEND>')[1]
 											
-											var productList_J=productListStr_after_I.split('</J>')[0].replace('<J>','');
-											var productListStr_after_J=productListStr_after_I.split('</J>')[1]
+											var productList_J=productListStr_after_I.split('<JEND>')[0].replace('<JSTART>','');
+											var productListStr_after_J=productListStr_after_I.split('<JEND>')[1]
 											
-											var productList_K=productListStr_after_J.split('</K>')[0].replace('<K>','');
-											var productListStr_after_K=productListStr_after_J.split('</K>')[1]
+											var productList_K=productListStr_after_J.split('<KEND>')[0].replace('<KSTART>','');
+											var productListStr_after_K=productListStr_after_J.split('<KEND>')[1]
 											
-											var productList_L=productListStr_after_K.split('</L>')[0].replace('<L>','');
-											var productListStr_after_L=productListStr_after_K.split('</L>')[1]
+											var productList_L=productListStr_after_K.split('<LEND>')[0].replace('<LSTART>','');
+											var productListStr_after_L=productListStr_after_K.split('<LEND>')[1]
 											
-											var productList_M=productListStr_after_L.split('</M>')[0].replace('<M>','');
-											var productListStr_after_M=productListStr_after_L.split('</M>')[1]
+											var productList_M=productListStr_after_L.split('<MEND>')[0].replace('<MSTART>','');
+											var productListStr_after_M=productListStr_after_L.split('<MEND>')[1]
 											
-											var productList_N=productListStr_after_M.split('</N>')[0].replace('<N>','');
-											var productListStr_after_N=productListStr_after_M.split('</N>')[1]
+											var productList_N=productListStr_after_M.split('<NEND>')[0].replace('<NSTART>','');
+											var productListStr_after_N=productListStr_after_M.split('<NEND>')[1]
 											
-											var productList_O=productListStr_after_N.split('</O>')[0].replace('<O>','');
-											var productListStr_after_O=productListStr_after_N.split('</O>')[1]
+											var productList_O=productListStr_after_N.split('<OEND>')[0].replace('<OSTART>','');
+											var productListStr_after_O=productListStr_after_N.split('<OEND>')[1]
 											
-											var productList_P=productListStr_after_O.split('</P>')[0].replace('<P>','');
-											var productListStr_after_P=productListStr_after_O.split('</P>')[1]
+											var productList_P=productListStr_after_O.split('<PEND>')[0].replace('<PSTART>','');
+											var productListStr_after_P=productListStr_after_O.split('<PEND>')[1]
 											
-											var productList_Q=productListStr_after_P.split('</Q>')[0].replace('<Q>','');
-											var productListStr_after_Q=productListStr_after_P.split('</Q>')[1]
+											var productList_Q=productListStr_after_P.split('<QEND>')[0].replace('<QSTART>','');
+											var productListStr_after_Q=productListStr_after_P.split('<QEND>')[1]
 											
-											var productList_R=productListStr_after_Q.split('</R>')[0].replace('<R>','');
-											var productListStr_after_R=productListStr_after_Q.split('</R>')[1]
+											var productList_R=productListStr_after_Q.split('<REND>')[0].replace('<RSTART>','');
+											var productListStr_after_R=productListStr_after_Q.split('<REND>')[1]
 											
-											var productList_S=productListStr_after_R.split('</S>')[0].replace('<S>','');
-											var productListStr_after_S=productListStr_after_R.split('</S>')[1]
+											var productList_S=productListStr_after_R.split('<SEND>')[0].replace('<SSTART>','');
+											var productListStr_after_S=productListStr_after_R.split('<SEND>')[1]
 											
-											var productList_T=productListStr_after_S.split('</T>')[0].replace('<T>','');
-											var productListStr_after_T=productListStr_after_S.split('</T>')[1]
+											var productList_T=productListStr_after_S.split('<TEND>')[0].replace('<TSTART>','');
+											var productListStr_after_T=productListStr_after_S.split('<TEND>')[1]
 											
-											var productList_U=productListStr_after_T.split('</U>')[0].replace('<U>','');
-											var productListStr_after_U=productListStr_after_T.split('</U>')[1]
+											var productList_U=productListStr_after_T.split('<UEND>')[0].replace('<USTART>','');
+											var productListStr_after_U=productListStr_after_T.split('<UEND>')[1]
 											
-											var productList_V=productListStr_after_U.split('</V>')[0].replace('<V>','');
-											var productListStr_after_V=productListStr_after_U.split('</V>')[1]
+											var productList_V=productListStr_after_U.split('<VEND>')[0].replace('<VSTART>','');
+											var productListStr_after_V=productListStr_after_U.split('<VEND>')[1]
 											
-											var productList_W=productListStr_after_V.split('</W>')[0].replace('<W>','');
-											var productListStr_after_W=productListStr_after_V.split('</W>')[1]
+											var productList_W=productListStr_after_V.split('<WEND>')[0].replace('<WSTART>','');
+											var productListStr_after_W=productListStr_after_V.split('<WEND>')[1]
 											
-											var productList_X=productListStr_after_W.split('</X>')[0].replace('<X>','');
-											var productListStr_after_X=productListStr_after_W.split('</X>')[1]
+											var productList_X=productListStr_after_W.split('<XEND>')[0].replace('<XSTART>','');
+											var productListStr_after_X=productListStr_after_W.split('<XEND>')[1]
 											
-											var productList_Y=productListStr_after_X.split('</Y>')[0].replace('<Y>','');
-											var productListStr_after_Y=productListStr_after_X.split('</Y>')[1]
-											//alert (productList_Y)
-											var productList_Z=productListStr_after_Y.split('</Z>')[0].replace('<Z>','');
+											var productList_Y=productListStr_after_X.split('<YEND>')[0].replace('<YSTART>','');
+											var productListStr_after_Y=productListStr_after_X.split('<YEND>')[1]
+											
+											var productList_Z=productListStr_after_Y.split('<ZEND>')[0].replace('<ZSTART>','');
 											//var productListStr_after_E=productListStr_after_D.split('</Z>')[1]
+											//alert (productList_Z)
 											
 											
-
 											localStorage.productList_A=productList_A
 											localStorage.productList_B=productList_B
 											localStorage.productList_C=productList_C
@@ -418,7 +418,8 @@ function check_user() {
 function setProduct() {
 	
 	//if (char=='A') {
-		if (localStorage.append_A.length != '') {
+		
+		if (localStorage.productList_A.length != '') {
 			productList_A=localStorage.productList_A
 			var productList_A=productList_A.split('<rd>');
 			var productLength_A=productList_A.length;
@@ -431,12 +432,12 @@ function setProduct() {
 				}
 		localStorage.product_tbl_doc_campaign_A=product_tbl_doc_campaign_A		
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_A);	
-	//	alert (localStorage.product_tbl_doc_campaign_A)	
+		//alert (localStorage.product_tbl_doc_campaign_A)	
 //		localStorage.append_A=1
 //		}//if localStorage.append_A==0
 	}
 	//if (char=='B') {
-	if (localStorage.append_B.length != '') {
+	if (localStorage.productList_B.length != '') {
 			productList_B=localStorage.productList_B
 			var productList_B=productList_B.split('<rd>');
 			var productLength_B=productList_B.length;
@@ -456,7 +457,7 @@ function setProduct() {
 	
 	//if (char=='C') {
 		//alert ('asaf')
-	if (localStorage.append_C.length != '') {
+	if (localStorage.productList_C.length != '') {
 			productList_C=localStorage.productList_C
 			var productList_C=productList_C.split('<rd>');
 			var productLength_C=productList_C.length;
@@ -482,7 +483,7 @@ function setProduct() {
 	
 	//if (char=='D') {
 		//alert ('asaf')
-		if (localStorage.append_D.length != '') {
+		if (localStorage.productList_D.length != '') {
 			productList_D=localStorage.productList_D
 			var productList_D=productList_D.split('<rd>');
 			var productLength_D=productList_D.length;
@@ -505,7 +506,7 @@ function setProduct() {
 	
 	//if (char=='E') {
 		//alert ('asaf')
-		if (localStorage.append_E.length != '') {
+		if (localStorage.productList_E.length != '') {
 			productList_E=localStorage.productList_E
 			var productList_E=productList_E.split('<rd>');
 			var productLength_E=productList_E.length;
@@ -528,7 +529,7 @@ function setProduct() {
 	
 	//if (char=='F') {
 		//alert ('asaf')
-		if (localStorage.append_F.length != '') {
+		if (localStorage.productList_F.length != '') {
 			productList_F=localStorage.productList_F
 			var productList_F=productList_F.split('<rd>');
 			var productLength_F=productList_F.length;
@@ -551,7 +552,7 @@ function setProduct() {
 	
 	//if (char=='G') {
 		//alert ('asaf')
-		if (localStorage.append_G.length != '') {
+		if (localStorage.productList_G.length != '') {
 			productList_G=localStorage.productList_G
 			var productList_G=productList_G.split('<rd>');
 			var productLength_G=productList_G.length;
@@ -574,7 +575,7 @@ function setProduct() {
 	
 	//if (char=='H') {
 		//alert ('asaf')
-		if (localStorage.append_H.length != '') {
+		if (localStorage.productList_H.length != '') {
 			productList_H=localStorage.productList_H
 			var productList_H=productList_H.split('<rd>');
 			var productLength_H=productList_H.length;
@@ -597,7 +598,7 @@ function setProduct() {
 	
 	//if (char=='I') {
 		//alert ('asaf')
-		if (localStorage.append_I.length != '') {
+		if (localStorage.productList_I.length != '') {
 			productList_I=localStorage.productList_I
 			var productList_I=productList_I.split('<rd>');
 			var productLength_I=productList_I.length;
@@ -620,7 +621,7 @@ function setProduct() {
 	
 	//if (char=='J') {
 		//alert ('asaf')
-		if (localStorage.append_J.length != '') {
+		if (localStorage.productList_J.length != '') {
 			productList_J=localStorage.productList_J
 			var productList_J=productList_J.split('<rd>');
 			var productLength_J=productList_J.length;
@@ -643,7 +644,7 @@ function setProduct() {
 	
 	//if (char=='K') {
 		//alert ('asaf')
-		if (localStorage.append_K.length != '') {
+		if (localStorage.productList_K.length != '') {
 			productList_K=localStorage.productList_K
 			var productList_K=productList_K.split('<rd>');
 			var productLength_K=productList_K.length;
@@ -666,7 +667,7 @@ function setProduct() {
 	
 	//if (char=='L') {
 		//alert ('asaf')
-		if (localStorage.append_L.length != '') {
+		if (localStorage.productList_L.length != '') {
 			productList_L=localStorage.productList_L
 			var productList_L=productList_L.split('<rd>');
 			var productLength_L=productList_L.length;
@@ -689,7 +690,7 @@ function setProduct() {
 	
 	//if (char=='M') {
 		//alert ('asaf')
-		if (localStorage.append_M.length != '') {
+		if (localStorage.productList_M.length != '') {
 			productList_M=localStorage.productList_M
 			var productList_M=productList_M.split('<rd>');
 			var productLength_M=productList_M.length;
@@ -712,7 +713,7 @@ function setProduct() {
 	
 	//if (char=='N') {
 		//alert ('asaf')
-		if (localStorage.append_N.length != '') {
+		if (localStorage.productList_N.length != '') {
 			productList_N=localStorage.productList_N
 			var productList_N=productList_N.split('<rd>');
 			var productLength_N=productList_N.length;
@@ -735,7 +736,7 @@ function setProduct() {
 	
 	//if (char=='O') {
 		//alert ('asaf')
-		if (localStorage.append_O.length != '') {
+		if (localStorage.productList_O.length != '') {
 			productList_O=localStorage.productList_O
 			var productList_O=productList_O.split('<rd>');
 			var productLength_O=productList_O.length;
@@ -757,7 +758,7 @@ function setProduct() {
 	
 	//if (char=='P') {
 		//alert ('asaf')
-		if (localStorage.append_P.length != '') {
+		if (localStorage.productList_P.length != '') {
 			productList_P=localStorage.productList_P
 			var productList_P=productList_P.split('<rd>');
 			var productLength_P=productList_P.length;
@@ -780,7 +781,7 @@ function setProduct() {
 	
 	//if (char=='Q') {
 		//alert ('asaf')
-		if (localStorage.append_Q.length != '') {
+		if (localStorage.productList_Q.length != '') {
 			productList_Q=localStorage.productList_Q
 			var productList_Q=productList_Q.split('<rd>');
 			var productLength_Q=productList_Q.length;
@@ -803,7 +804,7 @@ function setProduct() {
 	
 	//if (char=='R') {
 		//alert ('asaf')
-	if (localStorage.append_R.length != '') {
+	if (localStorage.productList_R.length != '') {
 			productList_R=localStorage.productList_R
 			var productList_R=productList_R.split('<rd>');
 			var productLength_R=productList_R.length;
@@ -826,7 +827,7 @@ function setProduct() {
 	
 	//if (char=='S') {
 		//alert ('asaf')
-	if (localStorage.append_S.length != '') {
+	if (localStorage.productList_S.length != '') {
 			productList_S=localStorage.productList_S
 			var productList_S=productList_S.split('<rd>');
 			var productLength_S=productList_S.length;
@@ -849,7 +850,7 @@ function setProduct() {
 	
 	//if (char=='T') {
 		//alert ('asaf')
-		if (localStorage.append_T.length != '') {
+		if (localStorage.productList_T.length != '') {
 			productList_T=localStorage.productList_T
 			var productList_T=productList_T.split('<rd>');
 			var productLength_T=productList_T.length;
@@ -872,7 +873,7 @@ function setProduct() {
 	
 	//if (char=='U') {
 		//alert ('asaf')
-		if (localStorage.append_U.length != '') {
+		if (localStorage.productList_U.length != '') {
 			productList_U=localStorage.productList_U
 			var productList_U=productList_U.split('<rd>');
 			var productLength_U=productList_U.length;
@@ -895,7 +896,7 @@ function setProduct() {
 	
 	//if (char=='V') {
 		//alert ('asaf')
-		if (localStorage.append_V.length != '') {
+		if (localStorage.productList_V.length != '') {
 			productList_V=localStorage.productList_V
 			var productList_V=productList_V.split('<rd>');
 			var productLength_V=productList_V.length;
@@ -917,7 +918,7 @@ function setProduct() {
 	
 	//if (char=='W') {
 		//alert (localStorage.append_W.length)
-		if (localStorage.append_W.length != '') {
+		if (localStorage.productList_W.length != '') {
 			productList_W=localStorage.productList_W
 			var productList_W=productList_W.split('<rd>');
 			var productLength_W=productList_W.length;
@@ -940,7 +941,7 @@ function setProduct() {
 	
 	//if (char=='X') {
 		//alert ('asaf')
-		if (localStorage.append_X.length != '') {
+		if (localStorage.productList_X.length != '') {
 			productList_X=localStorage.productList_X
 			var productList_X=productList_X.split('<rd>');
 			var productLength_X=productList_X.length;
@@ -963,49 +964,49 @@ function setProduct() {
 	
 	////if (char=='Y') {
 //		//alert (localStorage.append_Y.length)
-//		if (localStorage.append_y.length != '') {
-//			productList_Y=localStorage.productList_Y
-//			var productList_Y=productList_Y.split('<rd>');
-//			var productLength_Y=productList_Y.length;
-//			var product_tbl_doc_campaign_Y=''
-//
-//			for (j=0; j < productLength_Y; j++){
-//				var productArray_Y = productList_Y[j].split('<fd>');
-//				var product_id_Y=productArray_Y[0];	
-//				var product_name_Y=productArray_Y[1];
-//				
-//				product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_Y+'\')" class="name"><font id="'+ product_id_Y +'" class="name" >'+ product_name_Y+'</font><input type="hidden" id="doc_camp_id'+product_id_Y+'" value="'+product_id_Y+'" > '+'</li>';
-//
-//				}
+		if (localStorage.productList_Y.length != '') {
+			productList_Y=localStorage.productList_Y
+			var productList_Y=productList_Y.split('<rd>');
+			var productLength_Y=productList_Y.length;
+			var product_tbl_doc_campaign_Y=''
+
+			for (j=0; j < productLength_Y; j++){
+				var productArray_Y = productList_Y[j].split('<fd>');
+				var product_id_Y=productArray_Y[0];	
+				var product_name_Y=productArray_Y[1];
+				
+				product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_Y+'\')" class="name"><font id="'+ product_id_Y +'" class="name" >'+ product_name_Y+'</font><input type="hidden" id="doc_camp_id'+product_id_Y+'" value="'+product_id_Y+'" > '+'</li>';
+
+				}
 //		//alert (product_tbl_doc_campaign_Y)
-//		localStorage.product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y		
-//		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Y);			
+		localStorage.product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y		
+		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Y);			
 //		//localStorage.append_Y=1
 ////		}//if localStorage.append_A==0
-//	}
+	}
 //	
 //	//if (char=='Z') {
 //		//alert ('asaf')
-//		if (localStorage.append_Z.length != '') {
-//			productList_Z=localStorage.productList_Z
-//			var productList_Z=productList_Z.split('<rd>');
-//			var productLength_Z=productList_Z.length;
-//			var product_tbl_doc_campaign_Z=''
-//
-//			for (j=0; j < productLength_Z; j++){
-//				var productArray_Z = productList_Z[j].split('<fd>');
-//				var product_id_Z=productArray_Z[0];	
-//				var product_name_Z=productArray_Z[1];
-//				
-//				product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " onClick="check_boxTrue(\''+product_id_Z+'\')" class="name"><font id="'+ product_id_Z +'" class="name" >'+ product_name_Z+'</font><input type="hidden" id="doc_camp_id'+product_id_Z+'" value="'+product_id_Z+'" > '+'</li>';
-//
-//				}
+		if (localStorage.productList_Z.length != '') {
+			productList_Z=localStorage.productList_Z
+			var productList_Z=productList_Z.split('<rd>');
+			var productLength_Z=productList_Z.length;
+			var product_tbl_doc_campaign_Z=''
+
+			for (j=0; j < productLength_Z; j++){
+				var productArray_Z = productList_Z[j].split('<fd>');
+				var product_id_Z=productArray_Z[0];	
+				var product_name_Z=productArray_Z[1];
+				
+				product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_Z+'\')"  class="name"><font id="'+ product_id_Z +'" class="name" >'+ product_name_Z+'</font><input type="hidden" id="doc_camp_id'+product_id_Z+'" value="'+product_id_Z+'" > '+'</li>';		
+
+				}
 //		//alert (product_tbl_doc_campaign_Z)
-//		localStorage.product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z		
-//		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Z);			
+		localStorage.product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z		
+		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Z);			
 //		//localStorage.append_Z=1
 ////		}//if localStorage.append_A==0
-//	}
+	}
 	
 	
 	
@@ -1021,11 +1022,11 @@ function setProduct() {
 function gotoMarket(pic_no) {
 	//alert (pic_no)
 	if (pic_no!=localStorage.pic_no){
-		//$("#campaign_combo_id_lv").empty()
+		$("#campaign_combo_id_lv").empty()
 //		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign);
-		$('input:checkbox').attr('checked',false);
-		$("#itemSearch").val('A')
-		searchItem()
+	//	$('input:checkbox').attr('checked',false);
+	//	$("#itemSearch").val('A')
+		setProduct()
 	}
 	localStorage.pic_no=pic_no
 	
@@ -1447,8 +1448,8 @@ function getDocCampaignDataCart(){
 	for ( i=0; i < campaignListLength; i++){
 	var pID=campaignList[i];
 	$("#campCart").empty();
-	alert (localStorage.campaign_doc_str)
-	alert ('aa')
+	//alert (localStorage.campaign_doc_str)
+	
 	if(pID!=''){
 		var pName=$("#"+pID).html();
 		//alert (pName)
