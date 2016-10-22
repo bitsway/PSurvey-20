@@ -69,12 +69,14 @@
 
 
 
-		
+	
 		
 		$("#campaign_combo_id_lv").empty()
 		
+		localStorage.campaign_doc_str=''
 		setProduct()
-		searchItem()
+		
+		//searchItem()
 		
 		var image1 = document.getElementById('myImagePrescription_1');
 		image1.src = localStorage.prescriptionPhoto_1;
@@ -89,9 +91,82 @@
 		image3.src = localStorage.prescriptionPhoto_3;
 		$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
 		
+		var image4 = document.getElementById('myImagePrescription_4');
+		image4.src = localStorage.prescriptionPhoto_4;
+		$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+		
+		var image5 = document.getElementById('myImagePrescription_5');
+		image5.src = localStorage.prescriptionPhoto_5;
+		$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+		
+		var image6 = document.getElementById('myImagePrescription_6');
+		image6.src = localStorage.prescriptionPhoto_6;
+		$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+		
+		var image7 = document.getElementById('myImagePrescription_7');
+		image7.src = localStorage.prescriptionPhoto_7;
+		$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+		
+		var image8 = document.getElementById('myImagePrescription_8');
+		image8.src = localStorage.prescriptionPhoto_8;
+		$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+		
+		var image8 = document.getElementById('myImagePrescription_8');
+		image8.src = localStorage.prescriptionPhoto_8;
+		$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+		
+		var image9 = document.getElementById('myImagePrescription_9');
+		image9.src = localStorage.prescriptionPhoto_9;
+		$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+		
+		var image10 = document.getElementById('myImagePrescription_10');
+		image10.src = localStorage.prescriptionPhoto_10;
+		$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+		
+		var image11 = document.getElementById('myImagePrescription_11');
+		image11.src = localStorage.prescriptionPhoto_11;
+		$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+		
+		var image12 = document.getElementById('myImagePrescription_12');
+		image12.src = localStorage.prescriptionPhoto_12;
+		$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+		
+		var image13 = document.getElementById('myImagePrescription_13');
+		image13.src = localStorage.prescriptionPhoto_13;
+		$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+		
+		var image14 = document.getElementById('myImagePrescription_14');
+		image14.src = localStorage.prescriptionPhoto_14;
+		$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+		
+		var image15 = document.getElementById('myImagePrescription_15');
+		image15.src = localStorage.prescriptionPhoto_15;
+		$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+		
+		var image16 = document.getElementById('myImagePrescription_16');
+		image16.src = localStorage.prescriptionPhoto_16;
+		$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+		
+		var image17 = document.getElementById('myImagePrescription_17');
+		image17.src = localStorage.prescriptionPhoto_17;
+		$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+		
+		var image18 = document.getElementById('myImagePrescription_18');
+		image18.src = localStorage.prescriptionPhoto_18;
+		$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+		
+		var image19 = document.getElementById('myImagePrescription_19');
+		image19.src = localStorage.prescriptionPhoto_19;
+		$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+		
+		var image20 = document.getElementById('myImagePrescription_20');
+		image20.src = localStorage.prescriptionPhoto_20;
+		$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+		
 		if (localStorage.synced=='YES'){
 			$.afui.loadContent("#imagePage",true,true,'right');	
 		}
+		//alert (localStorage.visit_client)
 		$(".visit_client").html(localStorage.visit_client); 
 		$(".market").html(localStorage.visit_market_show);		
 		
@@ -606,7 +681,9 @@
                             </td>
                     <td width="70%" onClick="search_setfocus()">
                        <!--<div class="input-group">-->   
-                         <input id="itemSearch" type="text" id="itemSearch" style="width:100%; color:#000; font-weight:normal" placeholder="Search" onKeyUp="searchItem()"  />
+                         <input id="itemSearch" type="hidden" id="itemSearch" style="width:100%; color:#000; font-weight:normal" placeholder="Search" onKeyUp="searchItem()"  />
+                         <div><b>Market :</b><span class="market"></span></div>
+                     <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div> 
                         <!--</div>-->
                           
                             
@@ -631,9 +708,8 @@
             
                 <!--<div class="card">-->
                     <!--<h1>Sync</h1>-->
-                    <div><b>Market :</b><span class="market"></span></div>
-                     <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>   
-                    </br>
+                      
+                   <!-- </br>-->
                    
                             
                             <div id="myerror_doctor_campaign" style="color:#C00"></div> 
@@ -786,37 +862,93 @@
                 <table width="100%" border="0">
   <tr>
     <td align="left">  <a onClick="page_imageSingle()" class="icon left" >Back</a></td>
-    <td align="right">
-		
-      			 <select id="item_combo" style=" width:40px"data-native-menu="false" onChange="comboSearch()" >
-                        <option value="A" >A</option>
-                        <option value="B" >B</option>
-                        <option value="C" >C</option>
-                        <option value="D" >D</option>
-                        <option value="E" >E</option>
-                        <option value="F" >F</option>
-                        <option value="G" >G</option>
-                        <option value="H" >H</option>
-                        <option value="I" >I</option>
-                        <option value="J" >J</option>
-                        <option value="K" >K</option> 
-                        <option value="L" >L</option>
-                        <option value="M" >M</option>
-                        <option value="N" >N</option>
-                        <option value="O" >O</option> 
-                        <option value="P" >P</option>
-                        <option value="Q" >Q</option>
-                        <option value="R" >R</option>
-                        <option value="S" >S</option>
-                        <option value="T" >T</option>
-                        <option value="U" >U</option>
-                        <option value="V" >V</option>
-                        <option value="W" >W</option>
-                        <option value="X" >X</option>
-                        <option value="Y" >Y</option>
-                        <option value="Z" >Z</option>
-                </select>
-         </td>
+     <td width="40%">&nbsp;</td>
+    <td width="40%">&nbsp;</td>
+  </tr>
+</table>	
+         
+		  <!--<a onClick="homePage()" class="icon home" >Home</a>-->
+          
+           </footer>
+
+    </div> 
+  <!--=========================Cart page=====================-->
+
+      <div class="view" id="doctorCampaignCartPageView">
+        <div class="pages">
+         <header style="height:70px">
+         </br>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                 
+                            <td width="2%" onClick="search_setfocus()">
+                     
+                            </td>
+                    <td width="70%" onClick="search_setfocus()">
+                       <!--<div class="input-group">-->   
+                         
+                         <div><b>Market :</b><span class="market"></span></div>
+                     <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div> 
+                        <!--</div>-->
+                          
+                            
+                            </td>
+                            <td onClick="search_setfocus()" width="10%"></td>
+                            <td align="right">
+                            <img src="icon-arrow-right_1.png" width="40" height="40" alt="Next" onClick="page_prescription()" >
+
+                     
+                            </td>
+                            <td width="2%">
+                     
+                            </td>
+                          </tr>
+                        </table>
+         
+         
+         </header> 
+            <div class="panel" id="doctorCampaignCartPage">
+            </br></br></br></br></br></br></br>
+            
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                      
+                   <!-- </br>-->
+                   
+                            
+                            <div id="myerror_doctor_campaign" style="color:#C00"></div> 
+                            <div class="input-group">
+                        
+                        <table width="100%" border="0"  id="campCart"  >
+                
+               			 </table>
+                        
+                        
+                        
+                        
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                         
+                                    
+                            
+                 </div>
+                   </div> 
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+        
+                <table width="100%" border="0">
+  <tr>
+    <td align="left">  <a onClick="page_doctor_campaign()" class="icon left" >Back</a></td>
+     <td width="40%">&nbsp;</td>
+    <td width="40%">&nbsp;</td>
   </tr>
 </table>	
          
@@ -826,6 +958,7 @@
 
     </div> 
   
+ <!-- ===========================Cart page End==================-->
   <!-- //======================Others Medicine-->
          
       <div class="view" id="page_prescriptionView">
@@ -854,6 +987,41 @@
                <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>
                    <!-- <div class="input-group">-->
 
+                       <table  border="0" class="ui-body-d ui-shadow table-stripe ui-responsive" data-role="table" data-theme="d"  data-mode="display:none" style="cell-spacing:0px; width:100%; font-size:98%;">
+                        <tr >
+                         <!-- <td style="width:100%;" ><strong style="font-size:15px; color:#008040">Doctor:</strong><input id="doctor_name" name="doctor_name" type="text" placeholder="Doctor Name"></td>-->
+                        </tr>
+                        <tr >
+                          <td ><strong style="font-size:15px; color:#008040">Others Medicine:</strong></br></br>
+                          </td> 
+                          </tr>  
+                          <tr >
+                          <td >                        
+                           <input type="text" id="medicine_1" style="width:100%" placeholder="Medicine Name 1"   />
+                          </td>
+                          
+                        </tr>
+                        <tr >
+                          <td >
+                          <input type="text" id="medicine_2" style="width:100%" placeholder="Medicine Name 2"   />
+                           </td >
+                        </tr>
+                        <tr >
+                          <td >
+                          <input type="text" id="medicine_3" style="width:100%" placeholder="Medicine Name 3"   />
+                           </td >
+                        </tr>
+                        <tr >
+                          <td >
+                          <input type="text" id="medicine_4" style="width:100%" placeholder="Medicine Name 4"   />
+                           </td >
+                        </tr>
+                        <tr >
+                          <td >
+                          <input type="text" id="medicine_5" style="width:100%" placeholder="Medicine Name 5"   />
+                           </td >
+                        </tr>
+                    </table>
                              
                     <br>
         

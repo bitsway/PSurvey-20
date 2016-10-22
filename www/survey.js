@@ -24,6 +24,10 @@ function page_imageSingle() {
 	//$("#order_load").hide();
 	$.afui.loadContent("#imageSinglePage",true,true,'right');
 }
+function page_prescription() {
+	//$("#order_load").hide();
+	$.afui.loadContent("#page_prescription",true,true,'right');
+}
 
 //-------GET GEO LOCATION
 function getLocation() {
@@ -74,11 +78,11 @@ function check_user() {
 	
 	//Main
 
-	//
+	
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-	//var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+//	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
-	var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+	var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 	
 	
 	var user_id=$("#user_id").val();
@@ -202,9 +206,37 @@ function check_user() {
 											localStorage.user_type=resultArray[16];
 											localStorage.market_doctor=resultArray[17];
 											//alert (localStorage.menu);
-
 											
 											
+											localStorage.product_tbl_doc_campaign_A=''
+											localStorage.product_tbl_doc_campaign_B=''
+											localStorage.product_tbl_doc_campaign_C=''
+											localStorage.product_tbl_doc_campaign_D=''
+											localStorage.product_tbl_doc_campaign_E=''
+											localStorage.product_tbl_doc_campaign_F=''
+											localStorage.product_tbl_doc_campaign_G=''
+											localStorage.product_tbl_doc_campaign_H=''
+											localStorage.product_tbl_doc_campaign_I=''
+											localStorage.product_tbl_doc_campaign_J=''
+											localStorage.product_tbl_doc_campaign_K=''
+											localStorage.product_tbl_doc_campaign_L=''
+											localStorage.product_tbl_doc_campaign_M=''
+											localStorage.product_tbl_doc_campaign_N=''
+											localStorage.product_tbl_doc_campaign_O=''
+											localStorage.product_tbl_doc_campaign_P=''
+											localStorage.product_tbl_doc_campaign_Q=''
+											localStorage.product_tbl_doc_campaign_R=''
+											localStorage.product_tbl_doc_campaign_S=''
+											localStorage.product_tbl_doc_campaign_T=''
+											localStorage.product_tbl_doc_campaign_U=''
+											localStorage.product_tbl_doc_campaign_V=''
+											localStorage.product_tbl_doc_campaign_W=''
+											localStorage.product_tbl_doc_campaign_X=''
+											localStorage.product_tbl_doc_campaign_Y=''
+											localStorage.product_tbl_doc_campaign_Z=''
+											
+											localStorage.campaign_doc_str=''
+											//alert (localStorage.campaign_doc_str)
 											var productList_A=localStorage.productListStr.split('</A>')[0].replace('<A>','');
 											var productListStr_after_A=localStorage.productListStr.split('</A>')[1]
 										
@@ -312,6 +344,8 @@ function check_user() {
 											localStorage.productList_Y=productList_Y
 											localStorage.productList_Z=productList_Z
 											
+											
+											
 											$("#campaign_combo_id_lv").empty()
 											setProduct()
 											//setProduct('B')
@@ -383,7 +417,7 @@ function check_user() {
 function setProduct() {
 	
 	//if (char=='A') {
-		//if (localStorage.append_A == 0) {
+		if (localStorage.append_A.length != '') {
 			productList_A=localStorage.productList_A
 			var productList_A=productList_A.split('<rd>');
 			var productLength_A=productList_A.length;
@@ -392,16 +426,16 @@ function setProduct() {
 				var productArray_A = productList_A[j].split('<fd>');
 				var product_id_A=productArray_A[0];	
 				var product_name_A=productArray_A[1];
-				product_tbl_doc_campaign_A=product_tbl_doc_campaign_A+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  ><input type="hidden" id="doc_camp_id'+product_id_A+'" value="'+product_id_A+'" > <font id="'+ product_id_A +'" class="name" >'+ product_name_A+'</font>'+'</li>';		
+				product_tbl_doc_campaign_A=product_tbl_doc_campaign_A+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_A+'\')"  class="name"><font id="'+ product_id_A +'" class="name" >'+ product_name_A+'</font><input type="hidden" id="doc_camp_id'+product_id_A+'" value="'+product_id_A+'" > '+'</li>';		
 				}
 		localStorage.product_tbl_doc_campaign_A=product_tbl_doc_campaign_A		
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_A);	
 	//	alert (localStorage.product_tbl_doc_campaign_A)	
 //		localStorage.append_A=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	//if (char=='B') {
-	//	if (localStorage.append_B == 0) {
+	if (localStorage.append_B.length != '') {
 			productList_B=localStorage.productList_B
 			var productList_B=productList_B.split('<rd>');
 			var productLength_B=productList_B.length;
@@ -410,18 +444,18 @@ function setProduct() {
 				var productArray_B = productList_B[j].split('<fd>');
 				var product_id_B=productArray_B[0];	
 				var product_name_B=productArray_B[1];
-				product_tbl_doc_campaign_B=product_tbl_doc_campaign_B+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_B+'" value="'+product_id_B+'" > <font id="'+ product_id_B +'class="name" >'+ product_name_B+'</font>'+'</li>';	
+				product_tbl_doc_campaign_B=product_tbl_doc_campaign_B+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " onClick="check_boxTrue(\''+product_id_B+'\')" class="name"><font id="'+ product_id_B +'" class="name" >'+ product_name_B+'</font><input type="hidden" id="doc_camp_id'+product_id_B+'" value="'+product_id_B+'" > '+'</li>';	
 												
 				}
 		localStorage.product_tbl_doc_campaign_B=product_tbl_doc_campaign_B		
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_B);			
 	//	localStorage.append_B=1
 	//	}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='C') {
 		//alert ('asaf')
-	//	if (localStorage.append_C == 0) {
+	if (localStorage.append_C.length != '') {
 			productList_C=localStorage.productList_C
 			var productList_C=productList_C.split('<rd>');
 			var productLength_C=productList_C.length;
@@ -432,20 +466,22 @@ function setProduct() {
 				var product_id_C=productArray_C[0];	
 				var product_name_C=productArray_C[1];
 				
-				product_tbl_doc_campaign_C=product_tbl_doc_campaign_C+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_C+'" value="'+product_id_C+'" > <font id="'+ product_id_C +'class="name" >'+ product_name_C+'</font>'+'</li>';
+				product_tbl_doc_campaign_C=product_tbl_doc_campaign_C+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_C+'\')" class="name"><font id="'+ product_id_C +'" class="name" >'+ product_name_C+'</font><input type="hidden" id="doc_camp_id'+product_id_C+'" value="'+product_id_C+'" > '+'</li>';	
 
 				}
-		//alert (product_tbl_doc_campaign_C)
+		
 		localStorage.product_tbl_doc_campaign_C=product_tbl_doc_campaign_C		
-		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_C);			
+		//alert (localStorage.product_tbl_doc_campaign_C)
+		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_C);		
+		
 		//localStorage.append_C=1
 		//}//if localStorage.append_A==0
-//	}
+	}
 	
 	
 	//if (char=='D') {
 		//alert ('asaf')
-		//if (localStorage.append_D == 0) {
+		if (localStorage.append_D.length != '') {
 			productList_D=localStorage.productList_D
 			var productList_D=productList_D.split('<rd>');
 			var productLength_D=productList_D.length;
@@ -456,7 +492,7 @@ function setProduct() {
 				var product_id_D=productArray_D[0];	
 				var product_name_D=productArray_D[1];
 				
-				product_tbl_doc_campaign_D=product_tbl_doc_campaign_D+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_D+'" value="'+product_id_D+'" > <font id="'+ product_id_D +'class="name" >'+ product_name_D+'</font>'+'</li>';
+				product_tbl_doc_campaign_D=product_tbl_doc_campaign_D+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_D+'\')" class="name"><font id="'+ product_id_D +'" class="name" >'+ product_name_D+'</font><input type="hidden" id="doc_camp_id'+product_id_D+'" value="'+product_id_D+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_D)
@@ -464,11 +500,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_D);		
 		//localStorage.append_D=1
 		//}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='E') {
 		//alert ('asaf')
-		//if (localStorage.append_E == 0) {
+		if (localStorage.append_E.length != '') {
 			productList_E=localStorage.productList_E
 			var productList_E=productList_E.split('<rd>');
 			var productLength_E=productList_E.length;
@@ -479,7 +515,7 @@ function setProduct() {
 				var product_id_E=productArray_E[0];	
 				var product_name_E=productArray_E[1];
 				
-				product_tbl_doc_campaign_E=product_tbl_doc_campaign_E+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_E+'" value="'+product_id_E+'" > <font id="'+ product_id_E +'class="name" >'+ product_name_E+'</font>'+'</li>';
+				product_tbl_doc_campaign_E=product_tbl_doc_campaign_E+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_E+'\')" class="name"><font id="'+ product_id_E +'" class="name" >'+ product_name_E+'</font><input type="hidden" id="doc_camp_id'+product_id_E+'" value="'+product_id_E+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_E)
@@ -487,11 +523,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_E);			
 		//localStorage.append_E=1
 		//}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='F') {
 		//alert ('asaf')
-		//if (localStorage.append_F == 0) {
+		if (localStorage.append_F.length != '') {
 			productList_F=localStorage.productList_F
 			var productList_F=productList_F.split('<rd>');
 			var productLength_F=productList_F.length;
@@ -502,7 +538,7 @@ function setProduct() {
 				var product_id_F=productArray_F[0];	
 				var product_name_F=productArray_F[1];
 				
-				product_tbl_doc_campaign_F=product_tbl_doc_campaign_F+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_F+'" value="'+product_id_F+'" > <font id="'+ product_id_F +'class="name" >'+ product_name_F+'</font>'+'</li>';
+				product_tbl_doc_campaign_F=product_tbl_doc_campaign_F+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_F+'\')" class="name"><font id="'+ product_id_F +'" class="name" >'+ product_name_F+'</font><input type="hidden" id="doc_camp_id'+product_id_F+'" value="'+product_id_F+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_F)
@@ -510,11 +546,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_F);			
 		//localStorage.append_F=1
 		//}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='G') {
 		//alert ('asaf')
-		//if (localStorage.append_G == 0) {
+		if (localStorage.append_G.length != '') {
 			productList_G=localStorage.productList_G
 			var productList_G=productList_G.split('<rd>');
 			var productLength_G=productList_G.length;
@@ -525,7 +561,7 @@ function setProduct() {
 				var product_id_G=productArray_G[0];	
 				var product_name_G=productArray_G[1];
 				
-				product_tbl_doc_campaign_G=product_tbl_doc_campaign_G+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_G+'" value="'+product_id_G+'" > <font id="'+ product_id_G +'class="name" >'+ product_name_G+'</font>'+'</li>';
+				product_tbl_doc_campaign_G=product_tbl_doc_campaign_G+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_G+'\')" class="name"><font id="'+ product_id_G +'" class="name" >'+ product_name_G+'</font><input type="hidden" id="doc_camp_id'+product_id_G+'" value="'+product_id_G+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_G)
@@ -533,11 +569,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_G);		
 		//localStorage.append_G=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='H') {
 		//alert ('asaf')
-		//if (localStorage.append_H == 0) {
+		if (localStorage.append_H.length != '') {
 			productList_H=localStorage.productList_H
 			var productList_H=productList_H.split('<rd>');
 			var productLength_H=productList_H.length;
@@ -548,7 +584,7 @@ function setProduct() {
 				var product_id_H=productArray_H[0];	
 				var product_name_H=productArray_H[1];
 				
-				product_tbl_doc_campaign_H=product_tbl_doc_campaign_H+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_H+'" value="'+product_id_H+'" > <font id="'+ product_id_H +'class="name" >'+ product_name_H+'</font>'+'</li>';
+				product_tbl_doc_campaign_H=product_tbl_doc_campaign_H+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_H+'\')" class="name"><font id="'+ product_id_H +'" class="name" >'+ product_name_H+'</font><input type="hidden" id="doc_camp_id'+product_id_H+'" value="'+product_id_H+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_H)
@@ -556,11 +592,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_H);			
 		//localStorage.append_H=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='I') {
 		//alert ('asaf')
-		//if (localStorage.append_I == 0) {
+		if (localStorage.append_I.length != '') {
 			productList_I=localStorage.productList_I
 			var productList_I=productList_I.split('<rd>');
 			var productLength_I=productList_I.length;
@@ -571,7 +607,7 @@ function setProduct() {
 				var product_id_I=productArray_I[0];	
 				var product_name_I=productArray_I[1];
 				
-				product_tbl_doc_campaign_I=product_tbl_doc_campaign_I+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_I+'" value="'+product_id_I+'" > <font id="'+ product_id_I +'class="name" >'+ product_name_I+'</font>'+'</li>';
+				product_tbl_doc_campaign_I=product_tbl_doc_campaign_I+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " onClick="check_boxTrue(\''+product_id_I+'\')" class="name"><font id="'+ product_id_I +'" class="name" >'+ product_name_I+'</font><input type="hidden" id="doc_camp_id'+product_id_I+'" value="'+product_id_I+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_I)
@@ -579,11 +615,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_I);			
 		//localStorage.append_I=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='J') {
 		//alert ('asaf')
-		//if (localStorage.append_J == 0) {
+		if (localStorage.append_J.length != '') {
 			productList_J=localStorage.productList_J
 			var productList_J=productList_J.split('<rd>');
 			var productLength_J=productList_J.length;
@@ -594,7 +630,7 @@ function setProduct() {
 				var product_id_J=productArray_J[0];	
 				var product_name_J=productArray_J[1];
 				
-				product_tbl_doc_campaign_J=product_tbl_doc_campaign_J+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_J+'" value="'+product_id_J+'" > <font id="'+ product_id_J +'class="name" >'+ product_name_J+'</font>'+'</li>';
+				product_tbl_doc_campaign_J=product_tbl_doc_campaign_J+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_J+'\')" class="name"><font id="'+ product_id_J +'" class="name" >'+ product_name_J+'</font><input type="hidden" id="doc_camp_id'+product_id_J+'" value="'+product_id_J+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_J)
@@ -602,11 +638,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_J);				
 		//localStorage.append_J=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='K') {
 		//alert ('asaf')
-		//if (localStorage.append_K == 0) {
+		if (localStorage.append_K.length != '') {
 			productList_K=localStorage.productList_K
 			var productList_K=productList_K.split('<rd>');
 			var productLength_K=productList_K.length;
@@ -617,7 +653,7 @@ function setProduct() {
 				var product_id_K=productArray_K[0];	
 				var product_name_K=productArray_K[1];
 				
-				product_tbl_doc_campaign_K=product_tbl_doc_campaign_K+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_K+'" value="'+product_id_K+'" > <font id="'+ product_id_K +'class="name" >'+ product_name_K+'</font>'+'</li>';
+				product_tbl_doc_campaign_K=product_tbl_doc_campaign_K+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_K+'\')" class="name"><font id="'+ product_id_K +'" class="name" >'+ product_name_K+'</font><input type="hidden" id="doc_camp_id'+product_id_K+'" value="'+product_id_K+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_K)
@@ -625,11 +661,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_K);				
 		//localStorage.append_K=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='L') {
 		//alert ('asaf')
-		//if (localStorage.append_L == 0) {
+		if (localStorage.append_L.length != '') {
 			productList_L=localStorage.productList_L
 			var productList_L=productList_L.split('<rd>');
 			var productLength_L=productList_L.length;
@@ -640,7 +676,7 @@ function setProduct() {
 				var product_id_L=productArray_L[0];	
 				var product_name_L=productArray_L[1];
 				
-				product_tbl_doc_campaign_L=product_tbl_doc_campaign_L+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_L+'" value="'+product_id_L+'" > <font id="'+ product_id_L +'class="name" >'+ product_name_L+'</font>'+'</li>';
+				product_tbl_doc_campaign_L=product_tbl_doc_campaign_L+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_L+'\')" class="name"><font id="'+ product_id_L +'" class="name" >'+ product_name_L+'</font><input type="hidden" id="doc_camp_id'+product_id_L+'" value="'+product_id_L+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_L)
@@ -648,11 +684,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_L);				
 		//localStorage.append_L=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='M') {
 		//alert ('asaf')
-		//if (localStorage.append_M == 0) {
+		if (localStorage.append_M.length != '') {
 			productList_M=localStorage.productList_M
 			var productList_M=productList_M.split('<rd>');
 			var productLength_M=productList_M.length;
@@ -663,7 +699,7 @@ function setProduct() {
 				var product_id_M=productArray_M[0];	
 				var product_name_M=productArray_M[1];
 				
-				product_tbl_doc_campaign_M=product_tbl_doc_campaign_M+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_M+'" value="'+product_id_M+'" > <font id="'+ product_id_M +'class="name" >'+ product_name_M+'</font>'+'</li>';
+				product_tbl_doc_campaign_M=product_tbl_doc_campaign_M+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_M+'\')" class="name"><font id="'+ product_id_M +'" class="name" >'+ product_name_M+'</font><input type="hidden" id="doc_camp_id'+product_id_M+'" value="'+product_id_M+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_M)
@@ -671,11 +707,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_M);				
 		//localStorage.append_M=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='N') {
 		//alert ('asaf')
-		//if (localStorage.append_N == 0) {
+		if (localStorage.append_N.length != '') {
 			productList_N=localStorage.productList_N
 			var productList_N=productList_N.split('<rd>');
 			var productLength_N=productList_N.length;
@@ -686,7 +722,7 @@ function setProduct() {
 				var product_id_N=productArray_N[0];	
 				var product_name_N=productArray_N[1];
 				
-				product_tbl_doc_campaign_N=product_tbl_doc_campaign_N+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_N+'" value="'+product_id_N+'" > <font id="'+ product_id_N +'class="name" >'+ product_name_N+'</font>'+'</li>';
+				product_tbl_doc_campaign_N=product_tbl_doc_campaign_N+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_N+'\')" class="name"><font id="'+ product_id_N +'" class="name" >'+ product_name_N+'</font><input type="hidden" id="doc_camp_id'+product_id_N+'" value="'+product_id_N+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_N)
@@ -694,11 +730,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_N);				
 		//localStorage.append_N=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='O') {
 		//alert ('asaf')
-		//if (localStorage.append_O == 0) {
+		if (localStorage.append_O.length != '') {
 			productList_O=localStorage.productList_O
 			var productList_O=productList_O.split('<rd>');
 			var productLength_O=productList_O.length;
@@ -709,18 +745,18 @@ function setProduct() {
 				var product_id_O=productArray_O[0];	
 				var product_name_O=productArray_O[1];
 				
-				product_tbl_doc_campaign_O=product_tbl_doc_campaign_O+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_O+'" value="'+product_id_O+'" > <font id="'+ product_id_O +'class="name" >'+ product_name_O+'</font>'+'</li>';
+				product_tbl_doc_campaign_O=product_tbl_doc_campaign_O+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_O+'\')" class="name"><font id="'+ product_id_O +'" class="name" >'+ product_name_O+'</font><input type="hidden" id="doc_camp_id'+product_id_O+'" value="'+product_id_O+'" > '+'</li>';
 				}
 		//alert (product_tbl_doc_campaign_O)
 		localStorage.product_tbl_doc_campaign_O=product_tbl_doc_campaign_O		
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_O);			
 		//localStorage.append_O=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='P') {
 		//alert ('asaf')
-		//if (localStorage.append_P == 0) {
+		if (localStorage.append_P.length != '') {
 			productList_P=localStorage.productList_P
 			var productList_P=productList_P.split('<rd>');
 			var productLength_P=productList_P.length;
@@ -731,7 +767,7 @@ function setProduct() {
 				var product_id_P=productArray_P[0];	
 				var product_name_P=productArray_P[1];
 				
-				product_tbl_doc_campaign_P=product_tbl_doc_campaign_P+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_P+'" value="'+product_id_P+'" > <font id="'+ product_id_P +'class="name" >'+ product_name_P+'</font>'+'</li>';
+				product_tbl_doc_campaign_P=product_tbl_doc_campaign_P+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_P+'\')" class="name"><font id="'+ product_id_P +'" class="name" >'+ product_name_P+'</font><input type="hidden" id="doc_camp_id'+product_id_P+'" value="'+product_id_P+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_P)
@@ -739,11 +775,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_P);				
 		//localStorage.append_P=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='Q') {
 		//alert ('asaf')
-		//if (localStorage.append_Q == 0) {
+		if (localStorage.append_Q.length != '') {
 			productList_Q=localStorage.productList_Q
 			var productList_Q=productList_Q.split('<rd>');
 			var productLength_Q=productList_Q.length;
@@ -754,7 +790,7 @@ function setProduct() {
 				var product_id_Q=productArray_Q[0];	
 				var product_name_Q=productArray_Q[1];
 				
-				product_tbl_doc_campaign_Q=product_tbl_doc_campaign_Q+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_Q+'" value="'+product_id_Q+'" > <font id="'+ product_id_Q +'class="name" >'+ product_name_Q+'</font>'+'</li>';	
+				product_tbl_doc_campaign_Q=product_tbl_doc_campaign_Q+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_Q+'\')" class="name"><font id="'+ product_id_Q +'" class="name" >'+ product_name_Q+'</font><input type="hidden" id="doc_camp_id'+product_id_Q+'" value="'+product_id_Q+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_Q)
@@ -762,11 +798,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Q);				
 		//localStorage.append_Q=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='R') {
 		//alert ('asaf')
-	//	if (localStorage.append_R == 0) {
+	if (localStorage.append_R.length != '') {
 			productList_R=localStorage.productList_R
 			var productList_R=productList_R.split('<rd>');
 			var productLength_R=productList_R.length;
@@ -777,7 +813,7 @@ function setProduct() {
 				var product_id_R=productArray_R[0];	
 				var product_name_R=productArray_R[1];
 				
-				product_tbl_doc_campaign_R=product_tbl_doc_campaign_R+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_R+'" value="'+product_id_R+'" > <font id="'+ product_id_R +'class="name" >'+ product_name_R+'</font>'+'</li>';
+				product_tbl_doc_campaign_R=product_tbl_doc_campaign_R+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_R+'\')" class="name"><font id="'+ product_id_R +'" class="name" >'+ product_name_R+'</font><input type="hidden" id="doc_camp_id'+product_id_R+'" value="'+product_id_R+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_R)
@@ -785,11 +821,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_R);				
 		//localStorage.append_R=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='S') {
 		//alert ('asaf')
-	//	if (localStorage.append_S == 0) {
+	if (localStorage.append_S.length != '') {
 			productList_S=localStorage.productList_S
 			var productList_S=productList_S.split('<rd>');
 			var productLength_S=productList_S.length;
@@ -800,7 +836,7 @@ function setProduct() {
 				var product_id_S=productArray_S[0];	
 				var product_name_S=productArray_S[1];
 				
-				product_tbl_doc_campaign_S=product_tbl_doc_campaign_S+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_S+'" value="'+product_id_S+'" > <font id="'+ product_id_S +'class="name" >'+ product_name_S+'</font>'+'</li>';
+				product_tbl_doc_campaign_S=product_tbl_doc_campaign_S+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_S+'\')" class="name"><font id="'+ product_id_S +'" class="name" >'+ product_name_S+'</font><input type="hidden" id="doc_camp_id'+product_id_S+'" value="'+product_id_S+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_S)
@@ -808,11 +844,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_S);				
 		//localStorage.append_S=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='T') {
 		//alert ('asaf')
-		//if (localStorage.append_T == 0) {
+		if (localStorage.append_T.length != '') {
 			productList_T=localStorage.productList_T
 			var productList_T=productList_T.split('<rd>');
 			var productLength_T=productList_T.length;
@@ -823,7 +859,7 @@ function setProduct() {
 				var product_id_T=productArray_T[0];	
 				var product_name_T=productArray_T[1];
 				
-				product_tbl_doc_campaign_T=product_tbl_doc_campaign_T+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_T+'" value="'+product_id_T+'" > <font id="'+ product_id_T +'class="name" >'+ product_name_T+'</font>'+'</li>';
+				product_tbl_doc_campaign_T=product_tbl_doc_campaign_T+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_T+'\')" class="name"><font id="'+ product_id_T +'" class="name" >'+ product_name_T+'</font><input type="hidden" id="doc_camp_id'+product_id_T+'" value="'+product_id_T+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_T)
@@ -831,11 +867,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_T);				
 		//localStorage.append_T=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='U') {
 		//alert ('asaf')
-		//if (localStorage.append_U == 0) {
+		if (localStorage.append_U.length != '') {
 			productList_U=localStorage.productList_U
 			var productList_U=productList_U.split('<rd>');
 			var productLength_U=productList_U.length;
@@ -846,7 +882,7 @@ function setProduct() {
 				var product_id_U=productArray_U[0];	
 				var product_name_U=productArray_U[1];
 				
-				product_tbl_doc_campaign_U=product_tbl_doc_campaign_U+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_U+'" value="'+product_id_U+'" > <font id="'+ product_id_U +'class="name" >'+ product_name_U+'</font>'+'</li>';
+				product_tbl_doc_campaign_U=product_tbl_doc_campaign_U+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_U+'\')" class="name"><font id="'+ product_id_U +'" class="name" >'+ product_name_U+'</font><input type="hidden" id="doc_camp_id'+product_id_U+'" value="'+product_id_U+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_U)
@@ -854,11 +890,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_U);				
 		//localStorage.append_U=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='V') {
 		//alert ('asaf')
-		//if (localStorage.append_V == 0) {
+		if (localStorage.append_V.length != '') {
 			productList_V=localStorage.productList_V
 			var productList_V=productList_V.split('<rd>');
 			var productLength_V=productList_V.length;
@@ -869,29 +905,29 @@ function setProduct() {
 				var product_id_V=productArray_V[0];	
 				var product_name_V=productArray_V[1];
 				
-				product_tbl_doc_campaign_V=product_tbl_doc_campaign_V+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_V+'" value="'+product_id_V+'" > <font id="'+ product_id_V +'class="name" >'+ product_name_V+'</font>'+'</li>';
+				product_tbl_doc_campaign_V=product_tbl_doc_campaign_V+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_V+'\')" class="name"><font id="'+ product_id_V +'" class="name" >'+ product_name_V+'</font><input type="hidden" id="doc_camp_id'+product_id_V+'" value="'+product_id_V+'" > '+'</li>';
 				}
 		//alert (product_tbl_doc_campaign_V)
 		localStorage.product_tbl_doc_campaign_V=product_tbl_doc_campaign_V		
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_V);				
 		//localStorage.append_V=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='W') {
-		//alert ('asaf')
-		//if (localStorage.append_W == 0) {
+		//alert (localStorage.append_W.length)
+		if (localStorage.append_W.length != '') {
 			productList_W=localStorage.productList_W
 			var productList_W=productList_W.split('<rd>');
 			var productLength_W=productList_W.length;
 			var product_tbl_doc_campaign_W=''
-
+			//alert (localStorage.productList_W)
 			for (j=0; j < productLength_W; j++){
 				var productArray_W = productList_W[j].split('<fd>');
 				var product_id_W=productArray_W[0];	
 				var product_name_W=productArray_W[1];
 				
-				product_tbl_doc_campaign_W=product_tbl_doc_campaign_W+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_W+'" value="'+product_id_W+'" > <font id="'+ product_id_W +'class="name" >'+ product_name_W+'</font>'+'</li>';
+				product_tbl_doc_campaign_W=product_tbl_doc_campaign_W+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "   onClick="check_boxTrue(\''+product_id_W+'\')" class="name"><input type="hidden" id="doc_camp_id'+product_id_W+'" value="'+product_id_W+'" > <font id="'+ product_id_W +'class="name" >'+ product_name_W+'</font>'+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_W)
@@ -899,11 +935,11 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_W);			
 		//localStorage.append_W=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
 	//if (char=='X') {
 		//alert ('asaf')
-		//if (localStorage.append_X == 0) {
+		if (localStorage.append_X.length != '') {
 			productList_X=localStorage.productList_X
 			var productList_X=productList_X.split('<rd>');
 			var productLength_X=productList_X.length;
@@ -914,7 +950,7 @@ function setProduct() {
 				var product_id_X=productArray_X[0];	
 				var product_name_X=productArray_X[1];
 				
-				product_tbl_doc_campaign_X=product_tbl_doc_campaign_X+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_X+'" value="'+product_id_X+'" > <font id="'+ product_id_X +'class="name" >'+ product_name_X+'</font>'+'</li>';
+				product_tbl_doc_campaign_X=product_tbl_doc_campaign_X+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_X+'\')" class="name"><font id="'+ product_id_X +'" class="name" >'+ product_name_X+'</font><input type="hidden" id="doc_camp_id'+product_id_X+'" value="'+product_id_X+'" > '+'</li>';
 
 				}
 		//alert (product_tbl_doc_campaign_X)
@@ -922,52 +958,52 @@ function setProduct() {
 		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_X);				
 		//localStorage.append_X=1
 //		}//if localStorage.append_A==0
-	//}
+	}
 	
-	//if (char=='Y') {
-		//alert ('asaf')
-		//if (localStorage.append_Y == 0) {
-			productList_Y=localStorage.productList_Y
-			var productList_Y=productList_Y.split('<rd>');
-			var productLength_Y=productList_Y.length;
-			var product_tbl_doc_campaign_Y=''
-
-			for (j=0; j < productLength_Y; j++){
-				var productArray_Y = productList_Y[j].split('<fd>');
-				var product_id_Y=productArray_Y[0];	
-				var product_name_Y=productArray_Y[1];
-				
-				product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_Y+'" value="'+product_id_Y+'" > <font id="'+ product_id_Y +'class="name" >'+ product_name_Y+'</font>'+'</li>';
-
-				}
-		//alert (product_tbl_doc_campaign_Y)
-		localStorage.product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y		
-		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Y);			
-		//localStorage.append_Y=1
-//		}//if localStorage.append_A==0
-	//}
-	
-	//if (char=='Z') {
-		//alert ('asaf')
-		//if (localStorage.append_Z == 0) {
-			productList_Z=localStorage.productList_Z
-			var productList_Z=productList_Z.split('<rd>');
-			var productLength_Z=productList_Z.length;
-			var product_tbl_doc_campaign_Z=''
-
-			for (j=0; j < productLength_Z; j++){
-				var productArray_Z = productList_Z[j].split('<fd>');
-				var product_id_Z=productArray_Z[0];	
-				var product_name_Z=productArray_Z[1];
-				
-				product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " ><input type="hidden" id="doc_camp_id'+product_id_Z+'" value="'+product_id_Z+'" > <font id="'+ product_id_Z +'class="name" >'+ product_name_Z+'</font>'+'</li>';
-
-				}
-		//alert (product_tbl_doc_campaign_Z)
-		localStorage.product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z		
-		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Z);			
-		//localStorage.append_Z=1
-//		}//if localStorage.append_A==0
+	////if (char=='Y') {
+//		//alert (localStorage.append_Y.length)
+//		if (localStorage.append_y.length != '') {
+//			productList_Y=localStorage.productList_Y
+//			var productList_Y=productList_Y.split('<rd>');
+//			var productLength_Y=productList_Y.length;
+//			var product_tbl_doc_campaign_Y=''
+//
+//			for (j=0; j < productLength_Y; j++){
+//				var productArray_Y = productList_Y[j].split('<fd>');
+//				var product_id_Y=productArray_Y[0];	
+//				var product_name_Y=productArray_Y[1];
+//				
+//				product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin "  onClick="check_boxTrue(\''+product_id_Y+'\')" class="name"><font id="'+ product_id_Y +'" class="name" >'+ product_name_Y+'</font><input type="hidden" id="doc_camp_id'+product_id_Y+'" value="'+product_id_Y+'" > '+'</li>';
+//
+//				}
+//		//alert (product_tbl_doc_campaign_Y)
+//		localStorage.product_tbl_doc_campaign_Y=product_tbl_doc_campaign_Y		
+//		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Y);			
+//		//localStorage.append_Y=1
+////		}//if localStorage.append_A==0
+//	}
+//	
+//	//if (char=='Z') {
+//		//alert ('asaf')
+//		if (localStorage.append_Z.length != '') {
+//			productList_Z=localStorage.productList_Z
+//			var productList_Z=productList_Z.split('<rd>');
+//			var productLength_Z=productList_Z.length;
+//			var product_tbl_doc_campaign_Z=''
+//
+//			for (j=0; j < productLength_Z; j++){
+//				var productArray_Z = productList_Z[j].split('<fd>');
+//				var product_id_Z=productArray_Z[0];	
+//				var product_name_Z=productArray_Z[1];
+//				
+//				product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z+'<li  style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin " onClick="check_boxTrue(\''+product_id_Z+'\')" class="name"><font id="'+ product_id_Z +'" class="name" >'+ product_name_Z+'</font><input type="hidden" id="doc_camp_id'+product_id_Z+'" value="'+product_id_Z+'" > '+'</li>';
+//
+//				}
+//		//alert (product_tbl_doc_campaign_Z)
+//		localStorage.product_tbl_doc_campaign_Z=product_tbl_doc_campaign_Z		
+//		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign_Z);			
+//		//localStorage.append_Z=1
+////		}//if localStorage.append_A==0
 //	}
 	
 	
@@ -1393,54 +1429,92 @@ function marketRetailerNext_doc(mClientNameID) {
 
 
 function getDocCampaignData(){	
-	alert (localStorage.campaign_doc_str)
-    if  (localStorage.campaign_doc_str.length < 5){
-	
-	$("#myerror_doctor_campaign").html('Please select minimum one Item');
-	//$.afui.loadContent("#page_prescription",true,true,'right');		
+    if  (localStorage.campaign_doc_str.length < 3){
+		$("#myerror_doctor_campaign").html('Please select minimum one Item');
+		//$.afui.loadContent("#page_prescription",true,true,'right');		
 	}
 	else{
-		$.afui.loadContent("#page_prescription",true,true,'right');
+		getDocCampaignDataCart();
+		$.afui.loadContent("#doctorCampaignCartPage",true,true,'right');
 	}
 }
+function getDocCampaignDataCart(){	
+	campaign_doc_str=localStorage.campaign_doc_str
+	var campaignList = campaign_doc_str.split('<rd>');
+	var campaignListLength=campaignList.length
+	cart_list=''
+	for ( i=0; i < campaignListLength; i++){
+	var pID=campaignList[i];
+	$("#campCart").empty();
+	alert (localStorage.campaign_doc_str)
+	alert ('aa')
+	if(pID!=''){
+		var pName=$("#"+pID).html();
+		//alert (pName)
+		cart_list+='<tr id="cart_'+pID+'"><td >'+pName+'</td><td style="background-color:#E7F1FE"  align="center" width="5%" onClick="removeCarItem('+pID+')"> X </td></tr>';
+		}	
+	}
+	$('#campCart').append(cart_list);
+}
+function removeCarItem(product_id){	
+	campaign_doc_str=localStorage.campaign_doc_str
+	cartLength=campaign_doc_str.split('<rd>').length
+	$('#cart_'+product_id).remove();
+	//alert (cartLength)
+	
+	if (campaign_doc_str.indexOf(product_id)==0 & cartLength == 1){
+		campaign_doc_str=campaign_doc_str.replace(product_id,'')
+	}
+	else if (campaign_doc_str.indexOf(product_id)==0 & cartLength > 1){
+		campaign_doc_str=campaign_doc_str.replace(product_id+"<rd>",'')
+	}
+	else if (campaign_doc_str.indexOf(product_id)>0 & cartLength > 1){
+		campaign_doc_str=campaign_doc_str.replace("<rd>"+product_id,'')
+	}
+		
+	localStorage.campaign_doc_str=campaign_doc_str
+}
 function check_boxTrue(product_id){	
-	//alert (product_id);
+	//alert ('adasd');
 	var camp_combo="#doc_camp"+product_id
-	var camp_combo_val=$(camp_combo).is(":checked")
-	if (camp_combo_val==false){
-		$(camp_combo).prop('checked', true);
-		getDocCampaignData_keyup(product_id)
-	}
-	else{
-		$(camp_combo).prop('checked', false);
-		getDocCampaignData_keyup(product_id)
-	}
+	//var camp_combo_val=$(camp_combo).is(":checked")
+	//if (camp_combo_val==false){
+	//	$(camp_combo).prop('checked', true);
+		getDocCampaignData_keyup(product_id,'true')
+		$('li').click(function(){
+			$(this).css('color','red');	
+		});
+		//$('li').dblclick(function(){
+		//	$(this).css('color','black');
+		//	getDocCampaignData_keyup(product_id,'false')
+		//});
+	//}
+//	else{
+//		$(camp_combo).prop('checked', false);
+//		getDocCampaignData_keyup(product_id)
+//	}
 	//alert (localStorage.campaign_doc_str)
 	}
 
-function getDocCampaignData_keyup(product_id){
-	
+function getDocCampaignData_keyup(product_id,status){
+	//alert (status)
 	var pid=$("#doc_camp_id"+product_id).val();
-	var pname=$("#doc_camp_name"+product_id).val();
-	var camp_combo="#doc_camp"+product_id
-	
-	var camp_combo_val=$(camp_combo).is(":checked")
-	
+	var camp_combo_val=status
+//	alert (pid)
 
 	var campaign_doc_str=localStorage.campaign_doc_str
 	var campaign_docShowStr='';
 	var campaign_doc_strList="";
         var campaign_doc_strListLength=0;
         var campaign_docProductId="";
-	
-	if (camp_combo_val == true ){
+	//alert (camp_combo_val)
+	if (camp_combo_val == 'true' ){
+	//	alert (campaign_doc_str.indexOf(pid))
 		if (campaign_doc_str.indexOf(pid)==-1){
 			if (campaign_doc_str==''){
 				campaign_doc_str=pid
-				productOrderShowStr=pname
-				campaign_doc_str=pid+'<fd>'+pname
 			}else{
-				campaign_doc_str=campaign_doc_str+'<rd>'+pid+'<fd>'+pname
+				campaign_doc_str=campaign_doc_str+'<rd>'+pid
 			}	
 		}
 		else{
@@ -1451,14 +1525,10 @@ function getDocCampaignData_keyup(product_id){
 
 					if (campaign_docProductId==pid){
 						campaign_doc_str=campaign_doc_str.replace(campaign_docProductId, "")
-						
-						
 						if (campaign_doc_str==''){
-							campaign_doc_str=pid
-							//productOrderShowStr=pname+'('+pqty+')'
+							campaign_doc_str=pid							
 						}else{
-							campaign_doc_str=campaign_doc_str+'<rd>'+pid+'<fd>'+pname
-							//productOrderShowStr=productOrderShowStr+', '+pname+'('+orderProductQty+')'
+							campaign_doc_str=campaign_doc_str+'<rd>'+pid
 							}		
 					}
 			}
@@ -1470,7 +1540,6 @@ function getDocCampaignData_keyup(product_id){
 	else{
 		campaign_doc_strList=localStorage.campaign_doc_str.split('<rd>');
 		campaign_doc_strListLength=campaign_doc_strList.length;
-		
 		for (j=0; j < campaign_doc_strListLength; j++){
 		  campaign_docProductId=campaign_doc_strList[j].split('<fd>')[0]
 				//alert (campaign_docProductId)
@@ -1648,15 +1717,20 @@ function prescription_submit(){
 //			$("#error_prescription_submit").html('Required picture');
 //			$("#wait_image_prescription").hide();
 //			$("#btn_prescription_submit").show();
-//		}else{			
+//		}else{		
+			var medicine_1=$("#medicine_1").val();
+			var medicine_2=$("#medicine_2").val();
+			var medicine_3=$("#medicine_3").val();
+			var medicine_4=$("#medicine_4").val();
+			var medicine_5=$("#medicine_5").val();	
 			var now = $.now();
 			var imageName=localStorage.user_id+'_'+now.toString()+'.jpg';
 			//alert (imageName);
 				
 				
-				$("#error_prescription_submittxt").val(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str)							
+				$("#error_prescription_submittxt").val(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5)							
 
-				 $.ajax(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str,{
+				 $.ajax(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5,{
 								// cid:localStorage.cid,rep_id:localStorage.user_id,rep_pass:localStorage.user_pass,synccode:localStorage.synccode,
 								type: 'POST',
 								timeout: 30000,
@@ -1682,10 +1756,10 @@ function prescription_submit(){
 											$("#wait_image_prescription").hide();
 											$("#btn_prescription_submit").show();
 										}else if (resultArray[0]=='SUCCESS'){									
-											var result_string=resultArray[1];
+											//var result_string=resultArray[1];
 											
 											
-											
+											//alert (result_string)
 										
 											//image upload function									
 											//uploadPhoto(prescriptionPhoto, imageName);
@@ -3465,15 +3539,18 @@ function prescription_submit(){
 //											$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign);
 											
 											//setProductList();
+											//alert ('aaaa')
 											$('#market_combo_id_lv').empty();
 											$('#market_combo_id_lv').append(localStorage.unschedule_market_cmb_id);
 											$("#itemSearch").val('A')
-											searchItem()
+											setProduct();
+											//searchItem()
 											
 											
 											//alert (localStorage.pic_no)
 											//localStorage.campaign_doc_str=''
 											
+											//alert ('aaaa')
 											$("#lat").val("");
 											$("#long").val("");
 											//alert ('1')
