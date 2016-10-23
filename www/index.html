@@ -77,7 +77,7 @@
 		setProduct()
 		
 		//searchItem()
-		
+		//localStorage.prescriptionPhoto_1='file:///D:/web2py/applications/skf/static/images/comp_logo1.png'
 		var image1 = document.getElementById('myImagePrescription_1');
 		image1.src = localStorage.prescriptionPhoto_1;
 		$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
@@ -263,7 +263,7 @@
                                 <td width="33%" align="center"><img src="camera.png" width="70" height="70" alt="TakePic" onClick="getPrescriptionImage_1()"></td>
                                 <td width="33%" align="center">
                                 <img src="images.png" width="70" height="70" alt="Image" id="myImagePrescription_1">
-                                <input name="prescriptionPhoto_1" id="prescriptionPhoto_1" type="hidden" value="">
+                                <input name="prescriptionPhoto_1" id="prescriptionPhoto_1" type="text" value="">
                                 </td>
                                 <td width="33%" align="center" onClick="gotoMarket(1)">
                                 <img src="icon-arrow-right.png" width="70" height="70" alt="Next" >

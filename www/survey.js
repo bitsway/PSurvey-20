@@ -1058,10 +1058,11 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image1 = document.getElementById('myImagePrescription_1');
-			image1.src = localStorage.prescriptionPhoto_1;
+			//alert (prescriptionPhoto_1)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = localStorage.prescriptionPhoto_1;
 			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_1)
-			
+			alert (localStorage.prescriptionPhoto_1)
 		}
 	}
 	if (localStorage.pic_no ==2){
