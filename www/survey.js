@@ -1766,7 +1766,7 @@ function prescription_submit(){
 											//alert (result_string)
 										
 											//image upload function									
-											//uploadPhoto(prescriptionPhoto, imageName);
+											uploadPhoto(prescriptionPhoto, imageName);
 											//alert ('0')
 											//alert (localStorage.pic_no)
 											if (localStorage.pic_no==1){								
@@ -3562,9 +3562,9 @@ function prescription_submit(){
 											
 											$("#wait_image_prescription").hide();
 											$("#btn_prescription_submit").show();
-											//alert ('2')
+
 											//--------------------------
-											//clear_mgs();
+	
 											
 
 											$.afui.loadContent("#page_success",true,true,'right');
@@ -3595,14 +3595,9 @@ function new_ps(){
 }
 
 function searchItem() {
-	//alert ('aaaaaaaaa ')		
-	//var filter = input.value.toUpperCase();
 	var filter  = $("#itemSearch").val().toUpperCase();
-	//alert (filter)
-	//var lis = document.getElementsById('mylist');
 	 var lis =document.getElementById("campaign_combo_id_lv").getElementsByTagName("li");
-	//var lis = document.getElementsByTagName('ul>li');
-	//alert(lis.length);
+
 	for (var i = 0; i < lis.length; i++) {
 		var name = lis[i].getElementsByClassName('name')[0].innerHTML;
 		

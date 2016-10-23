@@ -72,6 +72,8 @@
 	
 		
 		$("#campaign_combo_id_lv").empty()
+		$("#itemSearch").val('')
+		
 		
 		localStorage.campaign_doc_str=''
 		setProduct()
@@ -681,7 +683,7 @@
                             </td>
                     <td width="70%" onClick="search_setfocus()">
                        <!--<div class="input-group">-->   
-                         <input id="itemSearch" type="text" id="itemSearch" style="width:100%; color:#000; font-weight:normal" placeholder="Search" onKeyUp="searchItem()"  />
+                        
                          <div><b>Market :</b><span class="market"></span></div>
                      <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div> 
                         <!--</div>-->
@@ -718,6 +720,7 @@
                         <table width="100%" border="0"   >
                 <tr>
                 <td width="90%"  style="vertical-align:top;overflow:scroll; height:700px; display:block">
+                 <input id="itemSearch" type="text" id="itemSearch" style="width:100%; color:#000; background-color:#F4F8FF; font-weight:normal" placeholder="Search" onKeyUp="searchItem()"  />
                  <ul class="list" id="campaign_combo_id_lv" >
                         
                         </ul>
