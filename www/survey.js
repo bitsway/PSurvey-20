@@ -1062,7 +1062,7 @@ function gotoMarket(pic_no) {
 			var image_show = document.getElementById('myImagePrescription_show');
 			image_show.src = prescriptionPhoto_1;
 			$("#myImagePrescription_show").val(prescriptionPhoto_1)
-			alert (prescriptionPhoto_1)
+			//alert (prescriptionPhoto_1)
 		}
 	}
 	if (localStorage.pic_no ==2){
@@ -1070,9 +1070,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image2 = document.getElementById('myImagePrescription_2');
-			image2.src = localStorage.prescriptionPhoto_2;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_2)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_2;
+			$("#myImagePrescription_show").val(prescriptionPhoto_2)
 		}
 		
 	}
@@ -1081,9 +1081,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image3 = document.getElementById('myImagePrescription_3');
-			image3.src = localStorage.prescriptionPhoto_3;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_3)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_3;
+			$("#myImagePrescription_show").val(prescriptionPhoto_3)
 		}
 	}
 	
@@ -1092,81 +1092,81 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image4 = document.getElementById('myImagePrescription_4');
-			image4.src = localStorage.prescriptionPhoto_4;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_4)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto41;
+			$("#myImagePrescription_show").val(prescriptionPhoto_4)
 		}
 	}if (localStorage.pic_no ==5){
 		if (prescriptionPhoto_5==''){
 			var error_flag=1
 		}
 		else{
-			var image5 = document.getElementById('myImagePrescription_5');
-			image5.src = localStorage.prescriptionPhoto_5;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_5)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_5;
+			$("#myImagePrescription_show").val(prescriptionPhoto_5)
 		}
 	}if (localStorage.pic_no ==6){
 		if (prescriptionPhoto_6==''){
 			var error_flag=1
 		}
 		else{
-			var image6 = document.getElementById('myImagePrescription_6');
-			image6.src = localStorage.prescriptionPhoto_6;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_6)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_6;
+			$("#myImagePrescription_show").val(prescriptionPhoto_6)
 		}
 	}if (localStorage.pic_no ==7){
 		if (prescriptionPhoto_7==''){
 			var error_flag=1
 		}
 		else{
-			var image7 = document.getElementById('myImagePrescription_7');
-			image7.src = localStorage.prescriptionPhoto_7;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_7)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_7;
+			$("#myImagePrescription_show").val(prescriptionPhoto_7)
 		}
 	}if (localStorage.pic_no ==8){
 		if (prescriptionPhoto_8==''){
 			var error_flag=1
 		}
 		else{
-			var image8 = document.getElementById('myImagePrescription_8');
-			image8.src = localStorage.prescriptionPhoto_8;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_8)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_8;
+			$("#myImagePrescription_show").val(prescriptionPhoto_8)
 		}
 	}if (localStorage.pic_no ==9){
 		if (prescriptionPhoto_9==''){
 			var error_flag=1
 		}
 		else{
-			var image9 = document.getElementById('myImagePrescription_9');
-			image9.src = localStorage.prescriptionPhoto_9;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_9)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_9;
+			$("#myImagePrescription_show").val(prescriptionPhoto_9)
 		}
 	}if (localStorage.pic_no ==10){
 		if (prescriptionPhoto_10==''){
 			var error_flag=1
 		}
 		else{
-			var image10 = document.getElementById('myImagePrescription_10');
-			image10.src = localStorage.prescriptionPhoto_10;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_10)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_10;
+			$("#myImagePrescription_show").val(prescriptionPhoto_10)
 		}
 	}if (localStorage.pic_no ==11){
 		if (prescriptionPhoto_11==''){
 			var error_flag=1
 		}
 		else{
-			var image11 = document.getElementById('myImagePrescription_11');
-			image11.src = localStorage.prescriptionPhoto_11;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_11)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_11;
+			$("#myImagePrescription_show").val(prescriptionPhoto_11)
 		}
 	}if (localStorage.pic_no ==12){
 		if (prescriptionPhoto_12==''){
 			var error_flag=1
 		}
 		else{
-			var image12 = document.getElementById('myImagePrescription_12');
-			image12.src = localStorage.prescriptionPhoto_12;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_12)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_12;
+			$("#myImagePrescription_show").val(prescriptionPhoto_12)
 		}
 	}
 	if (localStorage.pic_no ==13){
@@ -1174,9 +1174,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image13 = document.getElementById('myImagePrescription_13');
-			image13.src = localStorage.prescriptionPhoto_13;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_13)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_13;
+			$("#myImagePrescription_show").val(prescriptionPhoto_13)
 		}
 	}
 	if (localStorage.pic_no ==14){
@@ -1184,9 +1184,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image14 = document.getElementById('myImagePrescription_14');
-			image14.src = localStorage.prescriptionPhoto_14;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_14)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_14;
+			$("#myImagePrescription_show").val(prescriptionPhoto_14)
 		}
 	}
 	if (localStorage.pic_no ==15){
@@ -1194,9 +1194,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image15 = document.getElementById('myImagePrescription_15');
-			image15.src = localStorage.prescriptionPhoto_15;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_15)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_15;
+			$("#myImagePrescription_show").val(prescriptionPhoto_15)
 		}
 	}
 	if (localStorage.pic_no ==16){
@@ -1204,9 +1204,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image16 = document.getElementById('myImagePrescription_16');
-			image16.src = localStorage.prescriptionPhoto_16;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_16)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_16;
+			$("#myImagePrescription_show").val(prescriptionPhoto_16)
 		}
 	}
 	if (localStorage.pic_no ==17){
@@ -1214,9 +1214,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image17 = document.getElementById('myImagePrescription_17');
-			image17.src = localStorage.prescriptionPhoto_17;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_17)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_17;
+			$("#myImagePrescription_show").val(prescriptionPhoto_17)
 		}
 	}
 	if (localStorage.pic_no ==18){
@@ -1224,9 +1224,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image18 = document.getElementById('myImagePrescription_18');
-			image18.src = localStorage.prescriptionPhoto_18;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_18)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_18;
+			$("#myImagePrescription_show").val(prescriptionPhoto_18)
 		}
 	}
 	if (localStorage.pic_no ==19){
@@ -1234,9 +1234,9 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image19 = document.getElementById('myImagePrescription_19');
-			image19.src = localStorage.prescriptionPhoto_19;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_19)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_19;
+			$("#myImagePrescription_show").val(prescriptionPhoto_19)
 		}
 	}
 	if (localStorage.pic_no ==20){
@@ -1244,17 +1244,15 @@ function gotoMarket(pic_no) {
 			var error_flag=1
 		}
 		else{
-			var image20 = document.getElementById('myImagePrescription_20');
-			image20.src = localStorage.prescriptionPhoto_20;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_20)
+			var image_show = document.getElementById('myImagePrescription_show');
+			image_show.src = prescriptionPhoto_20;
+			$("#myImagePrescription_show").val(prescriptionPhoto_20)
 		}
 	}
 	
 	//alert (localStorage.synced)
 	if (localStorage.synced='YES'){
 		if (error_flag==0  ){
-			myImagePrescription_showPic=
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_20)
 			$.afui.loadContent("#imageSinglePage",true,true,'right');
 		}
 		else{
@@ -3612,7 +3610,7 @@ function searchItem() {
 			lis[i].style.display = 'list-item';
 		else
 			lis[i].style.display = 'none';
-		$("#campaign_combo_id_lv").find(lis[0]).first().focus()
+		$("#item_combo_id_lv").find(lis[0]).first().focus()
 	}
 }
 function comboSearch() {
@@ -3678,6 +3676,10 @@ function onSuccess_1(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_1").val(imagePath);
+	
+	var prescriptionPhoto_1=$("#prescriptionPhoto_1").val();
+	localStorage.prescriptionPhoto_1 = prescriptionPhoto_1;
+		
 }
 function onFail_1(message) {
 	//alert ('Fail')
@@ -3701,6 +3703,10 @@ function onSuccess_2(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_2").val(imagePath);
+
+	var prescriptionPhoto_2=$("#prescriptionPhoto_2").val();
+	localStorage.prescriptionPhoto_2 = prescriptionPhoto_2;
+		
 }
 function onFail_2(message) {
 	//alert ('Fail')
@@ -3724,6 +3730,10 @@ function onSuccess_3(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_3").val(imagePath);
+
+	var prescriptionPhoto_3=$("#prescriptionPhoto_3").val();
+	localStorage.prescriptionPhoto_3 = prescriptionPhoto_3;
+		
 }
 function onFail_3(message) {
 	//alert ('Fail')
@@ -3748,6 +3758,9 @@ function onSuccess_4(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_4").val(imagePath);
+	var prescriptionPhoto_4=$("#prescriptionPhoto_4").val();
+	localStorage.prescriptionPhoto_4 = prescriptionPhoto_4;
+		
 }
 function onFail_4(message) {
 	imagePath="";
@@ -3768,6 +3781,10 @@ function onSuccess_5(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_5").val(imagePath);
+
+	var prescriptionPhoto_5=$("#prescriptionPhoto_5").val();
+	localStorage.prescriptionPhoto_5 = prescriptionPhoto_5;
+		
 }
 function onFail_5(message) {
 	imagePath="";
@@ -3788,6 +3805,10 @@ function onSuccess_6(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_6").val(imagePath);
+
+	var prescriptionPhoto_6=$("#prescriptionPhoto_6").val();
+	localStorage.prescriptionPhoto_6 = prescriptionPhoto_6;
+		
 }
 function onFail_6(message) {
 	imagePath="";
@@ -3808,6 +3829,10 @@ function onSuccess_7(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_7").val(imagePath);
+
+	var prescriptionPhoto_7=$("#prescriptionPhoto_7").val();
+	localStorage.prescriptionPhoto_7 = prescriptionPhoto_7;
+		
 }
 function onFail_7(message) {
 	imagePath="";
@@ -3827,6 +3852,9 @@ function onSuccess_8(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_8").val(imagePath);
+	var prescriptionPhoto_8=$("#prescriptionPhoto_8").val();
+	localStorage.prescriptionPhoto_8 = prescriptionPhoto_8;
+		
 }
 function onFail_8(message) {
 	imagePath="";
@@ -3847,6 +3875,10 @@ function onSuccess_9(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_9").val(imagePath);
+	
+	var prescriptionPhoto_9=$("#prescriptionPhoto_9").val();
+	localStorage.prescriptionPhoto_9 = prescriptionPhoto_9;
+		
 }
 function onFail_9(message) {
 	imagePath="";
@@ -3868,6 +3900,10 @@ function onSuccess_10(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_10").val(imagePath);
+
+	var prescriptionPhoto_10=$("#prescriptionPhoto_10").val();
+	localStorage.prescriptionPhoto_10 = prescriptionPhoto_10;
+		
 }
 function onFail_10(message) {
 	//alert ('Fail')
@@ -3890,6 +3926,10 @@ function onSuccess_11(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_11").val(imagePath);
+
+	var prescriptionPhoto_11=$("#prescriptionPhoto_11").val();
+	localStorage.prescriptionPhoto_11 = prescriptionPhoto_11;
+		
 }
 function onFail_11(message) {
 	//alert ('Fail')
@@ -3912,6 +3952,10 @@ function onSuccess_12(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_12").val(imagePath);
+
+	var prescriptionPhoto_12=$("#prescriptionPhoto_12").val();
+	localStorage.prescriptionPhoto_12 = prescriptionPhoto_12;
+		
 }
 function onFail_12(message) {
 	//alert ('Fail')
@@ -3934,6 +3978,10 @@ function onSuccess_13(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_13").val(imagePath);
+
+	var prescriptionPhoto_13=$("#prescriptionPhoto_13").val();
+	localStorage.prescriptionPhoto_13 = prescriptionPhoto_13;
+		
 }
 function onFail_13(message) {
 	//alert ('Fail')
@@ -3955,6 +4003,10 @@ function onSuccess_14(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_14").val(imagePath);
+	
+	var prescriptionPhoto_14=$("#prescriptionPhoto_14").val();
+	localStorage.prescriptionPhoto_14 = prescriptionPhoto_14;
+		
 }
 function onFail_14(message) {
 	//alert ('Fail')
@@ -3977,6 +4029,10 @@ function onSuccess_15(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_15").val(imagePath);
+	
+	var prescriptionPhoto_15=$("#prescriptionPhoto_15").val();
+	localStorage.prescriptionPhoto_15 = prescriptionPhoto_15;
+		
 }
 function onFail_15(message) {
 	//alert ('Fail')
@@ -3999,6 +4055,10 @@ function onSuccess_16(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_16").val(imagePath);
+
+	var prescriptionPhoto_16=$("#prescriptionPhoto_16").val();
+	localStorage.prescriptionPhoto_16 = prescriptionPhoto_16;
+	
 }
 function onFail_16(message) {
 	//alert ('Fail')
@@ -4021,6 +4081,10 @@ function onSuccess_17(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_17").val(imagePath);
+
+	var prescriptionPhoto_17=$("#prescriptionPhoto_17").val();
+	localStorage.prescriptionPhoto_17 = prescriptionPhoto_17;
+		
 }
 function onFail_17(message) {
 	//alert ('Fail')
@@ -4043,6 +4107,10 @@ function onSuccess_18(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_18").val(imagePath);
+
+	var prescriptionPhoto_18=$("#prescriptionPhoto_18").val();
+	localStorage.prescriptionPhoto_18 = prescriptionPhoto_18;
+		
 }
 function onFail_18(message) {
 	//alert ('Fail')
@@ -4065,6 +4133,10 @@ function onSuccess_19(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_19").val(imagePath);
+	
+	var prescriptionPhoto_19=$("#prescriptionPhoto_19").val();
+	localStorage.prescriptionPhoto_19 = prescriptionPhoto_19;
+		
 }
 function onFail_19(message) {
 	//alert ('Fail')
@@ -4087,6 +4159,9 @@ function onSuccess_20(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_20").val(imagePath);
+
+	var prescriptionPhoto_20=$("#prescriptionPhoto_20").val();
+	localStorage.prescriptionPhoto_20 = prescriptionPhoto_20;
 }
 function onFail_20(message) {
 	//alert ('Fail')
