@@ -1060,9 +1060,9 @@ function gotoMarket(pic_no) {
 		else{
 			//alert (prescriptionPhoto_1)
 			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = localStorage.prescriptionPhoto_1;
-			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_1)
-			alert (localStorage.prescriptionPhoto_1)
+			image_show.src = prescriptionPhoto_1;
+			$("#myImagePrescription_show").val(prescriptionPhoto_1)
+			alert (prescriptionPhoto_1)
 		}
 	}
 	if (localStorage.pic_no ==2){
