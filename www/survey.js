@@ -80,7 +80,7 @@ function check_user() {
 
 	
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-//	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+	//var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
 	var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 	
@@ -3839,7 +3839,7 @@ function getPrescriptionImage_9() {
 		
 }
 function onSuccess_9(imageURI) {
-    var image = document.getElementById('myImagePrescription_3');
+    var image = document.getElementById('myImagePrescription_9');
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#prescriptionPhoto_9").val(imagePath);
@@ -3849,89 +3849,242 @@ function onFail_9(message) {
     alert('Failed because: ' + message);
 }
 
-function getPrescriptionImage_3() {
+function getPrescriptionImage_10() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_3, onFail_3, { quality: 90,
+   navigator.camera.getPicture(onSuccess_10, onFail_10, { quality: 90,
 		targetWidth: 400,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
-function onSuccess_3(imageURI) {
+function onSuccess_10(imageURI) {
 	//alert ('Success')
-    var image = document.getElementById('myImagePrescription_3');
+    var image = document.getElementById('myImagePrescription_10');
     image.src = imageURI;
 	imagePath = imageURI;
-	$("#prescriptionPhoto_3").val(imagePath);
+	$("#prescriptionPhoto_10").val(imagePath);
 }
-function onFail_3(message) {
+function onFail_10(message) {
 	//alert ('Fail')
 	imagePath="";
     alert('Failed because: ' + message);
 }
 
-function getPrescriptionImage_3() {
+function getPrescriptionImage_11() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_3, onFail_3, { quality: 90,
+   navigator.camera.getPicture(onSuccess_11, onFail_11, { quality: 90,
 		targetWidth: 400,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
-function onSuccess_3(imageURI) {
+function onSuccess_11(imageURI) {
 	//alert ('Success')
-    var image = document.getElementById('myImagePrescription_3');
+    var image = document.getElementById('myImagePrescription_11');
     image.src = imageURI;
 	imagePath = imageURI;
-	$("#prescriptionPhoto_3").val(imagePath);
+	$("#prescriptionPhoto_11").val(imagePath);
 }
-function onFail_3(message) {
+function onFail_11(message) {
 	//alert ('Fail')
 	imagePath="";
     alert('Failed because: ' + message);
 }
 
-function getPrescriptionImage_3() {
+function getPrescriptionImage_12() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_3, onFail_3, { quality: 90,
+   navigator.camera.getPicture(onSuccess_12, onFail_12, { quality: 90,
 		targetWidth: 400,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
-function onSuccess_3(imageURI) {
+function onSuccess_12(imageURI) {
 	//alert ('Success')
-    var image = document.getElementById('myImagePrescription_3');
+    var image = document.getElementById('myImagePrescription_12');
     image.src = imageURI;
 	imagePath = imageURI;
-	$("#prescriptionPhoto_3").val(imagePath);
+	$("#prescriptionPhoto_12").val(imagePath);
 }
-function onFail_3(message) {
+function onFail_12(message) {
 	//alert ('Fail')
 	imagePath="";
     alert('Failed because: ' + message);
 }
 
-function getPrescriptionImage_3() {
+function getPrescriptionImage_13() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_3, onFail_3, { quality: 90,
+   navigator.camera.getPicture(onSuccess_13, onFail_13, { quality: 90,
 		targetWidth: 400,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
-function onSuccess_3(imageURI) {
+function onSuccess_13(imageURI) {
 	//alert ('Success')
-    var image = document.getElementById('myImagePrescription_3');
+    var image = document.getElementById('myImagePrescription_13');
     image.src = imageURI;
 	imagePath = imageURI;
-	$("#prescriptionPhoto_3").val(imagePath);
+	$("#prescriptionPhoto_13").val(imagePath);
 }
-function onFail_3(message) {
+function onFail_13(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+function getPrescriptionImage_14() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_14, onFail_14, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_14(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_14');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_14").val(imagePath);
+}
+function onFail_14(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_15() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_15, onFail_15, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_15(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_15');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_15").val(imagePath);
+}
+function onFail_15(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_16() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_16, onFail_16, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_16(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_16');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_16").val(imagePath);
+}
+function onFail_16(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_17() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_17, onFail_17, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_17(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_17');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_17").val(imagePath);
+}
+function onFail_17(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_18() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_18, onFail_18, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_18(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_18');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_18").val(imagePath);
+}
+function onFail_18(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_19() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_19, onFail_19, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_19(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_19');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_19").val(imagePath);
+}
+function onFail_19(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_20() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_20, onFail_20, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_20(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_20');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_20").val(imagePath);
+}
+function onFail_20(message) {
 	//alert ('Fail')
 	imagePath="";
     alert('Failed because: ' + message);
