@@ -80,7 +80,7 @@ function check_user() {
 
 	
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-	//var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+//	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
 	var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 	
@@ -1061,6 +1061,7 @@ function gotoMarket(pic_no) {
 			var image1 = document.getElementById('myImagePrescription_1');
 			image1.src = localStorage.prescriptionPhoto_1;
 			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_1)
+			
 		}
 	}
 	if (localStorage.pic_no ==2){
@@ -1250,7 +1251,9 @@ function gotoMarket(pic_no) {
 	
 	//alert (localStorage.synced)
 	if (localStorage.synced='YES'){
-		if (error_flag==1  ){
+		if (error_flag==0  ){
+			myImagePrescription_showPic=
+			$("#myImagePrescription_show").val(localStorage.prescriptionPhoto_20)
 			$.afui.loadContent("#imageSinglePage",true,true,'right');
 		}
 		else{
