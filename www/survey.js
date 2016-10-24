@@ -1455,7 +1455,7 @@ function getDocCampaignDataCart(){
 	if(pID!=''){
 		var pName=$("#"+pID).html();
 		//alert (pName)
-		cart_list+='<tr id="cart_'+pID+'"><td >'+pName+'</td><td style="background-color:#E7F1FE"  align="center" width="5%" onClick="removeCarItem('+pID+')"> X </td></tr>';
+		cart_list+='<tr heighi="30px" id="cart_'+pID+'"><td >'+pName+'</td><td style="background-color:#E7F1FE"  align="center" width="5%" onClick="removeCarItem('+pID+')"> X </td></tr>';
 		}	
 	}
 	$('#campCart').append(cart_list);
@@ -1847,8 +1847,12 @@ function prescription_submit(){
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
 												//alert (localStorage.pic_no)
-												$("#prescriptionPhoto_1").val('');
 												localStorage.prescriptionPhoto_1=''
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												//$("#prescriptionPhoto_1").val('');
+												//localStorage.prescriptionPhoto_1=''
 												
 											}
 											else if (localStorage.pic_no==2){
@@ -1928,88 +1932,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_2").val('');
 												localStorage.prescriptionPhoto_2=''
-											}
-											else if (localStorage.pic_no==2){
-												var image1 = document.getElementById('myImagePrescription_1');
-    											image1.src = localStorage.prescriptionPhoto_1;
-												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
-												
-												var image3 = document.getElementById('myImagePrescription_3');
-    											image3.src = localStorage.prescriptionPhoto_3;
-												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
-												
-												var image4 = document.getElementById('myImagePrescription_4');
-    											image4.src = localStorage.prescriptionPhoto_4;
-												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
-												
-												var image5 = document.getElementById('myImagePrescription_5');
-    											image5.src = localStorage.prescriptionPhoto_5;
-												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
-												
-												var image6 = document.getElementById('myImagePrescription_6');
-    											image6.src = localStorage.prescriptionPhoto_6;
-												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
-												
-												var image7 = document.getElementById('myImagePrescription_7');
-    											image7.src = localStorage.prescriptionPhoto_7;
-												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
-												
-												var image8 = document.getElementById('myImagePrescription_8');
-    											image8.src = localStorage.prescriptionPhoto_8;
-												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
-												
-												var image9 = document.getElementById('myImagePrescription_9');
-    											image9.src = localStorage.prescriptionPhoto_9;
-												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
-												
-												var image10 = document.getElementById('myImagePrescription_10');
-    											image10.src = localStorage.prescriptionPhoto_10;
-												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
-												
-												var image11 = document.getElementById('myImagePrescription_11');
-    											image11.src = localStorage.prescriptionPhoto_11;
-												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
-												
-												var image12 = document.getElementById('myImagePrescription_12');
-    											image12.src = localStorage.prescriptionPhoto_12;
-												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
-												
-												var image13 = document.getElementById('myImagePrescription_13');
-    											image13.src = localStorage.prescriptionPhoto_13;
-												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
-												
-												var image14 = document.getElementById('myImagePrescription_14');
-    											image14.src = localStorage.prescriptionPhoto_14;
-												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
-												
-												var image15 = document.getElementById('myImagePrescription_15');
-    											image15.src = localStorage.prescriptionPhoto_15;
-												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
-												
-												var image16 = document.getElementById('myImagePrescription_16');
-    											image16.src = localStorage.prescriptionPhoto_16;
-												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
-												
-												var image17 = document.getElementById('myImagePrescription_17');
-    											image17.src = localStorage.prescriptionPhoto_17;
-												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
-												
-												var image18 = document.getElementById('myImagePrescription_18');
-    											image18.src = localStorage.prescriptionPhoto_18;
-												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
-												
-												var image19 = document.getElementById('myImagePrescription_19');
-    											image19.src = localStorage.prescriptionPhoto_19;
-												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
-												
-												var image20 = document.getElementById('myImagePrescription_20');
-    											image20.src = localStorage.prescriptionPhoto_20;
-												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
-												
-												$("#prescriptionPhoto_2").val('');
-												localStorage.prescriptionPhoto_2=''
+												var image2 = document.getElementById('myImagePrescription_2');
+    											image2.src = localStorage.prescriptionPhoto_2;
+												$("#prescriptionPhoto_2").val(localStorage.prescriptionPhoto_2)
 											}
 											else if (localStorage.pic_no==3){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2088,8 +2014,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_3").val('');
 												localStorage.prescriptionPhoto_3=''
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
 											}
 											else if (localStorage.pic_no==4){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2172,8 +2100,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_4").val('');
 												localStorage.prescriptionPhoto_4=''
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
 											}
 											else if (localStorage.pic_no==5){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2256,8 +2186,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_5").val('');
 												localStorage.prescriptionPhoto_5=''
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
 											}
 											else if (localStorage.pic_no==6){
 												
@@ -2359,8 +2291,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_6").val('');
 												localStorage.prescriptionPhoto_6=''
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
 											}
 											else if (localStorage.pic_no==7){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2443,8 +2377,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_7").val('');
 												localStorage.prescriptionPhoto_7=''
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
 											}
 											else if (localStorage.pic_no==8){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2527,8 +2463,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_8").val('');
 												localStorage.prescriptionPhoto_8=''
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
 											}
 											else if (localStorage.pic_no==9){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2611,8 +2549,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_9").val('');
 												localStorage.prescriptionPhoto_9=''
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
 											}
 											else if (localStorage.pic_no==10){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2695,8 +2635,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_10").val('');
 												localStorage.prescriptionPhoto_10=''
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
 											}
 											else if (localStorage.pic_no==11){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2779,8 +2721,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_11").val('');
 												localStorage.prescriptionPhoto_11=''
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
 											}
 											else if (localStorage.pic_no==12){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2863,8 +2807,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_12").val('');
 												localStorage.prescriptionPhoto_12=''
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
 											}
 											else if (localStorage.pic_no==13){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2947,8 +2893,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_13").val('');
 												localStorage.prescriptionPhoto_13=''
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
 											}
 											else if (localStorage.pic_no==14){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -3031,8 +2979,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_14").val('');
 												localStorage.prescriptionPhoto_14=''
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
 											}
 											else if (localStorage.pic_no==15){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -3115,8 +3065,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_15").val('');
 												localStorage.prescriptionPhoto_15=''
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
 											}
 											else if (localStorage.pic_no==16){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -3199,8 +3151,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_16").val('');
 												localStorage.prescriptionPhoto_16=''
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
 											}
 											else if (localStorage.pic_no==17){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -3283,8 +3237,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_17").val('');
 												localStorage.prescriptionPhoto_17=''
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
 											}
 											else if (localStorage.pic_no==18){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -3367,8 +3323,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_18").val('');
 												localStorage.prescriptionPhoto_18=''
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
 											}
 											else if (localStorage.pic_no==19){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -3451,8 +3409,10 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_19").val('');
 												localStorage.prescriptionPhoto_19=''
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
 											}
 											else if (localStorage.pic_no==20){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -3535,15 +3495,17 @@ function prescription_submit(){
 //    											image20.src = localStorage.prescriptionPhoto_20;
 //												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
-												$("#prescriptionPhoto_20").val('');
 												localStorage.prescriptionPhoto_20=''
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 											}
 											//localStorage.pic_no='';
 											//$("#campaign_combo_id_lv").empty()
 //											$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign);
 											
-											//setProductList();
-											//alert ('aaaa')
+											$("#campCart").empty();
+											
 											$('#market_combo_id_lv').empty();
 											$('#market_combo_id_lv').append(localStorage.unschedule_market_cmb_id);
 											$("#itemSearch").val('A')
