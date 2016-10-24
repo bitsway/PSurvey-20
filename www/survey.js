@@ -3504,7 +3504,7 @@ function prescription_submit(){
 //											$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign);
 											
 											$("#campCart").empty();
-											localStorage.campaign_doc_str="";
+											localStorage.campaign_doc_str=""; 
 											$('#market_combo_id_lv').empty();
 											$('#market_combo_id_lv').append(localStorage.unschedule_market_cmb_id);
 											$("#itemSearch").val('A')
