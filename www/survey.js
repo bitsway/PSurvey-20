@@ -1451,7 +1451,6 @@ function getDocCampaignDataCart(){
 	var pID=campaignList[i];
 	$("#campCart").empty();
 	//alert (localStorage.campaign_doc_str)
-	
 	if(pID!=''){
 		var pName=$("#"+pID).html();
 		//alert (pName)
