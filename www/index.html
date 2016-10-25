@@ -538,16 +538,17 @@
        <div class="view" id="imageSinglePageView">
         <div class="pages">
          <header><h1>RX capture</h1></header> 
-            <div class="panel" id="imageSinglePage" style="overflow:scroll">
+            <div class="panel" id="imageSinglePage" >
             </br></br></br></br></br></br>
                 <!--<div class="card">-->
                     <!--<h1>Sync</h1>-->
                      <div id="error_image" style="color:#C00"></div> 
 					 <div><b>Market :</b><span class="market"></span></div>
                      <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>  
-
-                   <img src="images.png"  alt="Image" width="500px" id="myImagePrescription_show"></td>
-                               
+					
+                    <div style="overflow:scroll; width:300px; height:700px">
+                   <img src="images.png"  alt="Image"  id="myImagePrescription_show"></td>
+                      </div>         
                           
                                                                 
 						<input type="submit" id="imageNext" onClick="page_doctor_campaign()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Next     "   />
