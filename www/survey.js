@@ -1454,7 +1454,7 @@ function getDocCampaignDataCart(){
 	if(pID!=''){
 		var pName=$("#"+pID).html();
 		//alert (pName)
-		cart_list+='<tr heighi="30px" id="cart_'+pID+'"><td >'+pName+'</td><td style="background-color:#E7F1FE"  align="center" width="5%" onClick="removeCarItem('+pID+')"> X </td></tr>';
+		cart_list+='<tr style="font-size:14px" heighi="30px" id="cart_'+pID+'"><td > </br>'+pName+'</br></td><td style="background-color:#E7F1FE"  align="center" width="5%" onClick="removeCarItem('+pID+')"></br> X </br></td></tr>';
 		}	
 	}
 	$('#campCart').append(cart_list);
