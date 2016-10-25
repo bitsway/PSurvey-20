@@ -1415,7 +1415,7 @@ function marketRetailerNext_doc(mClientNameID) {
 				
 				//$.afui.loadContent("#page_doctor_campaign",true,true,'right');
 				localStorage.click_flag==0;
-				$("#err_m_retailer_next").html('Doctor Fixed. <font style=" font-size:16px">'+localStorage.visit_client+'</font>');
+				$("#err_m_retailer_next").html('<font style=" font-size:18px">'+localStorage.visit_client+'</font>');
 				$("#item_load").hide();
 				//$("#doctor_campaign_list_tbl").html(localStorage.product_tbl_str_doc_campaign);
 		
@@ -1434,7 +1434,7 @@ function marketRetailerNext_doc(mClientNameID) {
 
 function getDocCampaignData(){	
     if  (localStorage.campaign_doc_str.length < 3){
-		$("#myerror_doctor_campaign").html('Please select minimum one Item');
+		$("#myerror_doctor_campaign").html('Please select at least one Item');
 		//$.afui.loadContent("#page_prescription",true,true,'right');		
 	}
 	else{
@@ -1454,7 +1454,7 @@ function getDocCampaignDataCart(){
 	if(pID!=''){
 		var pName=$("#"+pID).html();
 		//alert (pName)
-		cart_list+='<tr style="font-size:14px" id="cart_'+pID+'"><td > </br>'+pName+'</br></td><td style="background-color:#E7F1FE"  align="center" width="10%" onClick="removeCarItem('+pID+')"></br> X </br></td></tr>';
+		cart_list+='<tr style="font-size:14px" id="cart_'+pID+'"><td > </br>'+pName+'</br></td><td style="background-color:#E7F1FE"  align="center" width="10%" onClick="removeCarItem('+pID+')"><input type="submit" style=" height:50px; background-color:#09C; color:#FFF; font-size:20px" value="  X  " onClick="removeCarItem('+pID+')"  /></td></tr>';
 		}	
 	}
 	$('#campCart').append(cart_list);
