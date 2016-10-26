@@ -1038,252 +1038,251 @@ function setProduct() {
 
 
 function gotoMarket(pic_no) {
-	//alert (pic_no)
-	if (pic_no!=localStorage.pic_no){
-		$("#campaign_combo_id_lv").empty()
-//		$("#campaign_combo_id_lv").append(localStorage.product_tbl_doc_campaign);
-	//	$('input:checkbox').attr('checked',false);
-	//	$("#itemSearch").val('A')
-		setProduct()
-	}
-	localStorage.pic_no=pic_no
-	
-	var prescriptionPhoto_1=$("#prescriptionPhoto_1").val();
-	var prescriptionPhoto_2=$("#prescriptionPhoto_2").val();
-	var prescriptionPhoto_3=$("#prescriptionPhoto_3").val();
-	var prescriptionPhoto_4=$("#prescriptionPhoto_4").val();
-	var prescriptionPhoto_5=$("#prescriptionPhoto_5").val();
-	var prescriptionPhoto_6=$("#prescriptionPhoto_6").val();
-	var prescriptionPhoto_7=$("#prescriptionPhoto_7").val();
-	var prescriptionPhoto_8=$("#prescriptionPhoto_8").val();
-	var prescriptionPhoto_9=$("#prescriptionPhoto_9").val();
-	var prescriptionPhoto_10=$("#prescriptionPhoto_10").val();
-	var prescriptionPhoto_11=$("#prescriptionPhoto_11").val();
-	var prescriptionPhoto_12=$("#prescriptionPhoto_12").val();
-	var prescriptionPhoto_13=$("#prescriptionPhoto_13").val();
-	var prescriptionPhoto_14=$("#prescriptionPhoto_14").val();
-	var prescriptionPhoto_15=$("#prescriptionPhoto_15").val();
-	var prescriptionPhoto_16=$("#prescriptionPhoto_16").val();
-	var prescriptionPhoto_17=$("#prescriptionPhoto_17").val();
-	var prescriptionPhoto_18=$("#prescriptionPhoto_18").val();
-	var prescriptionPhoto_19=$("#prescriptionPhoto_19").val();
-	var prescriptionPhoto_20=$("#prescriptionPhoto_20").val();
+	if (localStorage.visit_client !=""){
+		$("#error_image").html('Please Select Doctor');
+	}else{
+			if (pic_no!=localStorage.pic_no){
+				$("#campaign_combo_id_lv").empty()
+				setProduct()
+			}
+			localStorage.pic_no=pic_no
 			
-	var error_flag=0
-	
-	if (localStorage.pic_no ==1){
-		if (prescriptionPhoto_1==''){
-			var error_flag=1
-		}
-		else{
-			//alert (prescriptionPhoto_1)
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_1;
-			$("#myImagePrescription_show").val(prescriptionPhoto_1)
-			//alert (prescriptionPhoto_1)
-		}
-	}
-	if (localStorage.pic_no ==2){
-		if (prescriptionPhoto_2==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_2;
-			$("#myImagePrescription_show").val(prescriptionPhoto_2)
-		}
-		
-	}
-	if (localStorage.pic_no ==3){
-		if (prescriptionPhoto_3==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_3;
-			$("#myImagePrescription_show").val(prescriptionPhoto_3)
-		}
-	}
-	
-	if (localStorage.pic_no ==4){
-		if (prescriptionPhoto_4==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto41;
-			$("#myImagePrescription_show").val(prescriptionPhoto_4)
-		}
-	}if (localStorage.pic_no ==5){
-		if (prescriptionPhoto_5==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_5;
-			$("#myImagePrescription_show").val(prescriptionPhoto_5)
-		}
-	}if (localStorage.pic_no ==6){
-		if (prescriptionPhoto_6==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_6;
-			$("#myImagePrescription_show").val(prescriptionPhoto_6)
-		}
-	}if (localStorage.pic_no ==7){
-		if (prescriptionPhoto_7==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_7;
-			$("#myImagePrescription_show").val(prescriptionPhoto_7)
-		}
-	}if (localStorage.pic_no ==8){
-		if (prescriptionPhoto_8==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_8;
-			$("#myImagePrescription_show").val(prescriptionPhoto_8)
-		}
-	}if (localStorage.pic_no ==9){
-		if (prescriptionPhoto_9==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_9;
-			$("#myImagePrescription_show").val(prescriptionPhoto_9)
-		}
-	}if (localStorage.pic_no ==10){
-		if (prescriptionPhoto_10==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_10;
-			$("#myImagePrescription_show").val(prescriptionPhoto_10)
-		}
-	}if (localStorage.pic_no ==11){
-		if (prescriptionPhoto_11==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_11;
-			$("#myImagePrescription_show").val(prescriptionPhoto_11)
-		}
-	}if (localStorage.pic_no ==12){
-		if (prescriptionPhoto_12==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_12;
-			$("#myImagePrescription_show").val(prescriptionPhoto_12)
-		}
-	}
-	if (localStorage.pic_no ==13){
-		if (prescriptionPhoto_13==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_13;
-			$("#myImagePrescription_show").val(prescriptionPhoto_13)
-		}
-	}
-	if (localStorage.pic_no ==14){
-		if (prescriptionPhoto_14==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_14;
-			$("#myImagePrescription_show").val(prescriptionPhoto_14)
-		}
-	}
-	if (localStorage.pic_no ==15){
-		if (prescriptionPhoto_15==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_15;
-			$("#myImagePrescription_show").val(prescriptionPhoto_15)
-		}
-	}
-	if (localStorage.pic_no ==16){
-		if (prescriptionPhoto_16==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_16;
-			$("#myImagePrescription_show").val(prescriptionPhoto_16)
-		}
-	}
-	if (localStorage.pic_no ==17){
-		if (prescriptionPhoto_17==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_17;
-			$("#myImagePrescription_show").val(prescriptionPhoto_17)
-		}
-	}
-	if (localStorage.pic_no ==18){
-		if (prescriptionPhoto_18==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_18;
-			$("#myImagePrescription_show").val(prescriptionPhoto_18)
-		}
-	}
-	if (localStorage.pic_no ==19){
-		if (prescriptionPhoto_19==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_19;
-			$("#myImagePrescription_show").val(prescriptionPhoto_19)
-		}
-	}
-	if (localStorage.pic_no ==20){
-		if (prescriptionPhoto_20==''){
-			var error_flag=1
-		}
-		else{
-			var image_show = document.getElementById('myImagePrescription_show');
-			image_show.src = prescriptionPhoto_20;
-			$("#myImagePrescription_show").val(prescriptionPhoto_20)
-		}
-	}
-	
-	//alert (prescriptionPhoto_1)
-	if (localStorage.synced='YES'){
-		if (error_flag==0  ){
-			$.afui.loadContent("#imageSinglePage",true,true,'right');
-		}
-		else{
-			$("#error_image").html('Required picture');
+			var prescriptionPhoto_1=$("#prescriptionPhoto_1").val();
+			var prescriptionPhoto_2=$("#prescriptionPhoto_2").val();
+			var prescriptionPhoto_3=$("#prescriptionPhoto_3").val();
+			var prescriptionPhoto_4=$("#prescriptionPhoto_4").val();
+			var prescriptionPhoto_5=$("#prescriptionPhoto_5").val();
+			var prescriptionPhoto_6=$("#prescriptionPhoto_6").val();
+			var prescriptionPhoto_7=$("#prescriptionPhoto_7").val();
+			var prescriptionPhoto_8=$("#prescriptionPhoto_8").val();
+			var prescriptionPhoto_9=$("#prescriptionPhoto_9").val();
+			var prescriptionPhoto_10=$("#prescriptionPhoto_10").val();
+			var prescriptionPhoto_11=$("#prescriptionPhoto_11").val();
+			var prescriptionPhoto_12=$("#prescriptionPhoto_12").val();
+			var prescriptionPhoto_13=$("#prescriptionPhoto_13").val();
+			var prescriptionPhoto_14=$("#prescriptionPhoto_14").val();
+			var prescriptionPhoto_15=$("#prescriptionPhoto_15").val();
+			var prescriptionPhoto_16=$("#prescriptionPhoto_16").val();
+			var prescriptionPhoto_17=$("#prescriptionPhoto_17").val();
+			var prescriptionPhoto_18=$("#prescriptionPhoto_18").val();
+			var prescriptionPhoto_19=$("#prescriptionPhoto_19").val();
+			var prescriptionPhoto_20=$("#prescriptionPhoto_20").val();
+					
+			var error_flag=0
 			
-		}
-	}
-	else{
-		$("#error_image").html('Please Sync first');
-		
-	}
+			if (localStorage.pic_no ==1){
+				if (prescriptionPhoto_1==''){
+					var error_flag=1
+				}
+				else{
+					//alert (prescriptionPhoto_1)
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_1;
+					$("#myImagePrescription_show").val(prescriptionPhoto_1)
+					//alert (prescriptionPhoto_1)
+				}
+			}
+			if (localStorage.pic_no ==2){
+				if (prescriptionPhoto_2==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_2;
+					$("#myImagePrescription_show").val(prescriptionPhoto_2)
+				}
+				
+			}
+			if (localStorage.pic_no ==3){
+				if (prescriptionPhoto_3==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_3;
+					$("#myImagePrescription_show").val(prescriptionPhoto_3)
+				}
+			}
+			
+			if (localStorage.pic_no ==4){
+				if (prescriptionPhoto_4==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto41;
+					$("#myImagePrescription_show").val(prescriptionPhoto_4)
+				}
+			}if (localStorage.pic_no ==5){
+				if (prescriptionPhoto_5==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_5;
+					$("#myImagePrescription_show").val(prescriptionPhoto_5)
+				}
+			}if (localStorage.pic_no ==6){
+				if (prescriptionPhoto_6==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_6;
+					$("#myImagePrescription_show").val(prescriptionPhoto_6)
+				}
+			}if (localStorage.pic_no ==7){
+				if (prescriptionPhoto_7==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_7;
+					$("#myImagePrescription_show").val(prescriptionPhoto_7)
+				}
+			}if (localStorage.pic_no ==8){
+				if (prescriptionPhoto_8==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_8;
+					$("#myImagePrescription_show").val(prescriptionPhoto_8)
+				}
+			}if (localStorage.pic_no ==9){
+				if (prescriptionPhoto_9==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_9;
+					$("#myImagePrescription_show").val(prescriptionPhoto_9)
+				}
+			}if (localStorage.pic_no ==10){
+				if (prescriptionPhoto_10==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_10;
+					$("#myImagePrescription_show").val(prescriptionPhoto_10)
+				}
+			}if (localStorage.pic_no ==11){
+				if (prescriptionPhoto_11==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_11;
+					$("#myImagePrescription_show").val(prescriptionPhoto_11)
+				}
+			}if (localStorage.pic_no ==12){
+				if (prescriptionPhoto_12==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_12;
+					$("#myImagePrescription_show").val(prescriptionPhoto_12)
+				}
+			}
+			if (localStorage.pic_no ==13){
+				if (prescriptionPhoto_13==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_13;
+					$("#myImagePrescription_show").val(prescriptionPhoto_13)
+				}
+			}
+			if (localStorage.pic_no ==14){
+				if (prescriptionPhoto_14==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_14;
+					$("#myImagePrescription_show").val(prescriptionPhoto_14)
+				}
+			}
+			if (localStorage.pic_no ==15){
+				if (prescriptionPhoto_15==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_15;
+					$("#myImagePrescription_show").val(prescriptionPhoto_15)
+				}
+			}
+			if (localStorage.pic_no ==16){
+				if (prescriptionPhoto_16==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_16;
+					$("#myImagePrescription_show").val(prescriptionPhoto_16)
+				}
+			}
+			if (localStorage.pic_no ==17){
+				if (prescriptionPhoto_17==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_17;
+					$("#myImagePrescription_show").val(prescriptionPhoto_17)
+				}
+			}
+			if (localStorage.pic_no ==18){
+				if (prescriptionPhoto_18==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_18;
+					$("#myImagePrescription_show").val(prescriptionPhoto_18)
+				}
+			}
+			if (localStorage.pic_no ==19){
+				if (prescriptionPhoto_19==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_19;
+					$("#myImagePrescription_show").val(prescriptionPhoto_19)
+				}
+			}
+			if (localStorage.pic_no ==20){
+				if (prescriptionPhoto_20==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_20;
+					$("#myImagePrescription_show").val(prescriptionPhoto_20)
+				}
+			}
+			
+			//alert (prescriptionPhoto_1)
+			if (localStorage.synced='YES'){
+				if (error_flag==0  ){
+					$.afui.loadContent("#imageSinglePage",true,true,'right');
+				}
+				else{
+					$("#error_image").html('Required picture');
+					
+				}
+			}
+			else{
+				$("#error_image").html('Please Sync first');
+				
+			}
 	
-	
+	}//else
 }
 
 //=========================================================
