@@ -254,6 +254,7 @@ function check_user() {
 											localStorage.product_tbl_doc_campaign_Z=''
 											
 											localStorage.campaign_doc_str=''
+											localStorage.visit_client=''
 											//alert (localStorage.campaign_doc_str)
 											var productList_A=localStorage.productListStr.split('<AEND>')[0].replace('<ASTART>','');
 											
@@ -1038,7 +1039,7 @@ function setProduct() {
 
 
 function gotoMarket(pic_no) {
-	if (localStorage.visit_client !=""){
+	if (localStorage.visit_client.length ==0){
 		$("#error_image").html('Please Select Doctor');
 	}else{
 			if (pic_no!=localStorage.pic_no){
