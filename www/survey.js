@@ -1,7 +1,7 @@
 
 
 function homePage() {
-	
+	$("#error_image").html('');
 	$.afui.loadContent("#imagePage",true,true,'right');
 }
 function marketPage() {
@@ -36,9 +36,15 @@ function page_imageSingle() {
 	//$("#order_load").hide();
 	$.afui.loadContent("#imageSinglePage",true,true,'right');
 }
-function page_prescription() {
+function page_cart() {
 	//$("#order_load").hide();
-	$.afui.loadContent("#page_prescription",true,true,'right');
+	$.afui.loadContent("#doctorCampaignCartPage",true,true,'right');
+}
+function page_prescription() {
+	if  (localStorage.campaign_doc_str.length > 3){
+		$.afui.loadContent("#page_prescription",true,true,'right');
+	}
+	
 }
 
 //-------GET GEO LOCATION
