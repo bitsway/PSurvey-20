@@ -64,8 +64,8 @@
 		$("#wait_image_prescription").hide();
 
 		//alert (localStorage.unschedule_market_cmb_id)
-		$('#market_combo_id_lv').empty();
-		$('#market_combo_id_lv').append(localStorage.unschedule_market_cmb_id);
+		$('#zone_combo_id_lv').empty();
+		$('#zone_combo_id_lv').append(localStorage.unschedule_market_cmb_id);
 
 
 
@@ -230,7 +230,7 @@
                      
                      </br></br></br></br>
                      
-                     <input type="submit" id="loginButton" onClick="marketPage()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Set Doctor     " onClick="new_ps()"  />
+                     <input type="submit" id="loginButton" onClick="zonePage()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Set Doctor     " onClick="new_ps()"  />
                    <!-- <a class='button' id="loginButton" onClick="check_user()"  data-transition='up-reveal:dismiss'>Sync</a>-->
                     <div align="center"><img id="wait_image_login" style="" width="50px;" src="loading.gif" alt=""></div>
                     
@@ -546,7 +546,7 @@
 					 <div><b>Market :</b><span class="market"></span></div>
                      <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>  
 					
-                    <div style="overflow:scroll; width:100%; height:700px">
+                    <div style="overflow:scroll; width:100%">
                    <img src="images.png"  alt="Image" width="100%"  id="myImagePrescription_show"></td>
                       </div>         
                           
@@ -581,12 +581,134 @@
              
 
   <!--//==============================Market Page=================-->
-       <div class="view" id="marketPageView">
+    
+    
+    
+  <!--  =================Zone====================-->
+     <div class="view" id="zonePageView">
         <div class="pages">
          <header> 
          <table width="100%" border="0">
           <tr>
             <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="homePage()">	</td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">Zone</font></td>
+            <td width="10%" >&nbsp;</td> 
+          </tr>
+        </table>
+</header> 
+            <div class="panel" id="zonePage">
+            </br></br></br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                     <div id="error_login" style="color:#C00"></div> 
+                    
+                 <!--<div class="input-group"> -->
+                 <input type="text" id="zoneSearch" style="width:100%" placeholder="Search" onKeyUp="searchzone()"  />
+                <!--</div>-->
+				
+                         <ul class="list" id="zone_combo_id_lv" >
+                        
+                        </ul>
+                    </div>
+                    
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+		<a onClick="homePage()" class="icon home" >Home</a>
+        <a onClick="homePage()"  ></a>
+          <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
+          </footer>
+
+    </div> 
+    
+   <!-- ===============Zone======================-->
+   <!--===================RSM====================-->    
+       <div class="view" id="regionPageView">
+        <div class="pages">
+         <header> 
+         <table width="100%" border="0">
+          <tr>
+            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="zonePage()">	</td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">RSM</font></td>
+            <td width="10%" >&nbsp;</td> 
+          </tr>
+        </table>
+</header> 
+            <div class="panel" id="regionPage">
+            </br></br></br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                     <div id="error_login" style="color:#C00"></div> 
+                    
+                 <!--<div class="input-group"> -->
+                 <input type="text" id="regionSearch" style="width:100%" placeholder="Search" onKeyUp="searchRegion()"  />
+                <!--</div>-->
+				
+                         <ul class="list" id="region_combo_id_lv" >
+                        
+                        </ul>
+                    </div>
+                    
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+		<a onClick="homePage()" class="icon home" >Home</a>
+        <a onClick="homePage()"  ></a>
+          <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
+          </footer>
+
+    </div>               
+                      
+    <!--===================RSM====================-->  
+            
+     <!--===================FM====================-->    
+       <div class="view" id="fmPageView">
+        <div class="pages">
+         <header> 
+         <table width="100%" border="0">
+          <tr>
+            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="regionPage()">	</td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">FM</font></td>
+            <td width="10%" >&nbsp;</td> 
+          </tr>
+        </table>
+</header> 
+            <div class="panel" id="fmPage">
+            </br></br></br></br></br></br>
+                <!--<div class="card">-->
+                    <!--<h1>Sync</h1>-->
+                     <div id="error_login" style="color:#C00"></div> 
+                    
+                 <!--<div class="input-group"> -->
+                 <input type="text" id="fmSearch" style="width:100%" placeholder="Search" onKeyUp="searchFm()"  />
+                <!--</div>-->
+				
+                   		<ul class="list" id="fm_combo_id_lv" >
+                        
+                        </ul>
+                    </div>
+                    
+               <!-- </div>-->
+            </div>
+       
+        <footer>
+		<a onClick="homePage()" class="icon home" >Home</a>
+        <a onClick="homePage()"  ></a>
+          <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
+          </footer>
+
+    </div>               
+                      
+    <!--===================FM====================--> 
+     <!--===================Area====================-->       
+   <div class="view" id="marketPageView">
+        <div class="pages">
+         <header> 
+         <table width="100%" border="0">
+          <tr>
+            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="fmPage()">	</td>
             <td align="center"><font style="font-size:18px; font-weight:bold">Market</font></td>
             <td width="10%" >&nbsp;</td> 
           </tr>
@@ -616,11 +738,8 @@
           <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
           </footer>
 
-    </div>               
-                      
-            
-            
-  
+    </div> 
+     <!--===================Area====================-->
  
   <!--//==============================Doctor Page=================-->
        <div class="view" id="doctorPageView">
@@ -631,7 +750,7 @@
           <tr>
             <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="marketPage()">	</td>
             <td align="center"><font style="font-size:18px; font-weight:bold">Doctor List</font></td>
-            <td width="10%" > <img id="item_load" src="loading1.gif"   ></td>
+            <td width="10%" ><!-- <img id="item_load" src="loading1.gif"   >--></td>
           </tr>
         </table>
          
