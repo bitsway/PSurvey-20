@@ -3779,6 +3779,12 @@ function prescription_submit(){
 											//alert ('1')
 											//$("#prescriptionPhoto").val("");
 											
+											
+											$("#medicine_1").val('');
+											$("#medicine_2").val('');
+											$("#medicine_3").val('');
+											$("#medicine_4").val('');
+											$("#medicine_5").val('');
 											$("#wait_image_prescription").hide();
 											$("#btn_prescription_submit").show();
 
