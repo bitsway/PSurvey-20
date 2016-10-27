@@ -1110,7 +1110,7 @@ function gotoMarket(pic_no) {
 				}
 				else{
 					var image_show = document.getElementById('myImagePrescription_show');
-					image_show.src = prescriptionPhoto41;
+					image_show.src = prescriptionPhoto4;
 					$("#myImagePrescription_show").val(prescriptionPhoto_4)
 				}
 			}if (localStorage.pic_no ==5){
