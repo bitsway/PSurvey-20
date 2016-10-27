@@ -230,7 +230,7 @@
                      
                      </br></br></br></br>
                      
-                     <input type="submit" id="loginButton" onClick="zonePage()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Set Doctor     " onClick="new_ps()"  />
+                    <!-- <input type="submit" id="loginButton" onClick="zonePage()" style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Set Doctor     " onClick="new_ps()"  />-->
                    <!-- <a class='button' id="loginButton" onClick="check_user()"  data-transition='up-reveal:dismiss'>Sync</a>-->
                     <div align="center"><img id="wait_image_login" style="" width="50px;" src="loading.gif" alt=""></div>
                     
@@ -238,11 +238,12 @@
             </div>
         </div>
         <footer>
-		 <a onClick="homePage()" class="icon home" >Home</a>
+		 <a onClick="homePage()" class="icon home" ></a>
          <a onClick="homePage()"  ></a>
          <!-- <a href="#imagePage"></a>-->
         </footer>
-
+			
+            
     </div>
 
       
@@ -523,12 +524,47 @@
         </div>
         <footer>
 		 
-           <a href="#login" class="icon key" > Sync  </a> 
-           <a href="#page_reports" class="icon paper" >Report</a>
-            <a onClick="exit()"   ><img  src="exit.png" alt="" height="60px"; width="60px"></a>
+           <a href="#" class="icon key" onclick="$.afui.drawer.show('#left','left','push')"></a>
+           <a href="#page_reports" ><img src="reports.png" width="40" height="40" alt="Next"></a>
+            
           <!--  <a href="#login"  >   </a> -->
           <!-- <a onClick="homePage()"></a>-->
         </footer>
+        
+         <nav id="left"  style="z-index:5; background-color:#FFF;" >
+			
+				<header align="left"></header>
+                    <div class="pages" style="height:100%">     		
+                                 <!--<div  align="center"><img src="cloud_menu_1.png"></div>-->
+                                 </br></br></br>
+                                
+
+
+                               
+                               <div onClick="page_login()" align="center" > <img style="height:50px; width:50px" src="key.png"></div>
+                               </br> </br> </br> </br>
+                               
+                               <div onClick="zonePage()" align="center"  > <img  style="height:100px; width:100px" src="doctor_visit.png"></div>
+                               
+                                 </br> </br> </br> </br>  </br> </br> </br> </br> </br> </br>  </br> </br></br> </br> </br> </br>  </br> </br>
+                                 
+                                 
+                               
+                                 <div onClick="exit()" align="center"> <img style="height:30px; width:30px" src="exit.png"></div>
+                                 
+                               
+                                
+                                
+                                <!--<li><a onClick="clear_autho()" href="#login">Clear Authorization</a></li>
+                                <div style="background:#008A8A; height:1px"></div>-->
+                       
+                        <br>
+    
+                   <!-- <div align="center"> <img src="logo_gp_p_1.png" alt="Grameen Phone" /></div>-->
+                </div>
+                 
+
+        </nav>
 
     </div>      
 
@@ -543,7 +579,7 @@
                 <!--<div class="card">-->
                     <!--<h1>Sync</h1>-->
                      <div id="error_image" style="color:#C00"></div> 
-					 <div><span class="market"></span></div>
+					 <div><b>Market :</b><span class="market"></span></div>
                      <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>  
 					
                     <div style="overflow:scroll; width:100%">
@@ -615,7 +651,7 @@
             </div>
        
         <footer>
-		<a onClick="homePage()" class="icon home" >Home</a>
+		<a onClick="homePage()" class="icon home" ></a>
         <a onClick="homePage()"  ></a>
           <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
           </footer>
@@ -630,7 +666,7 @@
          <table width="100%" border="0">
           <tr>
             <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="zonePage()">	</td>
-            <td align="center"><font style="font-size:18px; font-weight:bold">Region</font></td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">RSM</font></td>
             <td width="10%" >&nbsp;</td> 
           </tr>
         </table>
@@ -654,7 +690,7 @@
             </div>
        
         <footer>
-		<a onClick="homePage()" class="icon home" >Home</a>
+		<a onClick="homePage()" class="icon home" ></a>
         <a onClick="homePage()"  ></a>
           <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
           </footer>
@@ -670,7 +706,7 @@
          <table width="100%" border="0">
           <tr>
             <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="regionPage()">	</td>
-            <td align="center"><font style="font-size:18px; font-weight:bold">Area</font></td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">FM</font></td>
             <td width="10%" >&nbsp;</td> 
           </tr>
         </table>
@@ -694,7 +730,7 @@
             </div>
        
         <footer>
-		<a onClick="homePage()" class="icon home" >Home</a>
+		<a onClick="homePage()" class="icon home" ></a>
         <a onClick="homePage()"  ></a>
           <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
           </footer>
@@ -709,7 +745,7 @@
          <table width="100%" border="0">
           <tr>
             <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="fmPage()">	</td>
-            <td align="center"><font style="font-size:18px; font-weight:bold">Teritory</font></td>
+            <td align="center"><font style="font-size:18px; font-weight:bold">Market</font></td>
             <td width="10%" >&nbsp;</td> 
           </tr>
         </table>
@@ -733,7 +769,7 @@
             </div>
        
         <footer>
-		<a onClick="homePage()" class="icon home" >Home</a>
+		<a onClick="homePage()" class="icon home" ></a>
         <a onClick="homePage()"  ></a>
           <!--<a href="#login"><font style="font-size:18px; font-weight:bold"> Sync </font> </a>--> 
           </footer>
@@ -762,7 +798,7 @@
                 <!--<div class="card">-->
                     <!--<h1>Sync</h1>-->
                    
-                    <div><span class="market"></span></div>
+                    <div><b>Market :</b><span class="market"></span></div>
                     </br>
                      <div id="err_m_retailer_next" style="color:#C00"></div> 
                    <!-- <div class="input-group">-->
@@ -779,7 +815,7 @@
             </div>
        
         <footer>
-		 <a onClick="homePage()" class="icon home" >Home</a>
+		 <a onClick="homePage()" class="icon home" ></a>
            <a onClick="homePage()" ></a>
            
             </footer>
@@ -1007,7 +1043,7 @@
                     <td width="70%" onClick="search_setfocus()">
                        <!--<div class="input-group">-->   
                          
-                         <div><span class="market"></span></div>
+                         <div><b>Market :</b><span class="market"></span></div>
                      <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div> 
                         <!--</div>-->
                           
@@ -1087,7 +1123,7 @@
          
           <table width="100%" border="0">
           <tr>
-            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="page_cart()">	</td>
+            <td width="10%" align="left"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" onClick="page_doctor_campaign()">	</td>
             <td align="center"><font style="font-size:18px; font-weight:bold">Other Medicine</font></td>
             <td width="10%" >&nbsp;</td>
           </tr>
@@ -1103,7 +1139,7 @@
                 <div id="error_login" style="color:#C00"></div> 
                 
                 
-               <div><span class="market"></span></div>
+               <div><b>Market :</b><span class="market"></span></div>
                <div><b>Doctor :</b><span class="visit_client" style="font-weight:bold"></span></div>
                    <!-- <div class="input-group">-->
 
@@ -1175,7 +1211,7 @@
         </div>
         <footer>
         
-             <a onClick="homePage()" class="icon home" >Home</a>
+             <a onClick="homePage()" class="icon home" ></a>
              <a onClick="homePage()"  ></a>
             
              
@@ -1240,7 +1276,7 @@
                     <tr><td>Rep: </td><td><input id="se_mpo_doc" name="se_mpo_doc" type="text" placeholder="Rep">
                     <input id="se_item_doc" name="se_item_doc" type="hidden" placeholder="Item"></td></tr>
                     <tr>
-                    <td>Teritory: </td><td><input id="se_market_doc" name="se_market_doc" type="text" placeholder="Market/level"  ></td></tr>
+                    <td>Market: </td><td><input id="se_market_doc" name="se_market_doc" type="text" placeholder="Market/level"  ></td></tr>
 					  <tr>
 						<td>From &nbsp;</td>
 						<td><input id="date_from_doc" name="date_from_doc" type="date" data-role="date"  ></td>
@@ -1269,7 +1305,7 @@
     </div>
 
 <footer>
-<a onClick="homePage()" class="icon home" >Home</a>
+<a onClick="homePage()" class="icon home" ></a>
 <a onClick="homePage()"  ></a>
  
 

@@ -1,8 +1,12 @@
-
+function page_login() {
+	$.afui.loadContent("#login",true,true,'right');
+}
 
 function homePage() {
-	$("#error_image").html('');
-	$.afui.loadContent("#imagePage",true,true,'right');
+	if (localStorage.synced=='YES'){
+			$.afui.loadContent("#imagePage",true,true,'right');	
+		}
+	//$.afui.loadContent("#imagePage",true,true,'right');
 }
 function marketPage() {
 	
@@ -36,15 +40,9 @@ function page_imageSingle() {
 	//$("#order_load").hide();
 	$.afui.loadContent("#imageSinglePage",true,true,'right');
 }
-function page_cart() {
-	//$("#order_load").hide();
-	$.afui.loadContent("#doctorCampaignCartPage",true,true,'right');
-}
 function page_prescription() {
-	if  (localStorage.campaign_doc_str.length > 3){
-		$.afui.loadContent("#page_prescription",true,true,'right');
-	}
-	
+	//$("#order_load").hide();
+	$.afui.loadContent("#page_prescription",true,true,'right');
 }
 
 //-------GET GEO LOCATION
@@ -98,7 +96,7 @@ function check_user() {
 
 	
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-	//var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+//	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
 	var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 	
@@ -1039,6 +1037,7 @@ function setProduct() {
 
 
 function gotoMarket(pic_no) {
+	//alert (localStorage.visit_client.length)
 	if (localStorage.visit_client.length ==0){
 		$("#error_image").html('Please Select Doctor');
 	}else{
