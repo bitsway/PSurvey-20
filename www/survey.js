@@ -42,7 +42,10 @@ function page_imageSingle() {
 }
 function page_prescription() {
 	//$("#order_load").hide();
-	$.afui.loadContent("#page_prescription",true,true,'right');
+	 if  (localStorage.campaign_doc_str.length > 1){
+		$.afui.loadContent("#page_prescription",true,true,'right');	
+	}
+	
 }
 
 //-------GET GEO LOCATION
