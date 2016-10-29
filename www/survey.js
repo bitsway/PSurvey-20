@@ -1,7 +1,9 @@
 function page_login() {
 	$.afui.loadContent("#login",true,true,'right');
 }
-
+function page_doctor_campaignCart(){
+	$.afui.loadContent("#doctorCampaignCartPage",true,true,'right');
+}
 function homePage() {
 	if (localStorage.synced=='YES'){
 			$.afui.loadContent("#imagePage",true,true,'right');	
