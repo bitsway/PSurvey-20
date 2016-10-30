@@ -3835,7 +3835,7 @@ function searchItem() {
 		
 		if (name.toUpperCase().indexOf(filter) == 0) {
 			lis[i].style.display = 'list-item';
-			$("#item_combo_id_lv").find(lis[0]).first().focus()
+			$('#container').scrollTop(0);
 		}else{
 			lis[i].style.display = 'none';
 		}
@@ -3852,7 +3852,7 @@ function cancelSearch() {
 		
 		if (name.toUpperCase().indexOf(filter) == 0) {
 			lis[i].style.display = 'list-item';
-			$("#item_combo_id_lv").find(lis[0]).first().focus()
+			$('#container').scrollTop(0);
 		}else{
 			lis[i].style.display = 'none';
 		}
