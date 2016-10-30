@@ -3833,11 +3833,30 @@ function searchItem() {
 	for (var i = 0; i < lis.length; i++) {
 		var name = lis[i].getElementsByClassName('name')[0].innerHTML;
 		
-		if (name.toUpperCase().indexOf(filter) == 0) 
+		if (name.toUpperCase().indexOf(filter) == 0) {
 			lis[i].style.display = 'list-item';
-		else
+			$("#item_combo_id_lv").find(lis[0]).first().focus()
+		}else{
 			lis[i].style.display = 'none';
-		$("#item_combo_id_lv").find(lis[0]).first().focus()
+		}
+		
+	}
+}
+function cancelSearch() {
+	$("#itemSearch").val('')
+	var filter  = $("#itemSearch").val().toUpperCase();
+	 var lis =document.getElementById("campaign_combo_id_lv").getElementsByTagName("li");
+
+	for (var i = 0; i < lis.length; i++) {
+		var name = lis[i].getElementsByClassName('name')[0].innerHTML;
+		
+		if (name.toUpperCase().indexOf(filter) == 0) {
+			lis[i].style.display = 'list-item';
+			$("#item_combo_id_lv").find(lis[0]).first().focus()
+		}else{
+			lis[i].style.display = 'none';
+		}
+		
 	}
 }
 function comboSearch() {
@@ -4726,15 +4745,19 @@ function searchProductChar(char) {
 	var filter  = char;
 	var lis =document.getElementById("campaign_combo_id_lv").getElementsByTagName("li");
 	//alert (filter)
+	var focusDone=0;
 	for (var i = 0; i < lis.length; i++) {
 		var name = lis[i].getElementsByClassName('name')[0].innerHTML;
 		if (name.indexOf(filter) == 0) {
 			lis[i].style.display = 'list-item';
+			$('#container').scrollTop(0);
 		}
 		else{
 			lis[i].style.display = 'none';
 		}
-		$("#item_combo_id_lv").find(lis[0]).first().focus()
+		
 	}
+	
+	
 	
 }

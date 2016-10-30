@@ -836,15 +836,18 @@
                             <td width="2%" onClick="search_setfocus()">
                      
                             </td>
-                    <td width="70%" onClick="search_setfocus()">
+                    <td width="50%" onClick="search_setfocus()">
                        <!--<div class="input-group">-->   
                         
-                        <input id="itemSearch" type="text" id="itemSearch" style="width:100%; color:#000; background-color:#F4F8FF; font-weight:normal" placeholder="Search" onKeyUp="searchItem()"  />
+                        <input id="itemSearch" type="text" id="itemSearch" style="width:100%; color:#000; background-color:#F4F8FF; font-weight:normal" placeholder="Search"   />
                         <!--</div>-->
                           
                             
                             </td>
-                            <td onClick="search_setfocus()" width="10%"></td>
+                            <td onClick="searchItem()" width="10%"><img src="search-icon.png" width="30" height="30" alt="S"  ></td>
+                            <td  width="5px"></td>
+                            <td align="right" onClick="cancelSearch()" width="10%"><img src="cross_white.png" width="20" height="20" alt="Next"  ></td>
+                             <td  width="5px"></td>
                             <td align="right">
                             <img src="icon-arrow-right_1.png" width="40" height="40" alt="Next" onClick="getDocCampaignData()" >
                             <!-- <img  class="icon right"   alt="Next" onClick="getDocCampaignData()" >-->
@@ -860,7 +863,7 @@
          
          </header> 
             <div class="panel" id="page_doctor_campaign">
-            </br></br></br></br></br></br></br>
+            </br></br></br></br></br>
             
                 <!--<div class="card">-->
                     <!--<h1>Sync</h1>-->
@@ -873,11 +876,13 @@
                         
                         <table width="100%" border="0"   >
                 <tr>
-                <td width="90%"  style="vertical-align:top;overflow:scroll; height:700px; display:block">
-                 
+               <!-- <td id="itemTD" width="90%"  style="vertical-align:top;overflow:scroll; height:700px; display:block">-->
+                <td >
+                 <div id="container" style="max-height:700px;overflow:scroll;">
                  <ul class="list" id="campaign_combo_id_lv" >
                         
                         </ul>
+                  </div>
                  </td>
                 
                  <td style="vertical-align:top" >
