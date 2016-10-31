@@ -15,8 +15,17 @@ function marketPage() {
 	$.afui.loadContent("#marketPage",true,true,'right');
 }
 
+function zonePageDoctor() {
+	if (localStorage.visit_market_show.length > 0){
+		marketNext_doc(localStorage.visit_market_show)
+	}
+	else{
+	$.afui.loadContent("#zonePage",true,true,'right');
+	}
+}
 function zonePage() {
 	$.afui.loadContent("#zonePage",true,true,'right');
+
 }
 function regionPage() {
 	$.afui.loadContent("#regionPage",true,true,'right');
@@ -101,7 +110,7 @@ function check_user() {
 
 	
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-//	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+	//var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
 	//var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 	var apipath_base_photo_dm ='http://e2.businesssolutionapps.com/welcome/dmpath_prescription/get_path?CID='+cid +'&HTTPPASS=e99business321cba';
