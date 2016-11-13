@@ -110,10 +110,10 @@ function check_user() {
 
 	
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+	//var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
 	//var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-	//var apipath_base_photo_dm ='http://e2.businesssolutionapps.com/welcome/dmpath_prescription/get_path?CID='+cid +'&HTTPPASS=e99business321cba';
+	var apipath_base_photo_dm ='http://e2.businesssolutionapps.com/welcome/dmpath_prescription/get_path?CID='+cid +'&HTTPPASS=e99business321cba';
 	
 	
 	
@@ -14469,7 +14469,7 @@ function set_report_parameter_doctor() {
 	
 	
 	$("#report_market_prescription").html("Market :"+localStorage.se_market_report_doc);
-	$("#report_mpo_prescription").html("MPO :"+localStorage.rep_id_report_doc);
+	$("#report_mpo_prescription").html("MSO :"+localStorage.rep_id_report_doc);
 	$("#date_f_prescription").html("DateFrom :"+date_from_show_doc);
 	$("#date_t_prescription").html("DateTo :"+date_to_show_doc);
 	
