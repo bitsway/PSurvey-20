@@ -53,9 +53,9 @@ function page_imageSingle() {
 }
 function page_prescription() {
 	//$("#order_load").hide();
-	 if  (localStorage.campaign_doc_str.length > 1){
+	 //if  (localStorage.campaign_doc_str.length > 1){
 		$.afui.loadContent("#page_prescription",true,true,'right');	
-	}
+	//}
 	
 }
 
@@ -110,10 +110,10 @@ function check_user() {
 
 	
 //	//var  apipath_base_photo_dm='http://c003.cloudapp.net/mrepacme/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-	//var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
+	var  apipath_base_photo_dm='http://127.0.0.1:8000/skf/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
 
 	//var  apipath_base_photo_dm='http://a002.businesssolutionapps.com/gpl/syncmobile_prescription/dm_prescription_path?CID='+cid +'&HTTPPASS=e99business321cba'
-	var apipath_base_photo_dm ='http://e2.businesssolutionapps.com/welcome/dmpath_prescription/get_path?CID='+cid +'&HTTPPASS=e99business321cba';
+	//var apipath_base_photo_dm ='http://e2.businesssolutionapps.com/welcome/dmpath_prescription/get_path?CID='+cid +'&HTTPPASS=e99business321cba';
 	
 	
 	
@@ -239,6 +239,11 @@ function check_user() {
 											localStorage.market_doctor=resultArray[17];
 											//alert (localStorage.productListStr);
 											
+											
+											
+											localStorage.visit_client=''
+											localStorage.visit_market_show=''
+											//alert (localStorage.visit_market_show)
 											
 											localStorage.product_tbl_doc_campaign_A=''
 											localStorage.product_tbl_doc_campaign_B=''
@@ -1054,9 +1059,9 @@ function setProduct() {
 
 function gotoMarket(pic_no) {
 	//alert (localStorage.visit_client.length)
-	if (localStorage.visit_client.length ==0){
-		$("#error_image").html('Please Select Doctor');
-	}else{
+	//if (localStorage.visit_client.length ==0){
+//		$("#error_image").html('Please Select Doctor');
+//	}else{
 			if (pic_no!=localStorage.pic_no){
 				$("#campaign_combo_id_lv").empty()
 				setProduct()
@@ -1083,6 +1088,36 @@ function gotoMarket(pic_no) {
 			var prescriptionPhoto_18=$("#prescriptionPhoto_18").val();
 			var prescriptionPhoto_19=$("#prescriptionPhoto_19").val();
 			var prescriptionPhoto_20=$("#prescriptionPhoto_20").val();
+			var prescriptionPhoto_21=$("#prescriptionPhoto_21").val();
+			var prescriptionPhoto_22=$("#prescriptionPhoto_22").val();
+			var prescriptionPhoto_23=$("#prescriptionPhoto_23").val();
+			var prescriptionPhoto_24=$("#prescriptionPhoto_24").val();
+			var prescriptionPhoto_25=$("#prescriptionPhoto_25").val();
+			var prescriptionPhoto_26=$("#prescriptionPhoto_26").val();
+			var prescriptionPhoto_27=$("#prescriptionPhoto_27").val();
+			var prescriptionPhoto_28=$("#prescriptionPhoto_28").val();
+			var prescriptionPhoto_29=$("#prescriptionPhoto_29").val();
+			var prescriptionPhoto_30=$("#prescriptionPhoto_30").val();
+			var prescriptionPhoto_31=$("#prescriptionPhoto_31").val();
+			var prescriptionPhoto_32=$("#prescriptionPhoto_32").val();
+			var prescriptionPhoto_33=$("#prescriptionPhoto_33").val();
+			var prescriptionPhoto_34=$("#prescriptionPhoto_34").val();
+			var prescriptionPhoto_35=$("#prescriptionPhoto_35").val();
+			var prescriptionPhoto_36=$("#prescriptionPhoto_36").val();
+			var prescriptionPhoto_37=$("#prescriptionPhoto_37").val();
+			var prescriptionPhoto_38=$("#prescriptionPhoto_38").val();
+			var prescriptionPhoto_39=$("#prescriptionPhoto_39").val();
+			var prescriptionPhoto_40=$("#prescriptionPhoto_40").val();
+			var prescriptionPhoto_41=$("#prescriptionPhoto_41").val();
+			var prescriptionPhoto_42=$("#prescriptionPhoto_42").val();
+			var prescriptionPhoto_43=$("#prescriptionPhoto_43").val();
+			var prescriptionPhoto_44=$("#prescriptionPhoto_44").val();
+			var prescriptionPhoto_45=$("#prescriptionPhoto_45").val();
+			var prescriptionPhoto_46=$("#prescriptionPhoto_46").val();
+			var prescriptionPhoto_47=$("#prescriptionPhoto_47").val();
+			var prescriptionPhoto_48=$("#prescriptionPhoto_48").val();
+			var prescriptionPhoto_49=$("#prescriptionPhoto_49").val();
+			var prescriptionPhoto_50=$("#prescriptionPhoto_50").val();
 					
 			var error_flag=0
 			
@@ -1283,9 +1318,340 @@ function gotoMarket(pic_no) {
 				}
 			}
 			
-			//alert (prescriptionPhoto_1)
+			if (localStorage.pic_no ==21){
+				if (prescriptionPhoto_21==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_21;
+					$("#myImagePrescription_show").val(prescriptionPhoto_21)
+				}
+			}
+			
+			if (localStorage.pic_no ==22){
+				if (prescriptionPhoto_22==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_22;
+					$("#myImagePrescription_show").val(prescriptionPhoto_22)
+				}
+			}
+			
+			if (localStorage.pic_no ==23){
+				if (prescriptionPhoto_23==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_23;
+					$("#myImagePrescription_show").val(prescriptionPhoto_23)
+				}
+			}
+			
+			if (localStorage.pic_no ==24){
+				if (prescriptionPhoto_24==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_24;
+					$("#myImagePrescription_show").val(prescriptionPhoto_24)
+				}
+			}
+			
+			if (localStorage.pic_no ==25){
+				if (prescriptionPhoto_25==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_25;
+					$("#myImagePrescription_show").val(prescriptionPhoto_25)
+				}
+			}
+			
+			if (localStorage.pic_no ==26){
+				if (prescriptionPhoto_26==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_26;
+					$("#myImagePrescription_show").val(prescriptionPhoto_26)
+				}
+			}
+			
+			if (localStorage.pic_no ==27){
+				if (prescriptionPhoto_27==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_27;
+					$("#myImagePrescription_show").val(prescriptionPhoto_27)
+				}
+			}
+			
+			if (localStorage.pic_no ==28){
+				if (prescriptionPhoto_28==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_28;
+					$("#myImagePrescription_show").val(prescriptionPhoto_28)
+				}
+			}
+			
+			if (localStorage.pic_no ==29){
+				if (prescriptionPhoto_29==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_29;
+					$("#myImagePrescription_show").val(prescriptionPhoto_29)
+				}
+			}
+			
+			if (localStorage.pic_no ==30){
+				if (prescriptionPhoto_30==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_30;
+					$("#myImagePrescription_show").val(prescriptionPhoto_30)
+				}
+			}
+			
+			if (localStorage.pic_no ==31){
+				if (prescriptionPhoto_31==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_31;
+					$("#myImagePrescription_show").val(prescriptionPhoto_31)
+				}
+			}
+			
+			if (localStorage.pic_no ==32){
+				if (prescriptionPhoto_32==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_32;
+					$("#myImagePrescription_show").val(prescriptionPhoto_32)
+				}
+			}
+			
+			if (localStorage.pic_no ==33){
+				if (prescriptionPhoto_33==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_33;
+					$("#myImagePrescription_show").val(prescriptionPhoto_33)
+				}
+			}
+			
+			if (localStorage.pic_no ==34){
+				if (prescriptionPhoto_34==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_34;
+					$("#myImagePrescription_show").val(prescriptionPhoto_34)
+				}
+			}
+			
+			if (localStorage.pic_no ==35){
+				if (prescriptionPhoto_35==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_35;
+					$("#myImagePrescription_show").val(prescriptionPhoto_35)
+				}
+			}
+			
+			if (localStorage.pic_no ==36){
+				if (prescriptionPhoto_36==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_36;
+					$("#myImagePrescription_show").val(prescriptionPhoto_36)
+				}
+			}
+			
+			if (localStorage.pic_no ==37){
+				if (prescriptionPhoto_37==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_37;
+					$("#myImagePrescription_show").val(prescriptionPhoto_37)
+				}
+			}
+			
+			if (localStorage.pic_no ==38){
+				if (prescriptionPhoto_38==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_38;
+					$("#myImagePrescription_show").val(prescriptionPhoto_38)
+				}
+			}
+			
+			if (localStorage.pic_no ==39){
+				if (prescriptionPhoto_39==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_39;
+					$("#myImagePrescription_show").val(prescriptionPhoto_39)
+				}
+			}
+			
+			if (localStorage.pic_no ==40){
+				if (prescriptionPhoto_40==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_40;
+					$("#myImagePrescription_show").val(prescriptionPhoto_40)
+				}
+			}
+			
+			if (localStorage.pic_no ==41){
+				if (prescriptionPhoto_41==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_41;
+					$("#myImagePrescription_show").val(prescriptionPhoto_41)
+				}
+			}
+			
+			if (localStorage.pic_no ==42){
+				if (prescriptionPhoto_42==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_42;
+					$("#myImagePrescription_show").val(prescriptionPhoto_42)
+				}
+			}
+			
+			if (localStorage.pic_no ==43){
+				if (prescriptionPhoto_43==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_43;
+					$("#myImagePrescription_show").val(prescriptionPhoto_43)
+				}
+			}
+			
+			if (localStorage.pic_no ==44){
+				if (prescriptionPhoto_44==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_44;
+					$("#myImagePrescription_show").val(prescriptionPhoto_44)
+				}
+			}
+			
+			if (localStorage.pic_no ==45){
+				if (prescriptionPhoto_45==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_45;
+					$("#myImagePrescription_show").val(prescriptionPhoto_45)
+				}
+			}
+			
+			if (localStorage.pic_no ==46){
+				if (prescriptionPhoto_46==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_46;
+					$("#myImagePrescription_show").val(prescriptionPhoto_46)
+				}
+			}
+			
+			if (localStorage.pic_no ==47){
+				if (prescriptionPhoto_47==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_47;
+					$("#myImagePrescription_show").val(prescriptionPhoto_47)
+				}
+			}
+			
+			if (localStorage.pic_no ==48){
+				if (prescriptionPhoto_48==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_48;
+					$("#myImagePrescription_show").val(prescriptionPhoto_48)
+				}
+			}
+			
+			if (localStorage.pic_no ==49){
+				if (prescriptionPhoto_49==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_49;
+					$("#myImagePrescription_show").val(prescriptionPhoto_49)
+				}
+			}
+			
+			if (localStorage.pic_no ==50){
+				if (prescriptionPhoto_50==''){
+					var error_flag=1
+				}
+				else{
+					var image_show = document.getElementById('myImagePrescription_show');
+					image_show.src = prescriptionPhoto_50;
+					$("#myImagePrescription_show").val(prescriptionPhoto_50)
+				}
+			}
+			
+			
+			//alert (localStorage.pic_no)
 			if (localStorage.synced='YES'){
-				if (error_flag==0  ){
+				if (error_flag==1  ){
 					$.afui.loadContent("#imageSinglePage",true,true,'right');
 				}
 				else{
@@ -1298,7 +1664,7 @@ function gotoMarket(pic_no) {
 				
 			}
 	
-	}//else
+	//}//else
 }
 
 //=========================================================
@@ -1707,14 +2073,14 @@ function marketRetailerNext_doc(mClientNameID) {
 
 
 function getDocCampaignData(){	
-    if  (localStorage.campaign_doc_str.length < 3){
-		$("#myerror_doctor_campaign").html('Please select at least one Item');
-		//$.afui.loadContent("#page_prescription",true,true,'right');		
-	}
-	else{
+    //if  (localStorage.campaign_doc_str.length < 3){
+//		$("#myerror_doctor_campaign").html('Please select at least one Item');
+//		//$.afui.loadContent("#page_prescription",true,true,'right');		
+//	}
+//	else{
 		getDocCampaignDataCart();
 		$.afui.loadContent("#doctorCampaignCartPage",true,true,'right');
-	}
+	//}
 }
 function getDocCampaignDataCart(){	
 	campaign_doc_str=localStorage.campaign_doc_str
@@ -1877,6 +2243,9 @@ function prescription_submit(){
 	
 	var areaId=localStorage.visit_market_show.split('|')[1]
 	
+	var checkOther=$("#checkOther").attr("checked") ? 1 : 0;
+	
+	//alert (checkOther)
 	if (doctor_name==''){		
 		$("#error_prescription_submit").text("Required Doctor");
 		$("#wait_image_prescription").show();
@@ -1906,6 +2275,36 @@ function prescription_submit(){
 		var prescriptionPhoto_18=$("#prescriptionPhoto_18").val();
 		var prescriptionPhoto_19=$("#prescriptionPhoto_19").val();
 		var prescriptionPhoto_20=$("#prescriptionPhoto_20").val();
+		var prescriptionPhoto_21=$("#prescriptionPhoto_21").val();
+		var prescriptionPhoto_22=$("#prescriptionPhoto_22").val();
+		var prescriptionPhoto_23=$("#prescriptionPhoto_23").val();
+		var prescriptionPhoto_24=$("#prescriptionPhoto_24").val();
+		var prescriptionPhoto_25=$("#prescriptionPhoto_25").val();
+		var prescriptionPhoto_26=$("#prescriptionPhoto_26").val();
+		var prescriptionPhoto_27=$("#prescriptionPhoto_27").val();
+		var prescriptionPhoto_28=$("#prescriptionPhoto_28").val();
+		var prescriptionPhoto_29=$("#prescriptionPhoto_29").val();
+		var prescriptionPhoto_30=$("#prescriptionPhoto_30").val();
+		var prescriptionPhoto_31=$("#prescriptionPhoto_31").val();
+		var prescriptionPhoto_32=$("#prescriptionPhoto_32").val();
+		var prescriptionPhoto_33=$("#prescriptionPhoto_33").val();
+		var prescriptionPhoto_34=$("#prescriptionPhoto_34").val();
+		var prescriptionPhoto_35=$("#prescriptionPhoto_35").val();
+		var prescriptionPhoto_36=$("#prescriptionPhoto_36").val();
+		var prescriptionPhoto_37=$("#prescriptionPhoto_37").val();
+		var prescriptionPhoto_38=$("#prescriptionPhoto_38").val();
+		var prescriptionPhoto_39=$("#prescriptionPhoto_39").val();
+		var prescriptionPhoto_40=$("#prescriptionPhoto_40").val();
+		var prescriptionPhoto_41=$("#prescriptionPhoto_41").val();
+		var prescriptionPhoto_42=$("#prescriptionPhoto_42").val();
+		var prescriptionPhoto_43=$("#prescriptionPhoto_43").val();
+		var prescriptionPhoto_44=$("#prescriptionPhoto_44").val();
+		var prescriptionPhoto_45=$("#prescriptionPhoto_45").val();
+		var prescriptionPhoto_46=$("#prescriptionPhoto_46").val();
+		var prescriptionPhoto_47=$("#prescriptionPhoto_47").val();
+		var prescriptionPhoto_48=$("#prescriptionPhoto_48").val();
+		var prescriptionPhoto_49=$("#prescriptionPhoto_49").val();
+		var prescriptionPhoto_50=$("#prescriptionPhoto_50").val();
 		
 		localStorage.prescriptionPhoto_1 = prescriptionPhoto_1;
 		localStorage.prescriptionPhoto_2 = prescriptionPhoto_2;
@@ -1927,6 +2326,37 @@ function prescription_submit(){
 		localStorage.prescriptionPhoto_18 = prescriptionPhoto_18;
 		localStorage.prescriptionPhoto_19 = prescriptionPhoto_19;
 		localStorage.prescriptionPhoto_20 = prescriptionPhoto_20;
+		localStorage.prescriptionPhoto_21 = prescriptionPhoto_21;
+		localStorage.prescriptionPhoto_22 = prescriptionPhoto_22;
+		localStorage.prescriptionPhoto_23 = prescriptionPhoto_23;
+		localStorage.prescriptionPhoto_24 = prescriptionPhoto_24;
+		localStorage.prescriptionPhoto_25 = prescriptionPhoto_25;
+		localStorage.prescriptionPhoto_26 = prescriptionPhoto_26;
+		localStorage.prescriptionPhoto_27 = prescriptionPhoto_27;
+		localStorage.prescriptionPhoto_28 = prescriptionPhoto_28;
+		localStorage.prescriptionPhoto_29 = prescriptionPhoto_29;
+		localStorage.prescriptionPhoto_30 = prescriptionPhoto_30;
+		localStorage.prescriptionPhoto_31 = prescriptionPhoto_31;
+		localStorage.prescriptionPhoto_32 = prescriptionPhoto_32;
+		localStorage.prescriptionPhoto_33 = prescriptionPhoto_33;
+		localStorage.prescriptionPhoto_34 = prescriptionPhoto_34;
+		localStorage.prescriptionPhoto_35 = prescriptionPhoto_35;
+		localStorage.prescriptionPhoto_36 = prescriptionPhoto_36;
+		localStorage.prescriptionPhoto_37 = prescriptionPhoto_37;
+		localStorage.prescriptionPhoto_38 = prescriptionPhoto_38;
+		localStorage.prescriptionPhoto_39 = prescriptionPhoto_39;
+		localStorage.prescriptionPhoto_40 = prescriptionPhoto_40;
+		localStorage.prescriptionPhoto_41 = prescriptionPhoto_41;
+		localStorage.prescriptionPhoto_42 = prescriptionPhoto_42;
+		localStorage.prescriptionPhoto_43 = prescriptionPhoto_43;
+		localStorage.prescriptionPhoto_44 = prescriptionPhoto_44;
+		localStorage.prescriptionPhoto_45 = prescriptionPhoto_45;
+		localStorage.prescriptionPhoto_46 = prescriptionPhoto_46;
+		localStorage.prescriptionPhoto_47 = prescriptionPhoto_47;
+		localStorage.prescriptionPhoto_48 = prescriptionPhoto_48;
+		localStorage.prescriptionPhoto_49 = prescriptionPhoto_49;
+		localStorage.prescriptionPhoto_50 = prescriptionPhoto_50;
+		
 		
 		
 		if (localStorage.pic_no==1){
@@ -1989,6 +2419,96 @@ function prescription_submit(){
 		else if (localStorage.pic_no==20){
 			prescriptionPhoto=$("#prescriptionPhoto_20").val();
 		}
+		else if (localStorage.pic_no==21){
+			prescriptionPhoto=$("#prescriptionPhoto_21").val();
+		}
+		else if (localStorage.pic_no==22){
+			prescriptionPhoto=$("#prescriptionPhoto_22").val();
+		}
+		else if (localStorage.pic_no==23){
+			prescriptionPhoto=$("#prescriptionPhoto_23").val();
+		}
+		else if (localStorage.pic_no==24){
+			prescriptionPhoto=$("#prescriptionPhoto_24").val();
+		}
+		else if (localStorage.pic_no==25){
+			prescriptionPhoto=$("#prescriptionPhoto_25").val();
+		}
+		else if (localStorage.pic_no==26){
+			prescriptionPhoto=$("#prescriptionPhoto_26").val();
+		}
+		else if (localStorage.pic_no==27){
+			prescriptionPhoto=$("#prescriptionPhoto_27").val();
+		}
+		else if (localStorage.pic_no==28){
+			prescriptionPhoto=$("#prescriptionPhoto_28").val();
+		}
+		else if (localStorage.pic_no==29){
+			prescriptionPhoto=$("#prescriptionPhoto_29").val();
+		}else if (localStorage.pic_no==30){
+			prescriptionPhoto=$("#prescriptionPhoto_30").val();
+		}else if (localStorage.pic_no==31){
+			prescriptionPhoto=$("#prescriptionPhoto_31").val();
+		}
+		else if (localStorage.pic_no==32){
+			prescriptionPhoto=$("#prescriptionPhoto_32").val();
+		}
+		else if (localStorage.pic_no==33){
+			prescriptionPhoto=$("#prescriptionPhoto_33").val();
+		}
+		else if (localStorage.pic_no==34){
+			prescriptionPhoto=$("#prescriptionPhoto_34").val();
+		}
+		else if (localStorage.pic_no==35){
+			prescriptionPhoto=$("#prescriptionPhoto_35").val();
+		}
+		else if (localStorage.pic_no==36){
+			prescriptionPhoto=$("#prescriptionPhoto_36").val();
+		}
+		else if (localStorage.pic_no==37){
+			prescriptionPhoto=$("#prescriptionPhoto_37").val();
+		}
+		else if (localStorage.pic_no==38){
+			prescriptionPhoto=$("#prescriptionPhoto_38").val();
+		}
+		else if (localStorage.pic_no==39){
+			prescriptionPhoto=$("#prescriptionPhoto_39").val();
+		}
+		else if (localStorage.pic_no==40){
+			prescriptionPhoto=$("#prescriptionPhoto_40").val();
+		}
+		else if (localStorage.pic_no==41){
+			prescriptionPhoto=$("#prescriptionPhoto_41").val();
+		}
+		else if (localStorage.pic_no==42){
+			prescriptionPhoto=$("#prescriptionPhoto_42").val();
+		}
+		else if (localStorage.pic_no==43){
+			prescriptionPhoto=$("#prescriptionPhoto_43").val();
+		}
+		else if (localStorage.pic_no==44){
+			prescriptionPhoto=$("#prescriptionPhoto_44").val();
+		}
+		else if (localStorage.pic_no==45){
+			prescriptionPhoto=$("#prescriptionPhoto_45").val();
+		}
+		else if (localStorage.pic_no==46){
+			prescriptionPhoto=$("#prescriptionPhoto_46").val();
+		}
+		else if (localStorage.pic_no==47){
+			prescriptionPhoto=$("#prescriptionPhoto_47").val();
+		}
+		else if (localStorage.pic_no==48){
+			prescriptionPhoto=$("#prescriptionPhoto_48").val();
+		}
+		else if (localStorage.pic_no==49){
+			prescriptionPhoto=$("#prescriptionPhoto_49").val();
+		}
+		else if (localStorage.pic_no==50){
+			prescriptionPhoto=$("#prescriptionPhoto_50").val();
+		}
+		
+		
 		//prescriptionPhoto='dasdfadf'
 		//if (prescriptionPhoto==''){
 //			$("#error_prescription_submit").html('Required picture');
@@ -2005,9 +2525,9 @@ function prescription_submit(){
 			//alert (imageName);
 				
 				
-				$("#error_prescription_submittxt").val(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5)							
+				$("#error_prescription_submittxt").val(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5+'&checkOther='+checkOther)							
 
-				 $.ajax(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5,{
+				 $.ajax(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5+'&checkOther='+checkOther,{
 								// cid:localStorage.cid,rep_id:localStorage.user_id,rep_pass:localStorage.user_pass,synccode:localStorage.synccode,
 								type: 'POST',
 								timeout: 30000,
@@ -2039,7 +2559,7 @@ function prescription_submit(){
 											//alert (result_string)
 										
 											//image upload function									
-											uploadPhoto(prescriptionPhoto, imageName);
+											//uploadPhoto(prescriptionPhoto, imageName);
 											//alert ('0')
 											//alert (localStorage.pic_no)
 											if (localStorage.pic_no==1){								
@@ -2118,6 +2638,127 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												
 												//alert (localStorage.pic_no)
 												localStorage.prescriptionPhoto_1=''
@@ -2205,10 +2846,131 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_2=''
 												var image2 = document.getElementById('myImagePrescription_2');
     											image2.src = localStorage.prescriptionPhoto_2;
 												$("#prescriptionPhoto_2").val(localStorage.prescriptionPhoto_2)
+												
 											}
 											else if (localStorage.pic_no==3){
 												var image1 = document.getElementById('myImagePrescription_1');
@@ -2286,6 +3048,125 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_3=''
 												var image3 = document.getElementById('myImagePrescription_3');
@@ -2373,6 +3254,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_4=''
 												var image4 = document.getElementById('myImagePrescription_4');
     											image4.src = localStorage.prescriptionPhoto_4;
@@ -2458,6 +3459,126 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_5=''
 												var image5 = document.getElementById('myImagePrescription_5');
@@ -2564,6 +3685,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_6=''
 												var image6 = document.getElementById('myImagePrescription_6');
     											image6.src = localStorage.prescriptionPhoto_6;
@@ -2649,6 +3890,126 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_7=''
 												var image7 = document.getElementById('myImagePrescription_7');
@@ -2736,6 +4097,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_8=''
 												var image8 = document.getElementById('myImagePrescription_8');
     											image8.src = localStorage.prescriptionPhoto_8;
@@ -2821,6 +4302,126 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_9=''
 												var image9 = document.getElementById('myImagePrescription_9');
@@ -2908,6 +4509,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_10=''
 												var image10 = document.getElementById('myImagePrescription_10');
     											image10.src = localStorage.prescriptionPhoto_10;
@@ -2993,6 +4714,126 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_11=''
 												var image11 = document.getElementById('myImagePrescription_11');
@@ -3080,6 +4921,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_12=''
 												var image12 = document.getElementById('myImagePrescription_12');
     											image12.src = localStorage.prescriptionPhoto_12;
@@ -3165,6 +5126,126 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_13=''
 												var image13 = document.getElementById('myImagePrescription_13');
@@ -3252,6 +5333,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_14=''
 												var image14 = document.getElementById('myImagePrescription_14');
     											image14.src = localStorage.prescriptionPhoto_14;
@@ -3337,6 +5538,126 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_15=''
 												var image15 = document.getElementById('myImagePrescription_15');
@@ -3424,6 +5745,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_16=''
 												var image16 = document.getElementById('myImagePrescription_16');
     											image16.src = localStorage.prescriptionPhoto_16;
@@ -3509,6 +5950,126 @@ function prescription_submit(){
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 												
 												localStorage.prescriptionPhoto_17=''
 												var image17 = document.getElementById('myImagePrescription_17');
@@ -3596,6 +6157,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_18=''
 												var image18 = document.getElementById('myImagePrescription_18');
     											image18.src = localStorage.prescriptionPhoto_18;
@@ -3682,6 +6363,126 @@ function prescription_submit(){
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
 												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
 												localStorage.prescriptionPhoto_19=''
 												var image19 = document.getElementById('myImagePrescription_19');
     											image19.src = localStorage.prescriptionPhoto_19;
@@ -3767,11 +6568,6350 @@ function prescription_submit(){
 												//var image20 = document.getElementById('myImagePrescription_20');
 //    											image20.src = localStorage.prescriptionPhoto_20;
 //												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
 												
 												localStorage.prescriptionPhoto_20=''
 												var image20 = document.getElementById('myImagePrescription_20');
     											image20.src = localStorage.prescriptionPhoto_20;
 												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+											}
+											else if (localStorage.pic_no==21){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												//var image21 = document.getElementById('myImagePrescription_21');
+//												image21.src = localStorage.prescriptionPhoto_21;
+//												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_21=''
+												var image21 = document.getElementById('myImagePrescription_21');
+    											image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+											}
+											else if (localStorage.pic_no==22){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												//var image22 = document.getElementById('myImagePrescription_22');
+//												image22.src = localStorage.prescriptionPhoto_22;
+//												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_22=''
+												var image22 = document.getElementById('myImagePrescription_22');
+    											image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+											}
+											else if (localStorage.pic_no==23){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												//var image23 = document.getElementById('myImagePrescription_23');
+//												image23.src = localStorage.prescriptionPhoto_23;
+//												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_23=''
+												var image23 = document.getElementById('myImagePrescription_23');
+    											image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+											}
+											else if (localStorage.pic_no==24){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												//var image24 = document.getElementById('myImagePrescription_24');
+//												image24.src = localStorage.prescriptionPhoto_24;
+//												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_24=''
+												var image24 = document.getElementById('myImagePrescription_24');
+    											image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+											}
+											else if (localStorage.pic_no==25){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												//var image25 = document.getElementById('myImagePrescription_25');
+//												image25.src = localStorage.prescriptionPhoto_25;
+//												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_25=''
+												var image25 = document.getElementById('myImagePrescription_25');
+    											image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+											}
+											
+											if (localStorage.pic_no==26){		
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+																		
+												var image2 = document.getElementById('myImagePrescription_2');
+    											image2.src = localStorage.prescriptionPhoto_2;
+												$("#prescriptionPhoto_2").val(localStorage.prescriptionPhoto_2)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												//var image26 = document.getElementById('myImagePrescription_26');
+//												image26.src = localStorage.prescriptionPhoto_26;
+//												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												
+												//alert (localStorage.pic_no)
+												localStorage.prescriptionPhoto_26=''
+												var image26 = document.getElementById('myImagePrescription_26');
+    											image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												//$("#prescriptionPhoto_1").val('');
+												//localStorage.prescriptionPhoto_1=''
+												
+											}
+											else if (localStorage.pic_no==27){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image2 = document.getElementById('myImagePrescription_2');
+    											image2.src = localStorage.prescriptionPhoto_2;
+												$("#prescriptionPhoto_2").val(localStorage.prescriptionPhoto_2)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												//var image27 = document.getElementById('myImagePrescription_27');
+//												image27.src = localStorage.prescriptionPhoto_27;
+//												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_27=''
+												var image27 = document.getElementById('myImagePrescription_27');
+    											image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+											}
+											else if (localStorage.pic_no==28){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image2 = document.getElementById('myImagePrescription_2');
+    											image2.src = localStorage.prescriptionPhoto_2;
+												$("#prescriptionPhoto_2").val(localStorage.prescriptionPhoto_2)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												//var image28 = document.getElementById('myImagePrescription_28');
+//												image28.src = localStorage.prescriptionPhoto_28;
+//												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_28=''
+												var image28 = document.getElementById('myImagePrescription_28');
+    											image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+											}
+											else if (localStorage.pic_no==29){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												//var image29 = document.getElementById('myImagePrescription_29');
+//												image29.src = localStorage.prescriptionPhoto_29;
+//												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_29=''
+												var image29 = document.getElementById('myImagePrescription_29');
+    											image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+											}
+											else if (localStorage.pic_no==30){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												//var image30 = document.getElementById('myImagePrescription_30');
+//												image30.src = localStorage.prescriptionPhoto_30;
+//												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_30=''
+												var image30 = document.getElementById('myImagePrescription_30');
+    											image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+											}
+											else if (localStorage.pic_no==31){
+												
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												//var image31 = document.getElementById('myImagePrescription_31');
+//												image31.src = localStorage.prescriptionPhoto_31;
+//												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_31=''
+												var image31 = document.getElementById('myImagePrescription_31');
+    											image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+											}
+											else if (localStorage.pic_no==32){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												//var image32 = document.getElementById('myImagePrescription_32');
+//												image32.src = localStorage.prescriptionPhoto_32;
+//												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_32=''
+												var image32 = document.getElementById('myImagePrescription_32');
+    											image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+											}
+											else if (localStorage.pic_no==33){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												//var image33 = document.getElementById('myImagePrescription_33');
+//												image33.src = localStorage.prescriptionPhoto_33;
+//												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_33=''
+												var image33 = document.getElementById('myImagePrescription_33');
+    											image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+											}
+											else if (localStorage.pic_no==34){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												//var image34 = document.getElementById('myImagePrescription_34');
+//												image34.src = localStorage.prescriptionPhoto_34;
+//												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_34=''
+												var image34 = document.getElementById('myImagePrescription_34');
+    											image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_34)
+											}
+											else if (localStorage.pic_no==35){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												//var image35 = document.getElementById('myImagePrescription_35');
+//												image35.src = localStorage.prescriptionPhoto_35;
+//												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_35=''
+												var image35 = document.getElementById('myImagePrescription_35');
+    											image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+											}
+											else if (localStorage.pic_no==36){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												//var image36 = document.getElementById('myImagePrescription_36');
+//												image36.src = localStorage.prescriptionPhoto_36;
+//												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_36=''
+												var image36 = document.getElementById('myImagePrescription_36');
+    											image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+											}
+											else if (localStorage.pic_no==37){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												//var image37 = document.getElementById('myImagePrescription_37');
+//												image37.src = localStorage.prescriptionPhoto_37;
+//												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_37=''
+												var image37 = document.getElementById('myImagePrescription_37');
+    											image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+											}
+											else if (localStorage.pic_no==38){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												//var image38 = document.getElementById('myImagePrescription_38');
+//												image38.src = localStorage.prescriptionPhoto_38;
+//												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_38=''
+												var image38 = document.getElementById('myImagePrescription_38');
+    											image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+											}
+											else if (localStorage.pic_no==39){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												//var image39 = document.getElementById('myImagePrescription_39');
+//												image39.src = localStorage.prescriptionPhoto_39;
+//												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_39=''
+												var image39 = document.getElementById('myImagePrescription_39');
+    											image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+											}
+											else if (localStorage.pic_no==40){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												//var image40 = document.getElementById('myImagePrescription_40');
+//												image40.src = localStorage.prescriptionPhoto_40;
+//												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_40=''
+												var image40 = document.getElementById('myImagePrescription_40');
+    											image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+											}
+											else if (localStorage.pic_no==41){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												//var image41 = document.getElementById('myImagePrescription_41');
+//												image41.src = localStorage.prescriptionPhoto_41;
+//												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_41=''
+												var image41 = document.getElementById('myImagePrescription_41');
+    											image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+											}
+											else if (localStorage.pic_no==42){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												//var image42 = document.getElementById('myImagePrescription_42');
+//												image42.src = localStorage.prescriptionPhoto_42;
+//												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_42=''
+												var image42 = document.getElementById('myImagePrescription_42');
+    											image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+											}
+											else if (localStorage.pic_no==43){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												//var image43 = document.getElementById('myImagePrescription_43');
+//												image43.src = localStorage.prescriptionPhoto_43;
+//												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_43=''
+												var image43 = document.getElementById('myImagePrescription_43');
+    											image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+											}
+											else if (localStorage.pic_no==44){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+												
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												//var image44 = document.getElementById('myImagePrescription_44');
+//												image44.src = localStorage.prescriptionPhoto_44;
+//												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
+												
+												localStorage.prescriptionPhoto_44=''
+												var image44 = document.getElementById('myImagePrescription_44');
+    											image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+											}
+											else if (localStorage.pic_no==45){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												//var image45 = document.getElementById('myImagePrescription_45');
+//												image45.src = localStorage.prescriptionPhoto_45;
+//												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_45=''
+												var image45 = document.getElementById('myImagePrescription_45');
+    											image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+											}
+											else if (localStorage.pic_no==46){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												//var image46 = document.getElementById('myImagePrescription_46');
+//												image46.src = localStorage.prescriptionPhoto_46;
+//												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_46=''
+												var image46 = document.getElementById('myImagePrescription_46');
+    											image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+											}
+											else if (localStorage.pic_no==47){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												//var image47 = document.getElementById('myImagePrescription_47');
+//												image47.src = localStorage.prescriptionPhoto_47;
+//												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_47=''
+												var image47 = document.getElementById('myImagePrescription_47');
+    											image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+											}
+											else if (localStorage.pic_no==48){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												//var image48 = document.getElementById('myImagePrescription_48');
+//												image48.src = localStorage.prescriptionPhoto_48;
+//												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_48=''
+												var image48 = document.getElementById('myImagePrescription_48');
+    											image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+											}
+											else if (localStorage.pic_no==49){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												//var image49 = document.getElementById('myImagePrescription_49');
+//												image49.src = localStorage.prescriptionPhoto_49;
+//												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												var image50 = document.getElementById('myImagePrescription_50');
+												image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_49=''
+												var image49 = document.getElementById('myImagePrescription_49');
+    											image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+											}
+											else if (localStorage.pic_no==50){
+												var image1 = document.getElementById('myImagePrescription_1');
+    											image1.src = localStorage.prescriptionPhoto_1;
+												$("#prescriptionPhoto_1").val(localStorage.prescriptionPhoto_1)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image3 = document.getElementById('myImagePrescription_3');
+    											image3.src = localStorage.prescriptionPhoto_3;
+												$("#prescriptionPhoto_3").val(localStorage.prescriptionPhoto_3)
+												
+												var image4 = document.getElementById('myImagePrescription_4');
+    											image4.src = localStorage.prescriptionPhoto_4;
+												$("#prescriptionPhoto_4").val(localStorage.prescriptionPhoto_4)
+												
+												var image5 = document.getElementById('myImagePrescription_5');
+    											image5.src = localStorage.prescriptionPhoto_5;
+												$("#prescriptionPhoto_5").val(localStorage.prescriptionPhoto_5)
+												
+												var image6 = document.getElementById('myImagePrescription_6');
+    											image6.src = localStorage.prescriptionPhoto_6;
+												$("#prescriptionPhoto_6").val(localStorage.prescriptionPhoto_6)
+												
+												var image7 = document.getElementById('myImagePrescription_7');
+    											image7.src = localStorage.prescriptionPhoto_7;
+												$("#prescriptionPhoto_7").val(localStorage.prescriptionPhoto_7)
+												
+												var image8 = document.getElementById('myImagePrescription_8');
+    											image8.src = localStorage.prescriptionPhoto_8;
+												$("#prescriptionPhoto_8").val(localStorage.prescriptionPhoto_8)
+												
+												var image9 = document.getElementById('myImagePrescription_9');
+    											image9.src = localStorage.prescriptionPhoto_9;
+												$("#prescriptionPhoto_9").val(localStorage.prescriptionPhoto_9)
+												
+												var image10 = document.getElementById('myImagePrescription_10');
+    											image10.src = localStorage.prescriptionPhoto_10;
+												$("#prescriptionPhoto_10").val(localStorage.prescriptionPhoto_10)
+												
+												var image11 = document.getElementById('myImagePrescription_11');
+    											image11.src = localStorage.prescriptionPhoto_11;
+												$("#prescriptionPhoto_11").val(localStorage.prescriptionPhoto_11)
+												
+												var image12 = document.getElementById('myImagePrescription_12');
+    											image12.src = localStorage.prescriptionPhoto_12;
+												$("#prescriptionPhoto_12").val(localStorage.prescriptionPhoto_12)
+												
+												var image13 = document.getElementById('myImagePrescription_13');
+    											image13.src = localStorage.prescriptionPhoto_13;
+												$("#prescriptionPhoto_13").val(localStorage.prescriptionPhoto_13)
+												
+												var image14 = document.getElementById('myImagePrescription_14');
+    											image14.src = localStorage.prescriptionPhoto_14;
+												$("#prescriptionPhoto_14").val(localStorage.prescriptionPhoto_14)
+												
+												var image15 = document.getElementById('myImagePrescription_15');
+    											image15.src = localStorage.prescriptionPhoto_15;
+												$("#prescriptionPhoto_15").val(localStorage.prescriptionPhoto_15)
+												
+												var image16 = document.getElementById('myImagePrescription_16');
+    											image16.src = localStorage.prescriptionPhoto_16;
+												$("#prescriptionPhoto_16").val(localStorage.prescriptionPhoto_16)
+												
+												var image17 = document.getElementById('myImagePrescription_17');
+    											image17.src = localStorage.prescriptionPhoto_17;
+												$("#prescriptionPhoto_17").val(localStorage.prescriptionPhoto_17)
+												
+												var image18 = document.getElementById('myImagePrescription_18');
+    											image18.src = localStorage.prescriptionPhoto_18;
+												$("#prescriptionPhoto_18").val(localStorage.prescriptionPhoto_18)
+												
+												var image19 = document.getElementById('myImagePrescription_19');
+    											image19.src = localStorage.prescriptionPhoto_19;
+												$("#prescriptionPhoto_19").val(localStorage.prescriptionPhoto_19)
+												
+												var image20 = document.getElementById('myImagePrescription_20');
+    											image20.src = localStorage.prescriptionPhoto_20;
+												$("#prescriptionPhoto_20").val(localStorage.prescriptionPhoto_20)
+
+					
+												var image21 = document.getElementById('myImagePrescription_21');
+												image21.src = localStorage.prescriptionPhoto_21;
+												$("#prescriptionPhoto_21").val(localStorage.prescriptionPhoto_21)
+												
+												var image22 = document.getElementById('myImagePrescription_22');
+												image22.src = localStorage.prescriptionPhoto_22;
+												$("#prescriptionPhoto_22").val(localStorage.prescriptionPhoto_22)
+												
+												var image23 = document.getElementById('myImagePrescription_23');
+												image23.src = localStorage.prescriptionPhoto_23;
+												$("#prescriptionPhoto_23").val(localStorage.prescriptionPhoto_23)
+												
+												var image24 = document.getElementById('myImagePrescription_24');
+												image24.src = localStorage.prescriptionPhoto_24;
+												$("#prescriptionPhoto_24").val(localStorage.prescriptionPhoto_24)
+												
+												var image25 = document.getElementById('myImagePrescription_25');
+												image25.src = localStorage.prescriptionPhoto_25;
+												$("#prescriptionPhoto_25").val(localStorage.prescriptionPhoto_25)
+												
+												var image26 = document.getElementById('myImagePrescription_26');
+												image26.src = localStorage.prescriptionPhoto_26;
+												$("#prescriptionPhoto_26").val(localStorage.prescriptionPhoto_26)
+												
+												var image27 = document.getElementById('myImagePrescription_27');
+												image27.src = localStorage.prescriptionPhoto_27;
+												$("#prescriptionPhoto_27").val(localStorage.prescriptionPhoto_27)
+												
+												var image28 = document.getElementById('myImagePrescription_28');
+												image28.src = localStorage.prescriptionPhoto_28;
+												$("#prescriptionPhoto_28").val(localStorage.prescriptionPhoto_28)
+												
+												var image29 = document.getElementById('myImagePrescription_29');
+												image29.src = localStorage.prescriptionPhoto_29;
+												$("#prescriptionPhoto_29").val(localStorage.prescriptionPhoto_29)
+												
+												var image30 = document.getElementById('myImagePrescription_30');
+												image30.src = localStorage.prescriptionPhoto_30;
+												$("#prescriptionPhoto_30").val(localStorage.prescriptionPhoto_30)
+												
+												var image31 = document.getElementById('myImagePrescription_31');
+												image31.src = localStorage.prescriptionPhoto_31;
+												$("#prescriptionPhoto_31").val(localStorage.prescriptionPhoto_31)
+												
+
+												var image32 = document.getElementById('myImagePrescription_32');
+												image32.src = localStorage.prescriptionPhoto_32;
+												$("#prescriptionPhoto_32").val(localStorage.prescriptionPhoto_32)
+												
+												var image33 = document.getElementById('myImagePrescription_33');
+												image33.src = localStorage.prescriptionPhoto_33;
+												$("#prescriptionPhoto_33").val(localStorage.prescriptionPhoto_33)
+												
+												var image34 = document.getElementById('myImagePrescription_34');
+												image34.src = localStorage.prescriptionPhoto_34;
+												$("#prescriptionPhoto_34").val(localStorage.prescriptionPhoto_43)
+												
+												var image35 = document.getElementById('myImagePrescription_35');
+												image35.src = localStorage.prescriptionPhoto_35;
+												$("#prescriptionPhoto_35").val(localStorage.prescriptionPhoto_35)
+												
+												var image36 = document.getElementById('myImagePrescription_36');
+												image36.src = localStorage.prescriptionPhoto_36;
+												$("#prescriptionPhoto_36").val(localStorage.prescriptionPhoto_36)
+												
+												var image37 = document.getElementById('myImagePrescription_37');
+												image37.src = localStorage.prescriptionPhoto_37;
+												$("#prescriptionPhoto_37").val(localStorage.prescriptionPhoto_37)
+												
+												var image38 = document.getElementById('myImagePrescription_38');
+												image38.src = localStorage.prescriptionPhoto_38;
+												$("#prescriptionPhoto_38").val(localStorage.prescriptionPhoto_38)
+												
+												var image39 = document.getElementById('myImagePrescription_39');
+												image39.src = localStorage.prescriptionPhoto_39;
+												$("#prescriptionPhoto_39").val(localStorage.prescriptionPhoto_39)
+												
+												var image40 = document.getElementById('myImagePrescription_40');
+												image40.src = localStorage.prescriptionPhoto_40;
+												$("#prescriptionPhoto_40").val(localStorage.prescriptionPhoto_40)
+												
+												var image41 = document.getElementById('myImagePrescription_41');
+												image41.src = localStorage.prescriptionPhoto_41;
+												$("#prescriptionPhoto_41").val(localStorage.prescriptionPhoto_41)
+												
+												var image42 = document.getElementById('myImagePrescription_42');
+												image42.src = localStorage.prescriptionPhoto_42;
+												$("#prescriptionPhoto_42").val(localStorage.prescriptionPhoto_42)
+												
+												var image43 = document.getElementById('myImagePrescription_43');
+												image43.src = localStorage.prescriptionPhoto_43;
+												$("#prescriptionPhoto_43").val(localStorage.prescriptionPhoto_43)
+												
+												var image44 = document.getElementById('myImagePrescription_44');
+												image44.src = localStorage.prescriptionPhoto_44;
+												$("#prescriptionPhoto_44").val(localStorage.prescriptionPhoto_44)
+												
+												var image45 = document.getElementById('myImagePrescription_45');
+												image45.src = localStorage.prescriptionPhoto_45;
+												$("#prescriptionPhoto_45").val(localStorage.prescriptionPhoto_45)
+												
+												var image46 = document.getElementById('myImagePrescription_46');
+												image46.src = localStorage.prescriptionPhoto_46;
+												$("#prescriptionPhoto_46").val(localStorage.prescriptionPhoto_46)
+												
+												var image47 = document.getElementById('myImagePrescription_47');
+												image47.src = localStorage.prescriptionPhoto_47;
+												$("#prescriptionPhoto_47").val(localStorage.prescriptionPhoto_47)
+												
+												var image48 = document.getElementById('myImagePrescription_48');
+												image48.src = localStorage.prescriptionPhoto_48;
+												$("#prescriptionPhoto_48").val(localStorage.prescriptionPhoto_48)
+												
+												var image49 = document.getElementById('myImagePrescription_49');
+												image49.src = localStorage.prescriptionPhoto_49;
+												$("#prescriptionPhoto_49").val(localStorage.prescriptionPhoto_49)
+												
+												//var image50 = document.getElementById('myImagePrescription_50');
+//												image50.src = localStorage.prescriptionPhoto_50;
+//												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50) 
+												
+												localStorage.prescriptionPhoto_50=''
+												var image50 = document.getElementById('myImagePrescription_50');
+    											image50.src = localStorage.prescriptionPhoto_50;
+												$("#prescriptionPhoto_50").val(localStorage.prescriptionPhoto_50)
 											}
 											//localStorage.pic_no='';
 											//$("#campaign_combo_id_lv").empty()
@@ -3958,6 +13098,7 @@ function searchDoctor() {
 			lis[i].style.display = 'none';
 	}
 }
+
 
 function getPrescriptionImage_1() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
@@ -4467,7 +13608,763 @@ function onFail_20(message) {
 }
 
 
+function getPrescriptionImage_21() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_21, onFail_21, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_21(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_21');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_21").val(imagePath);
 
+	var prescriptionPhoto_21=$("#prescriptionPhoto_21").val();
+	localStorage.prescriptionPhoto_21 = prescriptionPhoto_21;
+}
+function onFail_21(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_22() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_22, onFail_22, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_22(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_22');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_22").val(imagePath);
+
+	var prescriptionPhoto_22=$("#prescriptionPhoto_22").val();
+	localStorage.prescriptionPhoto_22 = prescriptionPhoto_22;
+}
+function onFail_22(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_23() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   navigator.camera.getPicture(onSuccess_23, onFail_23, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_23(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_23');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_23").val(imagePath);
+	
+	var prescriptionPhoto_23=$("#prescriptionPhoto_23").val();
+	localStorage.prescriptionPhoto_23 = prescriptionPhoto_23;
+		
+}
+function onFail_23(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_24() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   
+   navigator.camera.getPicture(onSuccess_24, onFail_24, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_24(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_24');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_24").val(imagePath);
+
+	var prescriptionPhoto_24=$("#prescriptionPhoto_24").val();
+	localStorage.prescriptionPhoto_24 = prescriptionPhoto_24;
+		
+}
+function onFail_24(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_25() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_25, onFail_25, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_25(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_25');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_25").val(imagePath);
+
+	var prescriptionPhoto_25=$("#prescriptionPhoto_25").val();
+	localStorage.prescriptionPhoto_25 = prescriptionPhoto_25;
+		
+}
+function onFail_25(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_26() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   navigator.camera.getPicture(onSuccess_26, onFail_26, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_26(imageURI) {
+    var image = document.getElementById('myImagePrescription_26');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_26").val(imagePath);
+	var prescriptionPhoto_26=$("#prescriptionPhoto_26").val();
+	localStorage.prescriptionPhoto_26 = prescriptionPhoto_26;
+		
+}
+function onFail_26(message) {
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_27() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_27, onFail_27, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_27(imageURI) {
+    var image = document.getElementById('myImagePrescription_27');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_27").val(imagePath);
+
+	var prescriptionPhoto_27=$("#prescriptionPhoto_27").val();
+	localStorage.prescriptionPhoto_27 = prescriptionPhoto_27;
+		
+}
+function onFail_27(message) {
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_28() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   navigator.camera.getPicture(onSuccess_28, onFail_28, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_28(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_28');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_28").val(imagePath);
+
+	var prescriptionPhoto_28=$("#prescriptionPhoto_28").val();
+	localStorage.prescriptionPhoto_28 = prescriptionPhoto_28;
+		
+}
+function onFail_28(message) {
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_29() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_29, onFail_29, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_29(imageURI) {
+    var image = document.getElementById('myImagePrescription_29');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_29").val(imagePath);
+
+	var prescriptionPhoto_29=$("#prescriptionPhoto_29").val();
+	localStorage.prescriptionPhoto_29 = prescriptionPhoto_29;
+		
+}
+function onFail_29(message) {
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_30() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   navigator.camera.getPicture(onSuccess_30, onFail_30, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_30(imageURI) {
+    var image = document.getElementById('myImagePrescription_30');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_30").val(imagePath);
+	var prescriptionPhoto_30=$("#prescriptionPhoto_30").val();
+	localStorage.prescriptionPhoto_30 = prescriptionPhoto_30;
+		
+}
+function onFail_30(message) {
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_31() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_31, onFail_31, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_31(imageURI) {
+    var image = document.getElementById('myImagePrescription_31');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_31").val(imagePath);
+	
+	var prescriptionPhoto_31=$("#prescriptionPhoto_31").val();
+	localStorage.prescriptionPhoto_31 = prescriptionPhoto_31;
+		
+}
+function onFail_31(message) {
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_32() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_32, onFail_32, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_32(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_32');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_32").val(imagePath);
+
+	var prescriptionPhoto_32=$("#prescriptionPhoto_32").val();
+	localStorage.prescriptionPhoto_32 = prescriptionPhoto_32;
+		
+}
+function onFail_32(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_33() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_33, onFail_33, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_33(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_33');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_33").val(imagePath);
+
+	var prescriptionPhoto_33=$("#prescriptionPhoto_33").val();
+	localStorage.prescriptionPhoto_33 = prescriptionPhoto_33;
+		
+}
+function onFail_33(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_34() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_34, onFail_34, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_34(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_34');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_34").val(imagePath);
+
+	var prescriptionPhoto_34=$("#prescriptionPhoto_34").val();
+	localStorage.prescriptionPhoto_34 = prescriptionPhoto_34;
+		
+}
+function onFail_34(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_35() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_35, onFail_35, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_35(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_35');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_35").val(imagePath);
+
+	var prescriptionPhoto_35=$("#prescriptionPhoto_35").val();
+	localStorage.prescriptionPhoto_35 = prescriptionPhoto_35;
+		
+}
+function onFail_35(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+function getPrescriptionImage_36() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_36, onFail_36, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_36(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_36');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_36").val(imagePath);
+	
+	var prescriptionPhoto_36=$("#prescriptionPhoto_36").val();
+	localStorage.prescriptionPhoto_36 = prescriptionPhoto_36;
+		
+}
+function onFail_36(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_37() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_37, onFail_37, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_37(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_37');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_37").val(imagePath);
+	
+	var prescriptionPhoto_37=$("#prescriptionPhoto_37").val();
+	localStorage.prescriptionPhoto_37 = prescriptionPhoto_37;
+		
+}
+function onFail_37(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_38() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_38, onFail_38, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_38(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_38');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_38").val(imagePath);
+
+	var prescriptionPhoto_38=$("#prescriptionPhoto_38").val();
+	localStorage.prescriptionPhoto_38 = prescriptionPhoto_38;
+	
+}
+function onFail_38(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_39() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_39, onFail_39, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_39(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_39');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_39").val(imagePath);
+
+	var prescriptionPhoto_39=$("#prescriptionPhoto_39").val();
+	localStorage.prescriptionPhoto_39 = prescriptionPhoto_39;
+		
+}
+function onFail_39(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_40() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   navigator.camera.getPicture(onSuccess_40, onFail_40, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_40(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_40');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_40").val(imagePath);
+
+	var prescriptionPhoto_40=$("#prescriptionPhoto_40").val();
+	localStorage.prescriptionPhoto_40 = prescriptionPhoto_40;
+		
+}
+function onFail_40(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_41() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_41, onFail_41, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_41(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_41');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_41").val(imagePath);
+	
+	var prescriptionPhoto_41=$("#prescriptionPhoto_41").val();
+	localStorage.prescriptionPhoto_41 = prescriptionPhoto_41;
+		
+}
+function onFail_41(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_42() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   navigator.camera.getPicture(onSuccess_42, onFail_42, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_42(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_42');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_42").val(imagePath);
+
+	var prescriptionPhoto_42=$("#prescriptionPhoto_42").val();
+	localStorage.prescriptionPhoto_42 = prescriptionPhoto_42;
+}
+function onFail_42(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_43() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_43, onFail_43, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_43(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_43');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_43").val(imagePath);
+
+	var prescriptionPhoto_43=$("#prescriptionPhoto_43").val();
+	localStorage.prescriptionPhoto_43 = prescriptionPhoto_43;
+}
+function onFail_43(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_44() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_44, onFail_44, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_44(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_44');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_44").val(imagePath);
+
+	var prescriptionPhoto_44=$("#prescriptionPhoto_44").val();
+	localStorage.prescriptionPhoto_44 = prescriptionPhoto_44;
+}
+function onFail_44(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_45() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_45, onFail_45, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_45(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_45');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_45").val(imagePath);
+
+	var prescriptionPhoto_45=$("#prescriptionPhoto_45").val();
+	localStorage.prescriptionPhoto_45 = prescriptionPhoto_45;
+}
+function onFail_45(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_46() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_46, onFail_46, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_46(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_46');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_46").val(imagePath);
+	
+	var prescriptionPhoto_46=$("#prescriptionPhoto_46").val();
+	localStorage.prescriptionPhoto_46 = prescriptionPhoto_46;
+		
+}
+function onFail_46(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_47() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+   navigator.camera.getPicture(onSuccess_47, onFail_47, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_47(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_47');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_47").val(imagePath);
+
+	var prescriptionPhoto_47=$("#prescriptionPhoto_47").val();
+	localStorage.prescriptionPhoto_47 = prescriptionPhoto_47;
+}
+function onFail_47(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_48() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_48, onFail_48, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_48(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_48');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_48").val(imagePath);
+
+	var prescriptionPhoto_48=$("#prescriptionPhoto_48").val();
+	localStorage.prescriptionPhoto_48 = prescriptionPhoto_48;
+}
+function onFail_48(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+function getPrescriptionImage_49() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_49, onFail_49, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_49(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_49');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_49").val(imagePath);
+
+	var prescriptionPhoto_49=$("#prescriptionPhoto_49").val();
+	localStorage.prescriptionPhoto_49 = prescriptionPhoto_49;
+}
+function onFail_49(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
+
+
+function getPrescriptionImage_50() {
+	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
+		//destinationType: Camera.DestinationType.FILE_URI });
+  
+   navigator.camera.getPicture(onSuccess_50, onFail_50, { quality: 90,
+		targetWidth: 400,
+		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+		
+}
+function onSuccess_50(imageURI) {
+	//alert ('Success')
+    var image = document.getElementById('myImagePrescription_50');
+    image.src = imageURI;
+	imagePath = imageURI;
+	$("#prescriptionPhoto_50").val(imagePath);
+
+	var prescriptionPhoto_50=$("#prescriptionPhoto_50").val();
+	localStorage.prescriptionPhoto_50 = prescriptionPhoto_50;
+}
+function onFail_50(message) {
+	//alert ('Fail')
+	imagePath="";
+    alert('Failed because: ' + message);
+}
 //---------------------------------------------
 
 
