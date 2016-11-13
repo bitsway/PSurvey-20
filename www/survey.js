@@ -2559,7 +2559,7 @@ function prescription_submit(){
 											//alert (result_string)
 										
 											//image upload function									
-											//uploadPhoto(prescriptionPhoto, imageName);
+											uploadPhoto(prescriptionPhoto, imageName);
 											//alert ('0')
 											//alert (localStorage.pic_no)
 											if (localStorage.pic_no==1){								
