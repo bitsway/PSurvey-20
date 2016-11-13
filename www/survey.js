@@ -1651,7 +1651,7 @@ function gotoMarket(pic_no) {
 			
 			//alert (localStorage.pic_no)
 			if (localStorage.synced='YES'){
-				if (error_flag==1  ){
+				if (error_flag==0  ){
 					$.afui.loadContent("#imageSinglePage",true,true,'right');
 				}
 				else{
