@@ -62,10 +62,10 @@ function page_prescription() {
 //-------GET GEO LOCATION
 function getLocation() {
 	$("#error_prescription_submit").html("Confirming location. Please wait.");
-	$("#btn_prescription_submit").hide();
+	//$("#btn_prescription_submit").hide();
 	//$("#btn_prescription_submit").show();
 	//var options = { enableHighAccuracy: false};
-	var options = { enableHighAccuracy: false, timeout:15000};
+	var options = { enableHighAccuracy: false, timeout:5000};
 	navigator.geolocation.getCurrentPosition(onSuccess, onError , options);	
 	
 }
@@ -2248,8 +2248,8 @@ function prescription_submit(){
 	//alert (checkOther)
 	if (doctor_name==''){		
 		$("#error_prescription_submit").text("Required Doctor");
-		$("#wait_image_prescription").show();
-		$("#btn_prescription_submit").hide();
+		//$("#wait_image_prescription").show();
+		//$("#btn_prescription_submit").hide();
 	}else{
 		
 		var latitude=$("#lat").val();
@@ -13103,7 +13103,7 @@ function searchDoctor() {
 function getPrescriptionImage_1() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 50,
+   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 40,
 		targetWidth: 400,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
