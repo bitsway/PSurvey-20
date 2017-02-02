@@ -13103,7 +13103,7 @@ function searchDoctor() {
 function getPrescriptionImage_1() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 90,
+   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 50,
 		targetWidth: 400,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
@@ -14390,6 +14390,8 @@ function uploadPhoto(imageURI, imageName) {
     params.value2 = "param";
 	
     options.params = params;
+	
+	options.chunkedMode = false;
 	
     var ft = new FileTransfer();
      ft.upload(imageURI, encodeURI(localStorage.photo_submit_url+"fileUploaderPrescription/"),winProfile,failProfile,options);
