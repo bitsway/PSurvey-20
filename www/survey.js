@@ -139,6 +139,7 @@ function check_user() {
 		localStorage.visit_client=''
 		
 		
+		
 		localStorage.latitude_found=0;
 		localStorage.longitude_found=0;
 		
@@ -2248,8 +2249,8 @@ function prescription_submit(){
 	//alert (checkOther)
 	if (doctor_name==''){		
 		$("#error_prescription_submit").text("Required Doctor");
-		//$("#wait_image_prescription").show();
-		//$("#btn_prescription_submit").hide();
+		$("#wait_image_prescription").hide();
+		$("#btn_prescription_submit").show();
 	}else{
 		
 		var latitude=$("#lat").val();
