@@ -2559,7 +2559,8 @@ function prescription_submit(){
 											
 											//alert (result_string)
 										
-											//image upload function									
+											//image upload function		
+											alert (prescriptionPhoto+'     '+imageName)							
 											uploadPhoto(prescriptionPhoto, imageName);
 											//alert ('0')
 											//alert (localStorage.pic_no)
