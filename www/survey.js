@@ -13103,7 +13103,7 @@ function searchDoctor() {
 function getPrescriptionImage_1() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 30,
+   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 20,
 		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
