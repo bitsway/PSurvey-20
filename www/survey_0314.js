@@ -62,10 +62,10 @@ function page_prescription() {
 //-------GET GEO LOCATION
 function getLocation() {
 	$("#error_prescription_submit").html("Confirming location. Please wait.");
-	$("#btn_prescription_submit").hide();
+	//$("#btn_prescription_submit").hide();
 	//$("#btn_prescription_submit").show();
 	//var options = { enableHighAccuracy: false};
-	var options = { enableHighAccuracy: false, timeout:15000};
+	var options = { enableHighAccuracy: false, timeout:5000};
 	navigator.geolocation.getCurrentPosition(onSuccess, onError , options);	
 	
 }
@@ -137,6 +137,7 @@ function check_user() {
 	    localStorage.photo_url='';
 		localStorage.photo_submit_url='';
 		localStorage.visit_client=''
+		
 		
 		
 		localStorage.latitude_found=0;
@@ -2103,7 +2104,7 @@ function removeCarItem(product_id){
 	campaign_doc_str=localStorage.campaign_doc_str
 	cartLength=campaign_doc_str.split('<rd>').length
 	$('#cart_'+product_id).remove();
-	
+	//alert (cartLength)
 	
 	if (campaign_doc_str.indexOf(product_id)==0 & cartLength == 1){
 		campaign_doc_str=campaign_doc_str.replace(product_id,'')
@@ -2114,7 +2115,6 @@ function removeCarItem(product_id){
 	else if (campaign_doc_str.indexOf(product_id)>0 & cartLength > 1){
 		campaign_doc_str=campaign_doc_str.replace("<rd>"+product_id,'')
 	}
-	
 		
 	localStorage.campaign_doc_str=campaign_doc_str
 }
@@ -2249,8 +2249,8 @@ function prescription_submit(){
 	//alert (checkOther)
 	if (doctor_name==''){		
 		$("#error_prescription_submit").text("Required Doctor");
-		$("#wait_image_prescription").show();
-		$("#btn_prescription_submit").hide();
+		$("#wait_image_prescription").hide();
+		$("#btn_prescription_submit").show();
 	}else{
 		
 		var latitude=$("#lat").val();
@@ -2524,13 +2524,11 @@ function prescription_submit(){
 			var now = $.now();
 			var imageName=localStorage.user_id+'_'+now.toString()+'.jpg';
 			//alert (imageName);
-			if (medicine_3==''){		
-				$("#error_prescription_submit").text("Required medicine_3");
-				$("#wait_image_prescription").show();
-				$("#btn_prescription_submit").hide();	
-			}else{
+				
+				
 				$("#error_prescription_submittxt").val(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5+'&checkOther='+checkOther)							
-
+			// alert (localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5+'&checkOther='+checkOther)
+			 
 				 $.ajax(localStorage.base_url+'prescription_submit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+encodeURIComponent(localStorage.user_pass)+'&synccode='+localStorage.synccode+'&areaId='+areaId+'&doctor_id='+encodeURIComponent(doctorId)+'&doctor_name='+encodeURIComponent(doctor_name)+'&latitude='+latitude+'&longitude='+longitude+'&pres_photo='+imageName+'&campaign_doc_str='+localStorage.campaign_doc_str+'&medicine_1='+medicine_1+'&medicine_2='+medicine_2+'&medicine_3='+medicine_3+'&medicine_4='+medicine_4+'&medicine_5='+medicine_5+'&checkOther='+checkOther,{
 								// cid:localStorage.cid,rep_id:localStorage.user_id,rep_pass:localStorage.user_pass,synccode:localStorage.synccode,
 								type: 'POST',
@@ -2562,7 +2560,8 @@ function prescription_submit(){
 											
 											//alert (result_string)
 										
-											//image upload function									
+											//image upload function		
+											//alert (prescriptionPhoto+'     '+imageName)							
 											uploadPhoto(prescriptionPhoto, imageName);
 											//alert ('0')
 											//alert (localStorage.pic_no)
@@ -12964,7 +12963,7 @@ function prescription_submit(){
 }
 						});			 
 				
-			}//else medicine 3
+						
 //		}pic else
 	}
 }
@@ -13107,8 +13106,8 @@ function searchDoctor() {
 function getPrescriptionImage_1() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_1, onFail_1, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13134,8 +13133,8 @@ function getPrescriptionImage_2() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
    
-   navigator.camera.getPicture(onSuccess_2, onFail_2, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_2, onFail_2, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13161,8 +13160,8 @@ function getPrescriptionImage_3() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_3, onFail_3, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_3, onFail_3, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13190,8 +13189,8 @@ function onFail_3(message) {
 function getPrescriptionImage_4() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_4, onFail_4, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_4, onFail_4, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13213,8 +13212,8 @@ function getPrescriptionImage_5() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_5, onFail_5, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_5, onFail_5, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13236,8 +13235,8 @@ function onFail_5(message) {
 function getPrescriptionImage_6() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_6, onFail_6, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_6, onFail_6, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13261,8 +13260,8 @@ function getPrescriptionImage_7() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_7, onFail_7, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_7, onFail_7, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13284,8 +13283,8 @@ function onFail_7(message) {
 function getPrescriptionImage_8() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_8, onFail_8, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_8, onFail_8, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13307,8 +13306,8 @@ function getPrescriptionImage_9() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_9, onFail_9, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_9, onFail_9, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13331,8 +13330,8 @@ function getPrescriptionImage_10() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_10, onFail_10, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_10, onFail_10, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13357,8 +13356,8 @@ function getPrescriptionImage_11() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_11, onFail_11, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_11, onFail_11, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13383,8 +13382,8 @@ function getPrescriptionImage_12() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_12, onFail_12, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_12, onFail_12, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13409,8 +13408,8 @@ function getPrescriptionImage_13() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_13, onFail_13, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_13, onFail_13, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13434,8 +13433,8 @@ function getPrescriptionImage_14() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_14, onFail_14, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_14, onFail_14, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13460,8 +13459,8 @@ function getPrescriptionImage_15() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_15, onFail_15, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_15, onFail_15, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13486,8 +13485,8 @@ function getPrescriptionImage_16() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_16, onFail_16, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_16, onFail_16, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13512,8 +13511,8 @@ function getPrescriptionImage_17() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_17, onFail_17, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_17, onFail_17, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13538,8 +13537,8 @@ function getPrescriptionImage_18() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_18, onFail_18, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_18, onFail_18, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13564,8 +13563,8 @@ function getPrescriptionImage_19() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_19, onFail_19, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_19, onFail_19, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13590,8 +13589,8 @@ function getPrescriptionImage_20() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_20, onFail_20, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_20, onFail_20, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13616,8 +13615,8 @@ function getPrescriptionImage_21() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_21, onFail_21, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_21, onFail_21, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13641,8 +13640,8 @@ function getPrescriptionImage_22() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_22, onFail_22, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_22, onFail_22, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13666,8 +13665,8 @@ function onFail_22(message) {
 function getPrescriptionImage_23() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_23, onFail_23, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_23, onFail_23, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13693,8 +13692,8 @@ function getPrescriptionImage_24() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
    
-   navigator.camera.getPicture(onSuccess_24, onFail_24, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_24, onFail_24, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13720,8 +13719,8 @@ function getPrescriptionImage_25() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_25, onFail_25, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_25, onFail_25, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13746,8 +13745,8 @@ function onFail_25(message) {
 function getPrescriptionImage_26() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_26, onFail_26, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_26, onFail_26, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13769,8 +13768,8 @@ function getPrescriptionImage_27() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_27, onFail_27, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_27, onFail_27, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13792,8 +13791,8 @@ function onFail_27(message) {
 function getPrescriptionImage_28() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_28, onFail_28, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_28, onFail_28, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13817,8 +13816,8 @@ function getPrescriptionImage_29() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_29, onFail_29, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_29, onFail_29, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13840,8 +13839,8 @@ function onFail_29(message) {
 function getPrescriptionImage_30() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_30, onFail_30, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_30, onFail_30, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13863,8 +13862,8 @@ function getPrescriptionImage_31() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_31, onFail_31, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_31, onFail_31, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13887,8 +13886,8 @@ function getPrescriptionImage_32() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_32, onFail_32, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_32, onFail_32, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13913,8 +13912,8 @@ function getPrescriptionImage_33() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_33, onFail_33, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_33, onFail_33, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13939,8 +13938,8 @@ function getPrescriptionImage_34() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_34, onFail_34, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_34, onFail_34, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13965,8 +13964,8 @@ function getPrescriptionImage_35() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_35, onFail_35, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_35, onFail_35, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -13990,8 +13989,8 @@ function getPrescriptionImage_36() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_36, onFail_36, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_36, onFail_36, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14016,8 +14015,8 @@ function getPrescriptionImage_37() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_37, onFail_37, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_37, onFail_37, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14042,8 +14041,8 @@ function getPrescriptionImage_38() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_38, onFail_38, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_38, onFail_38, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14068,8 +14067,8 @@ function getPrescriptionImage_39() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_39, onFail_39, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_39, onFail_39, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14093,8 +14092,8 @@ function onFail_39(message) {
 function getPrescriptionImage_40() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_40, onFail_40, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_50, onFail_50, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14119,8 +14118,8 @@ function getPrescriptionImage_41() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_41, onFail_41, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_41, onFail_41, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14144,8 +14143,8 @@ function onFail_41(message) {
 function getPrescriptionImage_42() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_42, onFail_42, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_42, onFail_42, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14170,8 +14169,8 @@ function getPrescriptionImage_43() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_43, onFail_43, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_43, onFail_43, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14195,8 +14194,8 @@ function getPrescriptionImage_44() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_44, onFail_44, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_44, onFail_44, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14221,8 +14220,8 @@ function getPrescriptionImage_45() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_45, onFail_45, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_45, onFail_45, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14247,8 +14246,8 @@ function getPrescriptionImage_46() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_46, onFail_46, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_46, onFail_46, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14272,8 +14271,8 @@ function onFail_46(message) {
 function getPrescriptionImage_47() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
-   navigator.camera.getPicture(onSuccess_47, onFail_47, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_47, onFail_47, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14298,8 +14297,8 @@ function getPrescriptionImage_48() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_48, onFail_48, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_48, onFail_48, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14323,8 +14322,8 @@ function getPrescriptionImage_49() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_49, onFail_49, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_49, onFail_49, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14349,8 +14348,8 @@ function getPrescriptionImage_50() {
 	//navigator.camera.getPicture(onSuccessProfile, onFailProfile, { quality: 10,
 		//destinationType: Camera.DestinationType.FILE_URI });
   
-   navigator.camera.getPicture(onSuccess_50, onFail_50, { quality: 90,
-		targetWidth: 400,
+   navigator.camera.getPicture(onSuccess_50, onFail_50, { quality: 70,
+		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
 		
 }
@@ -14394,6 +14393,8 @@ function uploadPhoto(imageURI, imageName) {
     params.value2 = "param";
 	
     options.params = params;
+	
+	options.chunkedMode = false;
 	
     var ft = new FileTransfer();
      ft.upload(imageURI, encodeURI(localStorage.photo_submit_url+"fileUploaderPrescription/"),winProfile,failProfile,options);

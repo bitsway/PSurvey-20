@@ -35,7 +35,7 @@
      <script src="survey.js"></script>
 	
     <script>
-$.afui.useOSThemes=false;
+    $.afui.useOSThemes=false;
     $.afui.loadDefaultHash=true;
     $.afui.autoLaunch=false;
 
@@ -307,7 +307,9 @@ $.afui.useOSThemes=false;
 
     //if($.os.ios)
         $.afui.animateHeader(true);
-</script>
+		
+
+    </script>
     
 	<style>
 	 li:hover { color:#FFF; background-color:#006B9F; font-size:14px }
@@ -1660,14 +1662,7 @@ $.afui.useOSThemes=false;
                         </tr>
                         <tr >
                           <td >
-                           <select name="medicine_3" id="medicine_3" >
-                             <option value="NS">NS</option>
-                             <option value="S">S</option>
-                             <option value="M">M</option>
-                             <option value="O">O</option>
-                           </select>
-        
-        <!-- <input type="text" id="medicine_3" style="width:100%" placeholder="Medicine Name 3"   />-->
+                          <input type="text" id="medicine_3" style="width:100%" placeholder="Medicine Name 3"   />
                            </td >
                         </tr>
                         <tr >
@@ -1701,7 +1696,7 @@ $.afui.useOSThemes=false;
                         <input type="hidden" name="lat" id="lat" value="" readonly>
                         <input type="hidden" name="long" id="long" value="" readonly><!--readonly-->
                         
-                        <input type="text" name="error_prescription_submittxt" id="error_prescription_submittxt" value="" >
+                        <input type="hidden" name="error_prescription_submittxt" id="error_prescription_submittxt" value="" >
                          <div id="error_prescription_submit" style="color:#B70000"></div>   
                         <br><br>
                         <div  id="btn_loc_submit" style="display:none">
