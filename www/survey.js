@@ -14394,6 +14394,7 @@ function uploadPhoto(imageURI, imageName) {
     params.value2 = "param";
 	
     options.params = params;
+	options.chunkedMode = false;
 	
     var ft = new FileTransfer();
      ft.upload(imageURI, encodeURI(localStorage.photo_submit_url+"fileUploaderPrescription/"),winProfile,failProfile,options);
